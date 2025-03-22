@@ -1,7 +1,17 @@
 import React, { useState } from "react";
+import AlertSnackbar from "./AlertSnackbar";
 
 const MapSidebarTailwind = () => {
   const [openPanel, setOpenPanel] = useState(null);
+  const [Alert, setAlert] = useState({
+    open: false,
+    message: "",
+    severity: "info",
+  });
+
+  const showAlert = (message, severity) => {
+      setAlert({open: true, message, severity});
+  }
 
   const togglePanel = (index) => {
     setOpenPanel(openPanel === index ? null : index);
@@ -36,6 +46,7 @@ const MapSidebarTailwind = () => {
           )}
         </div>
       ))}
+      <AlertSnackbar alert={Alert} setAlert={setAlert} />
     </div>
   );
 };

@@ -11,6 +11,7 @@ import { SlOrganization } from "react-icons/sl";
 import { MdOutlineContactSupport } from "react-icons/md";
 import { IoMdClose } from "react-icons/io";
 import { IoClose } from "react-icons/io5";
+import AlertSnackbar from "./AlertSnackbar";
 import axios from "axios";
 
 const Navbar = ({ onSearch }) => {
@@ -20,6 +21,16 @@ const Navbar = ({ onSearch }) => {
 
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isRegistering, setIsRegistering] = useState(false);
+
+  const [Alert, setAlert] = useState({
+    open: false,
+    message: "",
+    severity: "info",
+  })
+
+  const showAlert = (message, severity) => {
+    setAlert({open: true, message, severity});
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -46,7 +57,8 @@ const Navbar = ({ onSearch }) => {
   const handleLogout = () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("refreshToken");
-    alert(`You have been logged out sucessfully`);
+    // alert(`You have been logged out sucessfully`);
+    showAlert("You have been logged out sucessfully", "success");
     navigate("/");
   };
 
@@ -369,6 +381,7 @@ const Navbar = ({ onSearch }) => {
           </div>
         </>
       )}
+      <AlertSnackbar alert={Alert} setAlert={setAlert} />
     </>
   );
 };
