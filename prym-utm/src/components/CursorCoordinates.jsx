@@ -11,7 +11,7 @@ const CursorCoordinates = () => {
   });
 
   return (
-    <div className="absolute bottom-4 left-4 bg-white p-2 rounded shadow-md text-sm font-medium z-1000">
+    <div className="absolute bottom-1 left-1 bg-white p-2 rounded shadow-md text-sm font-medium z-1000">
       <p>Lat: {coords.lat}, Lng: {coords.lng}</p>
     </div>
   );
