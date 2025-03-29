@@ -13,6 +13,22 @@ const FlightPlanShow = () => {
     setAlert({ open: true, message, severity });
   };
 
+  const handleDeleteFlightPlan = async (flightPlanId) => {
+     try {
+         const response = await axios.delete(`http://localhost:3000/api/flightPlan/remove-flight/${flightPlanId}`, {
+            headers: {
+                Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+            }
+         });
+         console.log("Flight Plan deleted successfully:", response.data);
+         showAlert("Flight Plan deleted successfully:", "success");
+         setFlightPlans(flightPlans.filter((plan) => plan._id !== flightPlanId));
+     } catch (error) {
+            console.error("Error deleting flight plan:", error);
+            showAlert("Error deleting flight plan", "error");
+     }
+  }
+
   useEffect(() => {
     const fetchFlightPlans = async () => {
       try {
@@ -64,6 +80,11 @@ const FlightPlanShow = () => {
                       View
                     </button>
                   </td>
+                  <td className="p-4">
+                    <button className="bg-red-500 text-white px-4 py-2 rounded" onClick={() => handleDeleteFlightPlan(flightPlan._id)}>
+                       Delete
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -76,3 +97,4 @@ const FlightPlanShow = () => {
 };
 
 export default FlightPlanShow;
+

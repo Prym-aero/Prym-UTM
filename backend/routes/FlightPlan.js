@@ -77,6 +77,24 @@ router.post("/addFlight", authMiddleware, async (req, res) => {
     }
 });
 
+router.delete('/remove-flight/:id', authMiddleware, async (req, res) => {
+     try {
+        const { id } = req.params; 
+        
+        const flightPlan = await FlightPlan.findById(id);
+
+        if (!flightPlan) {
+            return res.status(404).json({message: "Flight plan not found"});
+        }
+
+        await FlightPlan.findByIdAndDelete(id);
+        res.status(200).json({message: "Flight plan deleted successfully"});
+    } catch (error) {
+        console.error("Error deleting flight Plan:", error);
+        res.status(500).json({message: "Internal server error"});
+    }
+});
+
 
 
 

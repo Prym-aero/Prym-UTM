@@ -420,8 +420,8 @@ const FlightPlanForm = () => {
               <input
                 className="input-field  bg-white/50 p-2.5"
                 type="text"
-                name="pilotName"
-                placeholder="Enter Pilot Name"
+                name="pilotId"
+                placeholder="Enter Pilot Id"
                 value={formData.pilotId || ""}
                 onChange={handleChange}
                 required
