@@ -1,3 +1,4 @@
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AlertSnackbar from "./AlertSnackbar";
@@ -9,13 +10,15 @@ const FlightPlanShow = () => {
     message: "",
     severity: "info",
   });
+  const [view, setView] = useState(null);
+  const [loading, setLoading] = useState(false);
   const showAlert = (message, severity) => {
     setAlert({ open: true, message, severity });
   };
 
   const handleDeleteFlightPlan = async (flightPlanId) => {
      try {
-         const response = await axios.delete(`http://localhost:3000/api/flightPlan/remove-flight/${flightPlanId}`, {
+         const response = await axios.delete(`${API_URL}/flightPlan/remove-flight/${flightPlanId}`, {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
             }
@@ -33,7 +36,7 @@ const FlightPlanShow = () => {
     const fetchFlightPlans = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:3000/api/flightPlan"
+          `${API_URL}/flightPlan`
         );
         console.log("Flight Plans fetched successfully:", response.data);
         setFlightPlans(response.data);
@@ -49,7 +52,18 @@ const FlightPlanShow = () => {
 
   return (
     <>
-      <div className="FlightPlanShow w-screen h-full flex flex-col justify-center items-center bg-gray-100">
+      {view ? (
+         <>
+            <div className="w-screen h-full flex flex-col justify-center items-center bg-gray-100">
+                <h1>{view._id}</h1>
+                <h1>{view.flightName}</h1>
+                <h1>{view.flightDate}</h1>
+                <h1>{view.status}</h1>
+                <button onClick={() => setView(null)}>Close</button>
+            </div>
+         </>
+      ):(<>
+        <div className="FlightPlanShow w-screen h-full flex flex-col justify-center items-center bg-gray-100">
         <h1 className="text-3xl font-bold text-center mt-10">Flight Plans</h1>
         <div className="FlightPlanShow-container flex justify-center items-center mt-10">
           <table className="w-screen bg-white shadow-md rounded-lg overflow-hidden">
@@ -76,7 +90,7 @@ const FlightPlanShow = () => {
                   <td className="p-4">{flightPlan.status}</td>
                   <td className="p-4">{flightPlan.batteryLevel}</td>
                   <td className="p-4">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={() => setView(flightPlan)}>
                       View
                     </button>
                   </td>
@@ -91,6 +105,7 @@ const FlightPlanShow = () => {
           </table>
         </div>
       </div>
+      </>)}
       <AlertSnackbar alert={Alert} setAlert={setAlert} />
     </>
   );
