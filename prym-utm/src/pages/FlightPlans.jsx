@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 // import MuiAlert from "@mui/material/Alert";
 // import AlertSnackbar from "../components/AlertSnackbar";
 import FlightPlanForm from "../components/FlightPlanAdd";
+import FlightPlanShow from "../components/FlightPlanShow";
 
 const FlightPlan = () => {
     const [comp, setComp] = useState("add");
@@ -16,12 +17,17 @@ const FlightPlan = () => {
              <button className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer "
               onClick={() => setComp("add")}
              >Add Flight</button>
-             <button className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer ">All FlightPlans</button>
+             <button className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer "
+              onClick={() => setComp("all")}
+             >All FlightPlans</button>
              <button className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer ">Add Flight</button>
           </div>
 
           {comp === "add" && (
              <FlightPlanForm/>
+          )}
+          {comp === "all" && (
+             <FlightPlanShow/>
           )}
           {/* <FlightPlanForm/> */}
        </>
