@@ -36,16 +36,37 @@ const FlightPlanShow = () => {
       <div className="FlightPlanShow w-screen h-full flex flex-col justify-center items-center bg-gray-100">
         <h1 className="text-3xl font-bold text-center mt-10">Flight Plans</h1>
         <div className="FlightPlanShow-container flex justify-center items-center mt-10">
-          <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
-            <thead>
-              <tr className="bg-gray-200">
+          <table className="w-screen bg-white shadow-md rounded-lg overflow-hidden">
+            <thead className="flex justify-between items-center gap-10 w-full ">
+              <tr className="bg-gray-200 flex justify-between items-center gap-10 w-full mx-[20px] px-[10px]">
                 <th className="p-4">ID</th>
                 <th className="p-4">Flight Name</th>
                 <th className="p-4">Date</th>
+                <th className="p-4">Status</th>
+                <th className="p-4">Battery</th>
                 <th className="p-4">Actions</th>
               </tr>
             </thead>
-            <tbody>{/* Flight Plan data will be rendered here */}</tbody>
+            <tbody>
+              {/* Flight Plan data will be rendered here */}
+              {flightPlans.map((flightPlan, index) => (
+                <tr
+                  key={index}
+                  className="flex justify-between items-center gap-10 w-full mx-[20px] px-[10px]"
+                >
+                  <td className="p-4">{flightPlan._id}</td>
+                  <td className="p-4">{flightPlan.flightName}</td>
+                  <td className="p-4">{flightPlan.flightDate}</td>
+                  <td className="p-4">{flightPlan.status}</td>
+                  <td className="p-4">{flightPlan.batteryLevel}</td>
+                  <td className="p-4">
+                    <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                      View
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
         </div>
       </div>
