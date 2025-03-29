@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import AlertSnackbar from "../components/AlertSnackbar";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
   const [step, setStep] = useState(1);
@@ -15,7 +15,7 @@ const ResetPassword = () => {
     message: "",
     severity: "info",
   });
-
+  const navigate = useNavigate();
   const showAlert = (message, severity) => {
     setAlert({ open: true, message, severity });
   };
@@ -55,14 +55,14 @@ const ResetPassword = () => {
 
   const handleResetPassword = async () => {
     try {
-      const response = await axios.post(
+      const response = await axios.put(
         "http://localhost:3000/api/auth/reset-password",
-        { email, password }
+        { email, password: newPassword }
       );
       console.log("Password reset successfully:", response.data);
       setMessage(response.data.message);
       showAlert(response.data.message, "success");
-      Navigate("/");
+      navigate("/");
     } catch (error) {
       console.log("error in resetting password:", error);
       showAlert("Error resetting password", "error");
