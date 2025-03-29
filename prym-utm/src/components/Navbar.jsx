@@ -102,6 +102,7 @@ const Navbar = ({ onSearch }) => {
       );
 
       console.log(response.data);
+      showAlert(response.data.message, "success");
       setIsRegistering(false);
       e.target.reset();
     } catch (error) {
@@ -125,6 +126,7 @@ const Navbar = ({ onSearch }) => {
       console.log(response.data);
       localStorage.setItem("accessToken", response.data.accessToken);
       localStorage.setItem("refreshToken", response.data.refreshToken);
+      showAlert("Logged in successfully", "success");
       navigate("/profile");
       e.target.reset();
     } catch (error) {
@@ -357,6 +359,10 @@ const Navbar = ({ onSearch }) => {
                       placeholder="Password"
                       className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                     />
+                     <p
+                      onClick={() => navigate('/reset-password')}
+                      className="text-blue-600 hover:text-blue-800 cursor-pointer"
+                      >forgot password</p>
                     <button
                       type="submit"
                       className="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200"

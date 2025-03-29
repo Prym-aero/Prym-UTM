@@ -8,6 +8,7 @@ const port = process.env.PORT || 3000;
 const zoneRoutes = require('./routes/zones');
 const flightPlanRoutes = require('./routes/FlightPlan');
 const AirportsRoutes = require('./routes/Airports');
+const authRoutes = require('./routes/auth');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use('/api/zones', zoneRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/flightPlan', flightPlanRoutes);
 app.use('/api/airports', AirportsRoutes);
+app.use('/api/auth', authRoutes);
 
 app.get('/', (req, res)=> {
     res.send("welcome to the prym utm api");
