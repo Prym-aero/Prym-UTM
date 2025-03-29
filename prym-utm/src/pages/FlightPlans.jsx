@@ -9,7 +9,7 @@ import FlightPlanShow from "../components/FlightPlanShow";
 
 const FlightPlan = () => {
     const [comp, setComp] = useState("add");
-    const [message, setMessage] = useState("");
+    
      return ( 
        <>
           <Navbar/>
