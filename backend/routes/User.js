@@ -1,16 +1,22 @@
 const express = require('express');
-const User = require('../models/UserModel'); 
+const User = require('../models/UserModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const authMiddleware = require('../controllers/authMiddleware');
 require('dotenv').config(); // Load environment variables
+const util = require("util");
 
 const router = express.Router();
 
 const generateToken = (userId) => {
-    const accessToken = jwt.sign({ userId }, process.env.JWT_SECRET, { expiresIn: '1h' });
-    const refreshToken = jwt.sign({ userId }, process.env.JWT_REFRESH_SECRET, { expiresIn: '7d' });
-    return { accessToken, refreshToken };
+    try {
+        const accessToken = jwt.sign({ userId: userId }, process.env.JWT_SECRET, { expiresIn: "15m" });
+        const refreshToken = jwt.sign({ userId: userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
+        return { accessToken, refreshToken };
+    } catch (error) {
+        console.error("Error generating token:", error);
+        throw new Error("Token generation failed");
+    }
 };
 
 // User Registration
@@ -39,13 +45,32 @@ router.post('/login', async (req, res) => {
     const { email, password } = req.body;
 
     try {
-        const user = await User.findOne({ email });
-        if (!user) return res.status(401).json({ message: "Invalid credentials" });
+        // console.log("🔹 Login request received for email:", email);
+
+        const user = await User.findOne({ email }).select("+password");
+        if (!user) {
+            console.error("❌ User not found:", email);
+            return res.status(401).json({ message: "Invalid credentials" });
+        }
+
+        console.log("🔹 User found:", user);
 
         const validPassword = await bcrypt.compare(password, user.password);
-        if (!validPassword) return res.status(401).json({ message: "Invalid credentials" });
+        console.log("🔹 Password comparison result:", validPassword);
 
+        if (!validPassword) {
+            console.error("❌ Invalid password for user:", email);
+            return res.status(401).json({ message: "Invalid credentials" });
+        }
+
+        console.log("🔹 Generating token...");
         const token = generateToken(user._id);
+        console.log("✅ Token generated:", token);
+
+        console.log("🔹 Storing refresh token in database...");
+        await User.updateOne({ _id: user._id }, { $set: { refreshToken: token.refreshToken } });
+        console.log("✅ Refresh token stored successfully");
+
         res.status(200).json({
             message: "Login successful",
             accessToken: token.accessToken,
@@ -53,22 +78,41 @@ router.post('/login', async (req, res) => {
         });
 
     } catch (error) {
-        console.error("Error in login:", error);
-        res.status(500).json({ message: "Internal server error" });
+        console.error("❌ Error in login:", error);
+        res.status(500).json({ message: "Internal server error", error: error.message });
     }
+
+
 });
 
+const verifyJwt = util.promisify(jwt.verify);
+
 // Refresh Token
-router.post("/refresh", (req, res) => {
-    const { refreshToken } = req.body;
-    if (!refreshToken) return res.status(401).json({ message: "No refresh token provided" });
+router.post("/refresh", async (req, res) => {
+    try {
+        const { refreshToken } = req.body;
+        if (!refreshToken) return res.status(401).json({ message: "Unauthorized" });
 
-    jwt.verify(refreshToken, process.env.JWT_REFRESH_SECRET, (err, decoded) => {
-        if (err) return res.status(403).json({ message: "Invalid or expired refresh token" });
+        // Check if the refresh token exists in the database
+        const user = await User.findOne({ refreshToken });
+        if (!user) return res.status(403).json({ message: "Unauthorized" });
 
-        const newAccessToken = jwt.sign({ userId: decoded.userId }, process.env.JWT_SECRET, { expiresIn: "15m" });
+        // Verify the refresh token
+        const decoded = await verifyJwt(refreshToken, process.env.JWT_REFRESH_SECRET);
+        if (!decoded) return res.status(403).json({ message: "Unauthorized" });
+
+        // Generate new access token
+        const newAccessToken = jwt.sign(
+            { userId: decoded.userId },
+            process.env.JWT_SECRET,
+            { expiresIn: "15m" }
+        );
+
         res.json({ accessToken: newAccessToken });
-    });
+    } catch (error) {
+        console.error("Refresh Token Error:", error);
+        res.status(500).json({ message: "Internal Server Error" });
+    }
 });
 
 // Get User Profile

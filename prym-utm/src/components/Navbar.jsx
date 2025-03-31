@@ -112,27 +112,30 @@ const Navbar = ({ onSearch }) => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    const { email, password } = e.target.elements;
+    const email = e.target.elements.email.value;
+    const password = e.target.elements.password.value;
+
+    console.log("Attempting login with:", { email, password });
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/user/login",
-        {
-          email: email.value,
-          password: password.value,
-        }
-      );
+        const response = await axios.post(
+            "http://localhost:3000/api/user/login",
+            { email, password },
+            { headers: { "Content-Type": "application/json" } } // Ensure correct headers
+        );
 
-      console.log(response.data);
-      localStorage.setItem("accessToken", response.data.accessToken);
-      localStorage.setItem("refreshToken", response.data.refreshToken);
-      showAlert("Logged in successfully", "success");
-      navigate("/profile");
-      e.target.reset();
+        console.log("Login Response:", response.data);
+        localStorage.setItem("accessToken", response.data.accessToken);
+        localStorage.setItem("refreshToken", response.data.refreshToken);
+        showAlert("Logged in successfully", "success");
+        navigate("/profile");
+        e.target.reset();
     } catch (error) {
-      console.error("Error logging in:", error);
+        console.error("Error logging in:", error.response?.data || error.message);
+        showAlert(error.response?.data?.message || "Login failed", "error");
     }
-  };
+};
+
 
   return (
     <>

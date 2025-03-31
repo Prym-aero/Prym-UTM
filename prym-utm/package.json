@@ -15,6 +15,7 @@
     "@mui/material": "^6.4.8",
     "@tailwindcss/vite": "^4.0.7",
     "axios": "^1.7.9",
+    "bcryptjs": "^3.0.2",
     "leaflet": "^1.9.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
