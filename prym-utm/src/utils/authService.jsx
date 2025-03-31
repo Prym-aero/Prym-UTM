@@ -16,7 +16,7 @@ export const refreshAccessToken = async (navigate) => {
     if (!refreshToken) return null; // No refresh token, user must log in again
 
     try {
-        const response = await axios.post("http://localhost:3000/api/user/refresh", 
+        const response = await axios.post(`"${API_URL}/user/refresh`, 
             { refreshToken }, 
             { headers: { "Content-Type": "application/json" } }
         );

@@ -29,8 +29,8 @@ const Map = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/zones");
-        console.log("Fetched Zones:", response.data); // Check the format here
+        const response = await axios.get(`${API_URL}/zones`);
+        // console.log("Fetched Zones:", response.data); // Check the format here
         setZones(response.data);
       } catch (error) {
         console.error("Error fetching zones:", error);
@@ -42,8 +42,8 @@ const Map = () => {
   useEffect(() => {
     const fetchAirports = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/airports");
-        console.log("Fetched Airports:", response.data.slice(0, 5)); // Check the format here
+        const response = await axios.get(`${API_URL}/airports`);
+        // console.log("Fetched Airports:", response.data.slice(0, 5)); // Check the format here
         setAirports(response.data);
       } catch (error) {
         console.error("Error fetching airports:", error);

@@ -24,7 +24,7 @@ const Profile = () => {
       try {
         let token = localStorage.getItem("accessToken");
         if (!token) {
-          console.error("No token found in localStorage");
+          showAlert("Login expired, please login again", "error");
           navigate("/");
           return;
         }
@@ -39,12 +39,12 @@ const Profile = () => {
           }
         }
 
-        const response = await axios.get("http://localhost:3000/api/user/profile", {
+        const response = await axios.get(`${API_URL}/user/profile`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
-        console.log("User profile fetched:", response.data);
-        showAlert("Profile fetched successfully", "success");
+        // console.log("User profile fetched:", response.data);
+        showAlert("Welcome to profile page", "success");
         setUser(response.data);
       } catch (error) {
         console.error("Error fetching user:", error.response || error.message);

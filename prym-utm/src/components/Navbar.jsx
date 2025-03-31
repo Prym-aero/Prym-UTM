@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { NavLink, useNavigate } from "react-router-dom";
 import { FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
@@ -91,7 +92,7 @@ const Navbar = ({ onSearch }) => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/user/register",
+        `${API_URL}/user/register`,
         {
           username: username.value,
           name: name.value,
@@ -120,7 +121,7 @@ const Navbar = ({ onSearch }) => {
 
     try {
         const response = await axios.post(
-            "http://localhost:3000/api/user/login",
+            `${API_URL}/user/login`,
             { email, password },
             { headers: { "Content-Type": "application/json" } } // Ensure correct headers
         );

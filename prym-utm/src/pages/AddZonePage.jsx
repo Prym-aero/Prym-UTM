@@ -58,7 +58,7 @@ function AirspaceForm() {
     // Send data to API
     try {
       const res = await axios.post(
-        "http://localhost:3000/api/zones/register",
+        `${API_URL}/zones/register`,
         formattedData
       );
       console.log("Response:", res.data);

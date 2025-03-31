@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 // import Navbar from "../components/Navbar";
 // import Snackbar from "@mui/material/Snackbar";
 // import MuiAlert from "@mui/material/Alert";
@@ -148,7 +149,7 @@ const FlightPlanForm = () => {
 
     try {
         const response = await axios.post(
-            "http://localhost:3000/api/flightPlan/addFlight",
+            `${API_URL}/flightPlan/addFlight`,
             processedFormData,
             {
                 headers: {
@@ -158,7 +159,7 @@ const FlightPlanForm = () => {
             }
         );
 
-        console.log("✅ Flight Plan Saved:", response.data);
+        // console.log("✅ Flight Plan Saved:", response.data);
         setMessage("Flight plan saved successfully!");
         showAlert("Flight plan saved successfully!", "success");
 

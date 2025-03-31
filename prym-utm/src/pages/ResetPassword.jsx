@@ -39,7 +39,7 @@ const ResetPassword = () => {
 
   const handleVerifyOTP = async () => {
     try {
-      const response = await axios.post("http://localhost:3000/api/auth/verify-otp", {
+      const response = await axios.post(`${API_URL}/auth/verify-otp`, {
         email, // Make sure email is included
         otp,   // Ensure OTP is correctly inputted
       });
@@ -57,7 +57,7 @@ const ResetPassword = () => {
   const handleResetPassword = async () => {
     try {
       const response = await axios.put(
-        "http://localhost:3000/api/auth/reset-password",
+        `${API_URL}/auth/reset-password`,
         { email, password: newPassword }
       );
       console.log("Password reset successfully:", response.data);
