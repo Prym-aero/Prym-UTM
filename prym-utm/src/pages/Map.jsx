@@ -20,7 +20,7 @@ import axios from "axios";
 import { PiDroneBold } from "react-icons/pi";
 
 const Map = () => {
-  const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
+  // const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
   const [zones, setZones] = useState([]);
   const [selectedZone, setSelectedZone] = useState(null);
   const [searchLocation, setSearchLocation] = useState("");
@@ -81,28 +81,28 @@ const Map = () => {
   }
 
   // the dummy function to show drone ont the map
-  useEffect(() => {
-    const fetchDroneData = async () => {
-      try {
-        const response = await axios.get("http://localhost:3000/api/drones");
-        console.log("Fetched data:", response.data); // Check if it's an array
-        setDrones(response.data ? response.data : []); // Ensure an array
-      } catch (error) {
-        console.error("Error fetching drones:", error);
-        setDrones([]); // Set to empty array on error
-      }
-    };
+  // useEffect(() => {
+  //   const fetchDroneData = async () => {
+  //     try {
+  //       const response = await axios.get("http://localhost:3000/api/drones");
+  //       console.log("Fetched data:", response.data); // Check if it's an array
+  //       setDrones(response.data ? response.data : []); // Ensure an array
+  //     } catch (error) {
+  //       console.error("Error fetching drones:", error);
+  //       setDrones([]); // Set to empty array on error
+  //     }
+  //   };
 
-    fetchDroneData();
-  }, []);
+  //   fetchDroneData();
+  // }, []);
 
-  const droneIcon = L.divIcon({
-    html: ReactDOMServer.renderToString(
-      <PiDroneBold size={18} color="black" />
-    ),
-    classsName: "custom-icon",
-    iconSize: [24, 24],
-  });
+  // const droneIcon = L.divIcon({
+  //   html: ReactDOMServer.renderToString(
+  //     <PiDroneBold size={18} color="black" />
+  //   ),
+  //   classsName: "custom-icon",
+  //   iconSize: [24, 24],
+  // });
 
   return (
     <>
@@ -193,7 +193,7 @@ const Map = () => {
                 </Popup>
               </Marker>
             ))}
-
+          {/* 
            {drones && drones.map((drone,index)=> (
               <Marker key={index} position={[drone.location.latitude, drone.location.longitude]} icon={droneIcon}>
                  <Popup>
@@ -204,7 +204,7 @@ const Map = () => {
                     Longitude: {drone.longitude}
                  </Popup>
               </Marker>
-           ))}
+           ))} */}
         </MapContainer>
 
         <MapSidebarTailwind />
