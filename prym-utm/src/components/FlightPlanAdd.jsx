@@ -4,8 +4,12 @@ import axios from "axios";
 // import Snackbar from "@mui/material/Snackbar";
 // import MuiAlert from "@mui/material/Alert";
 import AlertSnackbar from "../components/AlertSnackbar";
+import { isTokenExpired, refreshAccessToken } from "../utils/authService"; // Import helper functions
+import { useNavigate } from "react-router-dom";
 
 const FlightPlanForm = () => {
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     // userId: "", // User who created the flight
     flightName: "",
@@ -115,88 +119,81 @@ const FlightPlanForm = () => {
     setMessage("");
     setAlert({ open: false, message: "", severity: "info" });
 
-    const token = localStorage.getItem("accessToken");
-    if (!token) {
-      showAlert("No authentication token found. Please log in again.", "error");
-      setLoading(false);
-      return;
+    let token = localStorage.getItem("accessToken");
+
+    // ✅ Check if token is expired
+    if (isTokenExpired(token)) {
+        console.log("🔄 Access token expired, refreshing...");
+        token = await refreshAccessToken(navigate); // Get new access token
+        if (!token) {
+            showAlert("Session expired. Please log in again.", "error");
+            setLoading(false);
+            return;
+        }
     }
-
-    // ✅ Ensure `center.lat` and `center.lon` exist
-    // if (!formData.center || formData.center.lat == null || formData.center.lon == null) {
-    //     setAlert({ open: true, message: "Missing location coordinates (center.lat and center.lon)", severity: "error" });
-    //     setLoading(false);
-    //     return;
-    // }
-
-    // // ✅ Validate required fields before sending the request
-    // if (!formData.flightName || !formData.locationName || !formData.flightDate || !formData.droneId || !formData.pilotId) {
-    //     setAlert({ open: true, message: "Missing required flight details", severity: "error" });
-    //     setLoading(false);
-    //     return;
-    // }
 
     // ✅ Convert string values to Boolean and ensure default values
     const processedFormData = {
-      ...formData,
-      regulatoryApproval: Boolean(formData.regulatoryApproval),
-      safetyChecks: Boolean(formData.safetyChecks),
-      batteryLevel: formData.batteryLevel || 100, // Default battery level
-      waypoints: formData.waypoints || [], // Default to an empty array
-      status: formData.status || "pending", // Default status
-      weatherConditions: formData.weatherConditions || "Unknown",
-      emergencyFailsafe: Boolean(formData.emergencyFailsafe),
+        ...formData,
+        regulatoryApproval: Boolean(formData.regulatoryApproval),
+        safetyChecks: Boolean(formData.safetyChecks),
+        batteryLevel: formData.batteryLevel || 100,
+        waypoints: formData.waypoints || [],
+        status: formData.status || "pending",
+        weatherConditions: formData.weatherConditions || "Unknown",
+        emergencyFailsafe: Boolean(formData.emergencyFailsafe),
     };
 
-    console.log("🚀 Sending Data:", processedFormData); // Debugging Log
+    console.log("🚀 Sending Data:", processedFormData);
 
     try {
-      const response = await axios.post(
-        "http://localhost:3000/api/flightPlan/addFlight",
-        processedFormData,
-        {
-          headers: {
-            Authorization: `Bearer ${token}`,
-            "Content-Type": "application/json",
-          },
-        }
-      );
+        const response = await axios.post(
+            "http://localhost:3000/api/flightPlan/addFlight",
+            processedFormData,
+            {
+                headers: {
+                    Authorization: `Bearer ${token}`,  // ✅ Use refreshed token
+                    "Content-Type": "application/json",
+                },
+            }
+        );
 
-      console.log("✅ Flight Plan Saved:", response.data);
-      setMessage("Flight plan saved successfully!");
-      showAlert("Flight plan saved successfully!","success");
+        console.log("✅ Flight Plan Saved:", response.data);
+        setMessage("Flight plan saved successfully!");
+        showAlert("Flight plan saved successfully!", "success");
 
-      // ✅ Reset form data with default values
-      setFormData({
-        flightName: "",
-        locationName: "",
-        center: { lat: 0, lon: 0 }, // Default center values
-        radius: 0,
-        altitude: 0,
-        speed: 0,
-        duration: 0,
-        flightDate: "",
-        droneId: "",
-        droneModel: "",
-        batteryLevel: 100,
-        waypoints: [],
-        pilotId: "",
-        pilotName: "",
-        status: "pending",
-        regulatoryApproval: false,
-        safetyChecks: false,
-        weatherConditions: "Unknown",
-        emergencyFailsafe: false,
-        logs: [],
-        notes: "",
-      });
+        // ✅ Reset form data with default values
+        setFormData({
+            flightName: "",
+            locationName: "",
+            center: { lat: 0, lon: 0 },
+            radius: 0,
+            altitude: 0,
+            speed: 0,
+            duration: 0,
+            flightDate: "",
+            droneId: "",
+            droneModel: "",
+            batteryLevel: 100,
+            waypoints: [],
+            pilotId: "",
+            pilotName: "",
+            status: "pending",
+            regulatoryApproval: false,
+            safetyChecks: false,
+            weatherConditions: "Unknown",
+            emergencyFailsafe: false,
+            logs: [],
+            notes: "",
+        });
     } catch (err) {
-      console.error("🚨 Error:", err.response?.data || err.message);
-     showAlert("Error: " + (err.response?.data?.message || "Something went wrong"), "error");
+        console.error("🚨 Error:", err.response?.data || err.message);
+        showAlert("Error: " + (err.response?.data?.message || "Something went wrong"), "error");
     } finally {
-      setLoading(false);
+        setLoading(false);
     }
-  };
+};
+
 
   return (
     <>

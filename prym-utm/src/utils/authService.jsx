@@ -11,7 +11,7 @@ export const isTokenExpired = (token) => {
     }
 };
 
-export const refreshAccessToken = async (navigate) => { // Accept navigate as a parameter
+export const refreshAccessToken = async (navigate) => {
     const refreshToken = localStorage.getItem("refreshToken");
     if (!refreshToken) return null; // No refresh token, user must log in again
 
@@ -26,14 +26,19 @@ export const refreshAccessToken = async (navigate) => { // Accept navigate as a 
         }
 
         const { accessToken } = response.data;
-        localStorage.setItem("accessToken", accessToken); // Store new token
+        localStorage.setItem("accessToken", accessToken); // ✅ Store new token
         return accessToken;
     } catch (error) {
-        console.error("Refresh failed:", error.response?.data || error.message);
-        localStorage.removeItem("accessToken");
-        localStorage.removeItem("refreshToken");
-        alert("Session expired, please log in again.");
-        navigate('/'); // Redirect to login page
+        console.error("🚨 Refresh failed:", error.response?.data || error.message);
+
+        if (error.response?.status === 403 || error.response?.status === 401) {
+            // If the error is due to an invalid/expired refresh token
+            localStorage.removeItem("accessToken");
+            localStorage.removeItem("refreshToken");
+            alert("Session expired, please log in again.");
+            navigate('/'); // Redirect to login page
+        }
+
         return null;
     }
 };

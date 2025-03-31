@@ -10,7 +10,7 @@ const router = express.Router();
 
 const generateToken = (userId) => {
     try {
-        const accessToken = jwt.sign({ userId: userId }, process.env.JWT_SECRET, { expiresIn: "15m" });
+        const accessToken = jwt.sign({ userId: userId }, process.env.JWT_SECRET, { expiresIn: "1h" });
         const refreshToken = jwt.sign({ userId: userId }, process.env.JWT_SECRET, { expiresIn: "7d" });
         return { accessToken, refreshToken };
     } catch (error) {
