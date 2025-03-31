@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 function AirspaceForm() {
   const [airspaceData, setAirspaceData] = useState({
     type: "",

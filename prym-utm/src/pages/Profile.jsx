@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import AlertSnackbar from "../components/AlertSnackbar";
 import { isTokenExpired, refreshAccessToken } from "../utils/authService"; // Import helper functions
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 
 const Profile = () => {
   const [user, setUser] = useState(null);

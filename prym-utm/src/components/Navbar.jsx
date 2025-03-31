@@ -77,7 +77,7 @@ const Navbar = ({ onSearch }) => {
           console.log("Location:", parseFloat(lat), parseFloat(lon));
           onSearch([parseFloat(lat), parseFloat(lon)]);
         } else {
-          console.log("No results found for this location.");
+          showAlert("Location not found", "info");
         }
       } catch (error) {
         console.log("Error in fetching the location:", error);
@@ -101,12 +101,13 @@ const Navbar = ({ onSearch }) => {
         }
       );
 
-      console.log(response.data);
+      // console.log(response.data);
       showAlert(response.data.message, "success");
       setIsRegistering(false);
       e.target.reset();
     } catch (error) {
-      console.error("Error registering user:", error);
+      // console.error("Error registering user:", error);
+      showAlert(error.response?.data?.message || "Registration failed", "error");
     }
   };
 
@@ -115,7 +116,7 @@ const Navbar = ({ onSearch }) => {
     const email = e.target.elements.email.value;
     const password = e.target.elements.password.value;
 
-    console.log("Attempting login with:", { email, password });
+    // console.log("Attempting login with:", { email, password });
 
     try {
         const response = await axios.post(
@@ -124,14 +125,14 @@ const Navbar = ({ onSearch }) => {
             { headers: { "Content-Type": "application/json" } } // Ensure correct headers
         );
 
-        console.log("Login Response:", response.data);
+        // console.log("Login Response:", response.data);
         localStorage.setItem("accessToken", response.data.accessToken);
         localStorage.setItem("refreshToken", response.data.refreshToken);
         showAlert("Logged in successfully", "success");
         navigate("/profile");
         e.target.reset();
     } catch (error) {
-        console.error("Error logging in:", error.response?.data || error.message);
+        // console.error("Error logging in:", error.response?.data || error.message);
         showAlert(error.response?.data?.message || "Login failed", "error");
     }
 };

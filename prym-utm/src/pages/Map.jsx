@@ -1,8 +1,9 @@
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { IoClose } from "react-icons/io5";
 import { TbBuildingAirport } from "react-icons/tb";
 import L from "leaflet";
 import React, { useState, useEffect } from "react";
-import ReactDOMServer from 'react-dom/server';
+import ReactDOMServer from "react-dom/server";
 import Navbar from "../components/Navbar";
 import CursorCoordinates from "../components/CursorCoordinates";
 import {
@@ -16,13 +17,14 @@ import {
 } from "react-leaflet";
 import MapSidebarTailwind from "../components/MapSidebarTailwind";
 import axios from "axios";
+import { PiDroneBold } from "react-icons/pi";
 
 const Map = () => {
+  const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
   const [zones, setZones] = useState([]);
   const [selectedZone, setSelectedZone] = useState(null);
   const [searchLocation, setSearchLocation] = useState("");
   const [Airports, setAirports] = useState([]);
-
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,17 +40,16 @@ const Map = () => {
   }, []);
 
   useEffect(() => {
-      const fetchAirports = async () => {
-          try {
-            const response = await axios.get("http://localhost:3000/api/airports");
-            console.log("Fetched Airports:", response.data.slice(0, 5)); // Check the format here
-            setAirports(response.data);
-            
-          } catch (error) {
-            console.error("Error fetching airports:", error);
-          }
-      };
-      fetchAirports();
+    const fetchAirports = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/airports");
+        console.log("Fetched Airports:", response.data.slice(0, 5)); // Check the format here
+        setAirports(response.data);
+      } catch (error) {
+        console.error("Error fetching airports:", error);
+      }
+    };
+    fetchAirports();
   }, []);
 
   const zoneInfo = (zone) => {
@@ -56,9 +57,12 @@ const Map = () => {
   };
 
   const airportIcon = L.divIcon({
-    html: ReactDOMServer.renderToString(<TbBuildingAirport size={18} color="red" />),
+    html: ReactDOMServer.renderToString(
+      <TbBuildingAirport size={18} color="red" />
+    ),
     className: "custom-icon",
     iconSize: [24, 24],
+    backgroundColor: "white",
   });
 
   function SetViewOnSearch({ coords }) {
@@ -75,6 +79,31 @@ const Map = () => {
 
     return null;
   }
+
+  // the dummy function to show drone ont the map
+  useEffect(() => {
+    const fetchDroneData = async () => {
+      try {
+        const response = await axios.get("http://localhost:3000/api/drones");
+        console.log("Fetched data:", response.data); // Check if it's an array
+        setDrones(response.data ? response.data : []); // Ensure an array
+      } catch (error) {
+        console.error("Error fetching drones:", error);
+        setDrones([]); // Set to empty array on error
+      }
+    };
+
+    fetchDroneData();
+  }, []);
+
+  const droneIcon = L.divIcon({
+    html: ReactDOMServer.renderToString(
+      <PiDroneBold size={18} color="black" />
+    ),
+    classsName: "custom-icon",
+    iconSize: [24, 24],
+  });
+
   return (
     <>
       <Navbar onSearch={setSearchLocation} />
@@ -164,6 +193,18 @@ const Map = () => {
                 </Popup>
               </Marker>
             ))}
+
+           {drones && drones.map((drone,index)=> (
+              <Marker key={index} position={[drone.location.latitude, drone.location.longitude]} icon={droneIcon}>
+                 <Popup>
+                    <strong>Drone ID: {drone.droneName}</strong>
+                    <br />
+                    Latitude: {drone.latitude}
+                    <br />
+                    Longitude: {drone.longitude}
+                 </Popup>
+              </Marker>
+           ))}
         </MapContainer>
 
         <MapSidebarTailwind />

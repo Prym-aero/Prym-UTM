@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import AlertSnackbar from "../components/AlertSnackbar";
 import { useNavigate } from "react-router-dom";
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 
 const ResetPassword = () => {
   const [step, setStep] = useState(1);
@@ -23,7 +24,7 @@ const ResetPassword = () => {
   const handleSendOtp = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/auth/forgot-password",
+        `${API_URL}/auth/forgot-password`,
         { email }
       );
       console.log("OTP sent successfully:", response.data);

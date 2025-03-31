@@ -31,7 +31,7 @@ const AlertSnackbar = ({ alert, setAlert }) => {
       TransitionComponent={TransitionLeft}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
     >
-      <div style={{ width: "300px" }}>
+      <div style={{ width: "340px" }}>
         <MuiAlert
           elevation={6}
           variant="filled"
