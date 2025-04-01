@@ -3,7 +3,7 @@ import mongoose from "mongoose";
 const droneSchema = new mongoose.Schema({
   droneName: String,
   uin: { type: String, unique: true, required: true },
-  droneStatus: { type: String, enum: ["Active", "Inactive", "Flying", "Repair", "Crashed"] },
+  droneStatus: { type: String, enum: ["Active", "Inactive", "Flying", "Repair", "Crashed"], default: "Inactive" },
   droneType: String,
   manufacture: String,
   deploymentDate: { type: String, required: true } ,
