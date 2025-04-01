@@ -60,7 +60,7 @@ const ResetPassword = () => {
         `${API_URL}/auth/reset-password`,
         { email, password: newPassword }
       );
-      console.log("Password reset successfully:", response.data);
+      // console.log("Password reset successfully:", response.data);
       setMessage(response.data.message);
       showAlert(response.data.message, "success");
       navigate("/");

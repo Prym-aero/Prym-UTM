@@ -60,11 +60,10 @@ const FlightPlanShow = () => {
       {view ? (
         <>
           <div className="w-screen h-full flex flex-col justify-center items-center bg-gray-100">
-            <h1>{view._id}</h1>
-            <h1>{view.flightName}</h1>
-            <h1>{view.flightDate}</h1>
-            <h1>{view.status}</h1>
-            <button onClick={() => setView(null)}>Close</button>
+              <h1 className="text-4xl text-orange-400 font-bold ">Flight Detail</h1>
+              <div className="details grid grid-cols-3 gap-2.5 " >
+                 <div className="flight-detail "></div>
+              </div>
           </div>
         </>
       ) : (
