@@ -1,15 +1,14 @@
 import axios from "axios";
-import { useState} from "react";
+import { useState } from "react";
 import AlertSnackbar from "./AlertSnackbar";
 const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { isTokenExpired, refreshAccessToken } from "../utils/authService"; // Import helper functions
 import { useNavigate } from "react-router-dom";
 
-
 const DroneAdd = () => {
   const [droneData, setDroneData] = useState({
     droneName: "",
-    // uin: "",
+    uin: "",
     droneStatus: "Inactive",
     droneTypeq: "",
     manufacture: "",
@@ -108,7 +107,7 @@ const DroneAdd = () => {
 
     try {
       const response = await axios.post(
-        `${API_URL}/drones/register`,
+        `${API_URL}/drones/add-drone`,
         formattedData,
         {
           headers: {
@@ -120,7 +119,7 @@ const DroneAdd = () => {
       showAlert("Drone added successfully", "success");
       setDroneData({
         droneName: "",
-        // uin: "",
+        uin: "",
         droneStatus: "Inactive",
         droneTypeq: "",
         manufacture: "",
@@ -182,10 +181,22 @@ const DroneAdd = () => {
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 />
               </div>
-              {/* <div className="mb-4">
-                                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="uin">UIN</label>
-                                <input type="text" name="uin" value={droneData.uin} onChange={handleChange} required className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" />
-                            </div> */}
+              <div className="mb-4">
+                <label
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                  htmlFor="uin"
+                >
+                  UIN
+                </label>
+                <input
+                  type="text"
+                  name="uin"
+                  value={droneData.uin}
+                  onChange={handleChange}
+                  required
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                />
+              </div>
               <div className="mb-4">
                 <label
                   className="block text-gray-700 text-sm font-bold mb-2"

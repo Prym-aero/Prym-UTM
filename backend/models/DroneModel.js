@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
 
 const droneSchema = new mongoose.Schema({
   droneName: String,
@@ -35,5 +35,4 @@ const droneSchema = new mongoose.Schema({
   image: { type: String }, // Directly store Base64 image string
 }, { timestamps: true });
 
-export default mongoose.model("Drone", droneSchema);
-
+module.exports = mongoose.model("Drone", droneSchema);

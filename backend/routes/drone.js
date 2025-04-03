@@ -32,9 +32,7 @@ router.post('/add-drone',authMiddleware, async (req, res) => { // this route is 
     try {
         const { uin, droneSerialNumber, image } = req.body;
 
-        const existedDrone = await Drone.findOne({
-            $or: [uin, droneSerialNumber]
-        });
+        const existedDrone = await Drone.findOne({uin});
 
         if (existedDrone) {
             return res.status(400).json({message: "Drone already exists"});
