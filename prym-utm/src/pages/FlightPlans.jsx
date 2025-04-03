@@ -1,5 +1,4 @@
 import { useState} from "react";
-const API_URL = import.meta.env.VITE_API_ENDPOINT;
 // import axios from "axios";
 import Navbar from "../components/Navbar";
 // import Snackbar from "@mui/material/Snackbar";

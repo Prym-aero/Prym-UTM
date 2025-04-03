@@ -25,6 +25,7 @@ const Map = () => {
   const [selectedZone, setSelectedZone] = useState(null);
   const [searchLocation, setSearchLocation] = useState("");
   const [Airports, setAirports] = useState([]);
+  const [ActiveIndex, setActiveIndex] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -55,6 +56,10 @@ const Map = () => {
   const zoneInfo = (zone) => {
     setSelectedZone(zone);
   };
+
+  const activeZone = (index) => {
+     setActiveIndex(index);
+  }
 
   const airportIcon = L.divIcon({
     html: ReactDOMServer.renderToString(
@@ -143,10 +148,14 @@ const Map = () => {
                   key={index}
                   center={[zone.center[0], zone.center[1]]}
                   radius={zone.radius || 1000} // Default radius if missing
-                  color="transparent"
+                  color={ActiveIndex === index ? zone.airspace : "transparent"}
                   fillColor={zone.airspace}
                   fillOpacity={0.5}
-                  eventHandlers={{ click: () => zoneInfo(zone) }}
+                  eventHandlers={{ click: () => {
+                     zoneInfo(zone);
+                     activeZone(index);
+                     
+                  }}}
                 />
               );
             } else if (
@@ -166,7 +175,7 @@ const Map = () => {
                   <Polygon
                     key={index}
                     positions={validVertices}
-                    color="transparent"
+                    color={zone.airspace}
                     fillColor={zone.airspace}
                     fillOpacity={0.5}
                     eventHandlers={{ click: () => zoneInfo(zone) }}

@@ -55,3 +55,5 @@ router.post('/add-drone',authMiddleware, async (req, res) => { // this route is 
     }
 });
 
+module.exports = router;
+

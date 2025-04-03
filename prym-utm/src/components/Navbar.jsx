@@ -27,11 +27,11 @@ const Navbar = ({ onSearch }) => {
     open: false,
     message: "",
     severity: "info",
-  })
+  });
 
   const showAlert = (message, severity) => {
-    setAlert({open: true, message, severity});
-  }
+    setAlert({ open: true, message, severity });
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -91,16 +91,13 @@ const Navbar = ({ onSearch }) => {
     const { username, name, email, password, role } = e.target.elements;
 
     try {
-      const response = await axios.post(
-        `${API_URL}/user/register`,
-        {
-          username: username.value,
-          name: name.value,
-          email: email.value,
-          password: password.value,
-          role: role.value,
-        }
-      );
+      const response = await axios.post(`${API_URL}/user/register`, {
+        username: username.value,
+        name: name.value,
+        email: email.value,
+        password: password.value,
+        role: role.value,
+      });
 
       // console.log(response.data);
       showAlert(response.data.message, "success");
@@ -108,7 +105,10 @@ const Navbar = ({ onSearch }) => {
       e.target.reset();
     } catch (error) {
       // console.error("Error registering user:", error);
-      showAlert(error.response?.data?.message || "Registration failed", "error");
+      showAlert(
+        error.response?.data?.message || "Registration failed",
+        "error"
+      );
     }
   };
 
@@ -120,24 +120,23 @@ const Navbar = ({ onSearch }) => {
     // console.log("Attempting login with:", { email, password });
 
     try {
-        const response = await axios.post(
-            `${API_URL}/user/login`,
-            { email, password },
-            { headers: { "Content-Type": "application/json" } } // Ensure correct headers
-        );
+      const response = await axios.post(
+        `${API_URL}/user/login`,
+        { email, password },
+        { headers: { "Content-Type": "application/json" } } // Ensure correct headers
+      );
 
-        // console.log("Login Response:", response.data);
-        localStorage.setItem("accessToken", response.data.accessToken);
-        localStorage.setItem("refreshToken", response.data.refreshToken);
-        showAlert("Logged in successfully", "success");
-        navigate("/profile");
-        e.target.reset();
+      // console.log("Login Response:", response.data);
+      localStorage.setItem("accessToken", response.data.accessToken);
+      localStorage.setItem("refreshToken", response.data.refreshToken);
+      showAlert("Logged in successfully", "success");
+      navigate("/profile");
+      e.target.reset();
     } catch (error) {
-        // console.error("Error logging in:", error.response?.data || error.message);
-        showAlert(error.response?.data?.message || "Login failed", "error");
+      // console.error("Error logging in:", error.response?.data || error.message);
+      showAlert(error.response?.data?.message || "Login failed", "error");
     }
-};
-
+  };
 
   return (
     <>
@@ -241,13 +240,15 @@ const Navbar = ({ onSearch }) => {
           <div>
             <p className="font-bold">My Records</p>
 
-            <div className="mt-6 hover:opacity-70 flex justify-between items-center cursor-pointer">
-              <div className="flex gap-3 items-center">
-                <MdFlight className="rotate-[85deg] text-[1.4rem]" />
-                <p>Aircraft</p>
+            <NavLink to="/drone">
+              <div className="mt-6 hover:opacity-70 flex justify-between items-center cursor-pointer">
+                <div className="flex gap-3 items-center">
+                  <MdFlight className="rotate-[85deg] text-[1.4rem]" />
+                  <p>Aircraft</p>
+                </div>
+                <RiArrowRightSLine className="text-[1.4rem]" />
               </div>
-              <RiArrowRightSLine className="text-[1.4rem]" />
-            </div>
+            </NavLink>
 
             <div className="mt-6 hover:opacity-70 flex justify-between items-center cursor-pointer">
               <div className="flex gap-3 items-center">
@@ -364,10 +365,12 @@ const Navbar = ({ onSearch }) => {
                       placeholder="Password"
                       className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                     />
-                     <p
-                      onClick={() => navigate('/reset-password')}
-                      className="text-blue-600 hover:text-blue-800 cursor-pointer"
-                      >forgot password</p>
+                    <p
+                      onClick={() => navigate("/reset-password")}
+                      className="text-blue-600 hover:text-blue-800 cursor-pointer underline "
+                    >
+                      forgot password
+                    </p>
                     <button
                       type="submit"
                       className="bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition duration-200"
@@ -380,7 +383,7 @@ const Navbar = ({ onSearch }) => {
                 <div className="mt-4">
                   <button
                     onClick={() => setIsRegistering(!isRegistering)}
-                    className="text-blue-600 hover:text-blue-800"
+                    className="text-blue-600 hover:text-blue-800 cursor-pointer"
                   >
                     {isRegistering
                       ? "Already have an account? Login"
