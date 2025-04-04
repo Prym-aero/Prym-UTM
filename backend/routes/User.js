@@ -131,25 +131,27 @@ router.get('/profile', authMiddleware, async (req, res) => {
 });
 
 // Update Profile
-router.put('/profile', authMiddleware, async (req, res) => {
-    const { userId } = req.user;
-    const { name, email } = req.body;
+router.put('/update', authMiddleware, async (req, res) => {
+    const {userId} = req.user;
+    const updates = req.body;
 
     try {
-        const existingEmail = await User.findOne({ email });
-        if (existingEmail && existingEmail._id.toString() !== userId) {
-            return res.status(400).json({ message: "Email already in use" });
-        }
+        const UpdatedUser = await User.findByIdAndUpdate(
+            userId,
+            {$set:updates},
+            { new: true, runValidators: true }
 
-        const user = await User.findByIdAndUpdate(userId, { name, email }, { new: true }).select('-password');
-        if (!user) return res.status(404).json({ message: "User not found" });
+        );
 
-        res.status(200).json({ message: "Profile updated successfully", user });
+        if (!UpdatedUser) return res.status(404).json({message: "User not foundd"});
+        res.status(200).json({message: "User updated successfully", user: UpdatedUser});
     } catch (error) {
-        console.error("Error updating profile:", error);
-        res.status(500).json({ message: "Internal server error" });
+        console.error("Error updating user:", error);
+        res.status(500).json({message: "Internal server error"});
     }
-});
+    
+
+})
 
 // Delete Profile
 router.delete('/profile', authMiddleware, async (req, res) => {
