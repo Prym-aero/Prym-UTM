@@ -8,6 +8,7 @@ const userSchema = new mongoose.Schema({
     role: { type: String, enum: ["admin", "user"], default: "user" },
     isVerified: { type: Boolean, default: false }, // Tracks if email is verified
     refreshToken: { type: String, default: null }, // Stores the refresh token
+    image: {type:String} //to store the iamge in base64 form
 }, { timestamps: true });
 
 const User = mongoose.models.User || mongoose.model('User', userSchema);
