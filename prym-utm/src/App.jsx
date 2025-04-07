@@ -5,6 +5,7 @@ import Profile from './pages/Profile';
 import FlightPlan from './pages/FlightPlans';
 import ResetPassword from './pages/ResetPassword';
 import Drone from './pages/Drone';
+import WebSocketChat from './pages/WebSocketChat';
 import './App.css'
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/flightPlan' element={<FlightPlan/>}/>
         <Route path='/reset-password' element={<ResetPassword/>}/>
         <Route path='/drone' element={<Drone/>}/>
+        <Route path='/webchat' element={<WebSocketChat/>}/>
       </Routes>
     </BrowserRouter>
   )

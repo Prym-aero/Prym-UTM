@@ -12,6 +12,12 @@ const authRoutes = require('./routes/auth');
 const droneRoutes = require('./routes/drone');
 
 const app = express();
+const WebSocket = require('ws');   
+const http = require('http');
+const server = http.createServer(app);
+
+const wss = new WebSocket.Server({server}); 
+
 
 
 app.use(cors());
@@ -31,6 +37,31 @@ app.get('/', (req, res)=> {
 })
 
 
-app.listen(port, () => {
+
+
+// websocket login goes here 
+wss.on('connection', (ws) => {
+    console.log('✅ WebSocket client connected');
+
+    ws.on('message', (message) => {
+        console.log('📨 Received:', message.toString());
+
+        // ✅ Broadcast to all connected clients
+        wss.clients.forEach((client) => {
+            if (client.readyState === WebSocket.OPEN) {
+                client.send(message.toString());
+            }
+        });
+    });
+
+    ws.on('close', () => {
+        console.log('❌ WebSocket client disconnected');
+    });
+});
+
+
+
+server.listen(port, () => {
     console.log(`server running on http://localhost:${port}`);
+    console.log(`websocket server running on ws://localhost:${port}`);
 });
