@@ -16,6 +16,8 @@ const FlightPlanShow = () => {
     setAlert({ open: true, message, severity });
   };
 
+  const [query, setQuery] = useState("");
+
   const handleDeleteFlightPlan = async (flightPlanId) => {
     try {
       const response = await axios.delete(
@@ -33,6 +35,37 @@ const FlightPlanShow = () => {
       // console.error("Error deleting flight plan:", error);
       showAlert("Login to perform any operation", "error");
     }
+  };
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      searchFlightPlans(query);
+    }
+  };
+
+  const searchFlightPlans = async (query) => {
+    setLoading(true);
+
+    const value = query.toLowerCase().trim();
+
+    const searchValues = flightPlans.filter((flightPlan) => {
+      const name = flightPlan.flightName?.toString().toLowerCase();
+      const date = flightPlan.flightDate?.toString().toLowerCase();
+      const status = flightPlan.status?.toString().toLowerCase();
+      const battery = flightPlan.batteryLevel?.toString().toLowerCase();
+
+      return (
+        name.includes(value) ||
+        date.includes(value) ||
+        status.includes(value) ||
+        battery.includes(value)
+      );
+    });
+
+    setFlightPlans(searchValues);
+    setLoading(false);
+    setQuery("");
   };
 
   useEffect(() => {
@@ -60,14 +93,34 @@ const FlightPlanShow = () => {
       {view ? (
         <>
           <div className="w-screen h-full flex flex-col justify-center items-center bg-gray-100">
-              <h1 className="text-4xl text-orange-400 font-bold ">Flight Detail</h1>
-              <div className="details grid grid-cols-3 gap-2.5 " >
-                 <div className="flight-detail "></div>
-              </div>
+            <h1 className="text-4xl text-orange-400 font-bold ">
+              Flight Detail
+            </h1>
+            <div className="details grid grid-cols-3 gap-2.5 ">
+              <div className="flight-detail "></div>
+            </div>
           </div>
         </>
       ) : (
         <>
+          <div className="searchBar flex items-center gap-4">
+            <div className="flex items-center">
+              <input
+                type="text"
+                placeholder="Search location..."
+                className="p-2 rounded-l-md bg-gray-500 focus:border-black focus:outline-none"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={handleSearch}
+              />
+              <button
+                className="bg-gray-200 px-4 py-2 rounded-r-md"
+                onClick={() => searchFlightPlans(query)}
+              >
+                🔍
+              </button>
+            </div>
+          </div>
           <div className="FlightPlanShow w-screen h-full flex flex-col justify-center items-center bg-gray-100">
             <h1 className="text-3xl font-bold text-center mt-10">
               Flight Plans
