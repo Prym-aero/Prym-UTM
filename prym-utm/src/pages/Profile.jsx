@@ -118,7 +118,7 @@ const Profile = () => {
             <div className="profile w-full h-full flex flex-col justify-start items-center mx-15 gap-10 p-10 ">
               <div className="profile-card w-full h-[180px] mx-10  border-black border-[2px] rounded-3xl p-10  flex justify-evenly items-center">
                 <div className="left-side w-[15%] h-full flex justify-center items-center ">
-                  <div className="profile-img w-[150px] h-[150px] rounded-full bg-black">
+                  <div className="profile-img w-[150px] h-[150px] rounded-full  ">
                      <img
                       src={user.image}
                       alt="profile"
