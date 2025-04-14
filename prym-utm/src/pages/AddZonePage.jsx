@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 const API_URL = import.meta.env.VITE_API_ENDPOINT;
+import AlertSnackbar from "../components/AlertSnackbar";
 function AirspaceForm() {
   const [airspaceData, setAirspaceData] = useState({
     type: "",
@@ -18,6 +19,18 @@ function AirspaceForm() {
 
   const [loading, setLoading] = useState(false);
   const [view, setView] = useState("add");
+  const [allZones, setAllZones] = useState([]); 
+  const [viewing, setViewing] = useState(null); // State to hold the zone being viewed
+
+ const [Alert, setAlert] = useState({
+     open: false,
+     message: "",
+     severity: "info",
+   });
+ 
+   const showAlert = (message, severity) => {
+     setAlert({ open: true, message, severity });
+   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -35,6 +48,24 @@ function AirspaceForm() {
       setAirspaceData({ ...airspaceData, [name]: value });
     }
   };
+
+  useEffect(()=> {
+    const fetchZone = async () => {
+        try {
+            const response = await axios.get(`${API_URL}/zones`, {
+                headers: {Authorization: `Bearer ${localStorage.getItem('accessToken')}`}
+            });
+
+            setAllZones(response.data);
+            showAlert("Zones fetched successfully", "success");   
+        } catch (error) {
+           console.error("error fetching zones", error);
+           showAlert("Error in fetching zones", "error");
+        }
+    }
+
+    fetchZone();
+  },[])
 
   // Convert and submit data
   const handleSubmit = async (e) => {
@@ -60,21 +91,53 @@ function AirspaceForm() {
     try {
       const res = await axios.post(`${API_URL}/zones/register`, formattedData);
       console.log("Response:", res.data);
-      alert("Zone added successfully!");
+     showAlert("Zone Added successfully", "success");
     } catch (error) {
       console.error("Error:", error);
-      alert("Error adding zone.");
+      showAlert("Error adding zone.", "error");
     } finally {
       setLoading(false);
     }
   };
 
+  // Delete zone
+  const handleDeletezone = async (zoneId) => {
+     try {
+        const response = await axios.delete(`${API_URL}/zones/${zoneId}`, {
+           headers: { Authorization: `Bearer ${localStorage.getItem('accessToken')}` },
+        });
+
+        console.log("Zone deleted successfully:", response.data);
+        showAlert("Zone deleted successfully", "success");
+        setAllZones(allZones.filter((zone) => zone._id !== zoneId));
+     } catch (error) {
+        console.error("Error deleting zone:", error);
+        showAlert("Error deleting zone", "error");
+     }
+
+  }
+
   return (
     <>
-      <Navbar/>
+      <Navbar />
+
+      <div className="Flight-btn flex justify-evenly items-center w-[750px] h-[100px] mt-20 ">
+        <button
+          className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer "
+          onClick={() => setView("add")}
+        >
+          Add Zone
+        </button>
+        <button
+          className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer "
+          onClick={() => setView("all")}
+        >
+          All Zones
+        </button>
+      </div>
 
       {view === "add" && (
-        <div className="w-screen h-screen  flex justify-center items-center">
+        <div className="w-screen h-screen flex justify-center items-center">
           <form
             onSubmit={handleSubmit}
             className="w-[550px] p-6 bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl border border-black/20 flex flex-col space-y-6"
@@ -185,6 +248,58 @@ function AirspaceForm() {
           </form>
         </div>
       )}
+
+      {view === "all" && (
+        <div className="zoneShow w-screen h-full flex flex-col justify-center items-center bg-gray-100">
+          <h1 className="text-3xl font-bold text-center mt-10">Zone Details</h1>
+          <div className="zoneShow-container flex justify-center items-center mt-10">
+            <table className="w-screen bg-white shadow-md rounded-lg overflow-hidden">
+              <thead className="flex justify-between items-center gap-10 w-full ">
+                <tr className="bg-gray-200 flex justify-between items-center gap-10 w-full mx-[20px] px-[10px]">
+                  <th className="p-4">Type</th>
+                  <th className="p-4">Zone Name</th>
+                  <th className="p-4">Location</th>
+                  <th className="p-4">Vertical limits</th>
+                  <th className="p-4">Airspace</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* Flight Plan data will be rendered here */}
+                {allZones.map((zone, index) => (
+                  <tr
+                    key={index}
+                    className="flex justify-between items-center gap-10 w-full mx-[20px] px-[10px]"
+                  >
+                    <td className="p-4">{zone.type}</td>
+                    <td className="p-4">{zone.name}</td>
+                    <td className="p-4">{zone.location}</td>
+                    <td className="p-4">{zone.verticalLimits}</td>
+                    <td className="p-4">{zone.airspace}</td>
+                    <td className="p-4">
+                      <button
+                        className="bg-blue-500 text-white px-4 py-2 rounded"
+                        onClick={() => setViewing(zone)}
+                      >
+                        View
+                      </button>
+                    </td>
+                    <td className="p-4">
+                      <button
+                        className="bg-red-500 text-white px-4 py-2 rounded"
+                        onClick={() => handleDeletezone(zone._id)}
+                      >
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
+
+      <AlertSnackbar alert={Alert} setAlert={setAlert}/>
     </>
   );
 }
