@@ -202,7 +202,7 @@ const FlightPlanForm = () => {
       <div className="w-screen h-full flex flex-col justify-center items-center  ">
         <div className="flight-form w-full bg-blue-200 h-[900px] ">
           <form
-            className="w-full h-full bg-pink-100 p-8 rounded-lg shadow-lg grid grid-cols-2 gap-x-6 gap-y-4"
+            className="w-full h-full bg-yellow-400 p-8 rounded-lg shadow-lg grid grid-cols-2 gap-x-6 gap-y-4"
             onSubmit={handleSubmit}
           >
             {/* Flight Name */}
