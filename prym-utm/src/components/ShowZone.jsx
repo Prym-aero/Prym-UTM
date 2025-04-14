@@ -76,7 +76,7 @@ const ShowZone = () => {
 
     return (
     <>
-        <div className="zoneshow w-[100vw]"></div>
+        <div className="zoneshow w-[100vw] "></div>
     </>
     )
 };
