@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Zone = require('../models/zoneModel');
+const authMiddleware = require('../controllers/authMiddleware');
 
 router.use(express.json());
 
@@ -14,7 +15,7 @@ router.get('/', async (req, res)=> {
     }
 });
 
-router.post('/register', async (req, res)=> {
+router.post('/register',async (req, res)=> {
     try {
         const zone = new Zone(req.body);
         const savedZone = await zone.save();
@@ -25,6 +26,21 @@ router.post('/register', async (req, res)=> {
     }
 });
 
+router.delete('/:id',authMiddleware, async (req, res) => {
+    try {
+        const zoneId = req.params.id;
+        const deletedZone = await Zone.findByIdAndDelete(zoneId);
+
+        if (!deletedZone) {
+            res.status(404).json({error: "Zone not found"});
+        }
+
+        res.status(200).json({message: "Zone deleted successfully"});
+
+    } catch (error) {
+        res.status(500).json({error: "Error deleting zone"});
+    }
+} )
 
 module.exports = router;
 

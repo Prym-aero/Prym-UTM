@@ -261,6 +261,8 @@ function AirspaceForm() {
                   <th className="p-4">Location</th>
                   <th className="p-4">Vertical limits</th>
                   <th className="p-4">Airspace</th>
+                  <th className="p-4">Details</th>
+                  <th className="p-4">Delete</th>
                 </tr>
               </thead>
               <tbody>
