@@ -159,7 +159,7 @@ const Profile = () => {
                   Personal Information
                 </h2>
 
-                <div className="flex flex-col gap-4">
+                <div className="grid  grid-cols-3 gap-4">
                   {/* Name */}
                   <div>
                     <label className="block text-gray-700 font-medium">
