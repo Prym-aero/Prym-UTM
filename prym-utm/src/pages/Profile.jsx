@@ -120,10 +120,10 @@ const Profile = () => {
           <div className="profile-info w-full max-w-[1200px] bg-white flex flex-col justify-center items-center shadow-2xl rounded-3xl p-6">
             <div className="profile w-full flex flex-col justify-start items-center gap-10">
               {/* Profile Card */}
-              <div className="profile-card w-full border-[2px] border-gray-300 rounded-3xl p-8 flex justify-between items-center bg-gradient-to-r from-blue-100 to-white">
+              <div className="profile-card w-full border border-blue-200 rounded-3xl p-6 md:p-8 flex flex-col md:flex-row justify-start md:justify-between items-center bg-gradient-to-r from-blue-50 via-white to-blue-100 shadow-lg transition-all duration-300">
                 {/* Left Side: Image */}
-                <div className="left-side flex justify-center items-center">
-                  <div className="profile-img w-[150px] h-[150px] rounded-full overflow-hidden shadow-md border-4 border-white">
+                <div className="left-side mb-4 md:mb-0">
+                  <div className="profile-img w-[120px] h-[120px] md:w-[150px] md:h-[150px] rounded-full overflow-hidden shadow-md border-4 border-white">
                     <img
                       src={user.image}
                       alt="profile"
@@ -133,18 +133,22 @@ const Profile = () => {
                 </div>
 
                 {/* Right Side: Info */}
-                <div className="right-side flex-1 ml-10  flex flex-col justify-center items-start gap-3">
-                  <div className="text-black text-xl md:text-2xl font-semibold flex gap-2">
-                    <span className="font-medium text-gray-700">Name:</span>
-                    {user.name}
-                  </div>
-                  <div className="text-black text-xl md:text-2xl font-semibold flex gap-2">
-                    <span className="font-medium text-gray-700">Role:</span>
-                    {user.role}
-                  </div>
-                  <div className="text-black text-xl md:text-2xl font-semibold flex gap-2">
-                    <span className="font-medium text-gray-700">Username:</span>
-                    {user.username}
+                <div className="right-side flex-1 md:ml-10 w-full md:w-auto text-center md:text-left">
+                  <div className="text-blue-900 text-lg md:text-xl font-semibold flex flex-col gap-2">
+                    <div className="flex gap-2 justify-center md:justify-start">
+                      <span className="font-medium text-gray-600">Name:</span>
+                      <span className="text-black">{user.name}</span>
+                    </div>
+                    <div className="flex gap-2 justify-center md:justify-start">
+                      <span className="font-medium text-gray-600">Role:</span>
+                      <span className="text-black">{user.role}</span>
+                    </div>
+                    <div className="flex gap-2 justify-center md:justify-start">
+                      <span className="font-medium text-gray-600">
+                        Username:
+                      </span>
+                      <span className="text-black">{user.username}</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -156,8 +160,8 @@ const Profile = () => {
                 </h2>
 
                 <div className="flex flex-col gap-4">
-                   {/* Name */}
-                   <div>
+                  {/* Name */}
+                  <div>
                     <label className="block text-gray-700 font-medium">
                       Name:
                     </label>
@@ -209,8 +213,6 @@ const Profile = () => {
                       <p className="text-gray-800">{user.role}</p>
                     )}
                   </div>
-
-                 
 
                   {/* Address */}
                   <div>
