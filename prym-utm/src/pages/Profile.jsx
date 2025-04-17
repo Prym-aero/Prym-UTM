@@ -168,7 +168,7 @@ const Profile = () => {
                     {change ? (
                       <input
                         type="text"
-                        name="phone"
+                        name="name"
                         value={updatedUser.name}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
@@ -203,14 +203,32 @@ const Profile = () => {
                     </label>
                     {change ? (
                       <input
-                        type="email"
-                        name="email"
+                        type="text"
+                        name="role"
                         value={updatedUser.role}
                         onChange={handleChange}
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                       />
                     ) : (
                       <p className="text-gray-800">{user.role}</p>
+                    )}
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label className="block text-gray-700 font-medium">
+                      Phone:
+                    </label>
+                    {change ? (
+                      <input
+                        type="text"
+                        name="phone"
+                        value={updatedUser.phone}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      />
+                    ) : (
+                      <p className="text-gray-800">{user.phone || "Not Provided"}</p>
                     )}
                   </div>
 
