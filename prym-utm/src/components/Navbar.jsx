@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { NavLink, useNavigate } from "react-router-dom";
-import { FaUser } from "react-icons/fa";
+import { FaCity, FaUser } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
 import { IoHomeSharp } from "react-icons/io5";
 import { MdFlight } from "react-icons/md";
@@ -97,6 +97,9 @@ const Navbar = ({ onSearch }) => {
         email: email.value,
         password: password.value,
         role: role.value,
+        phone: "",
+        country: "",
+        city: "",
       });
 
       // console.log(response.data);

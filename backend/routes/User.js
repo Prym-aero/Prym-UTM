@@ -21,7 +21,7 @@ const generateToken = (userId) => {
 
 // User Registration
 router.post('/register', async (req, res) => {
-    const { username, name, email, password } = req.body;
+    const { username, name, email, password, phone, country, city } = req.body;
 
     try {
         const existingUser = await User.findOne({ $or: [{ username }, { email }] });
@@ -30,7 +30,7 @@ router.post('/register', async (req, res) => {
         const salt = await bcrypt.genSalt(10);
         const hashedPassword = await bcrypt.hash(password, salt);
 
-        const newUser = new User({ username, name, email, password: hashedPassword });
+        const newUser = new User({ username, name, email, password: hashedPassword, phone, country, city });
         await newUser.save();
 
         res.status(201).json({ message: "User registered successfully" });
