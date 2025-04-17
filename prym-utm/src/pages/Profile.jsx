@@ -72,7 +72,7 @@ const Profile = () => {
   const handleSave = async (e) => {
     e.preventDefault();
 
-    const updatedFields = Object.keys(updatedUser).reduce((acc, key) => {
+    const updatedUserFields = Object.keys(updatedUser).reduce((acc, key) => {
       if (updatedUser[key] !== user[key]) {
         acc[key] = updatedUser[key];
       }
@@ -201,17 +201,7 @@ const Profile = () => {
                     <label className="block text-gray-700 font-medium">
                       Role:
                     </label>
-                    {change ? (
-                      <input
-                        type="text"
-                        name="role"
-                        value={updatedUser.role}
-                        onChange={handleChange}
-                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-                      />
-                    ) : (
-                      <p className="text-gray-800">{user.role}</p>
-                    )}
+                    <p className="text-gray-800">{user.role}</p>
                   </div>
 
                   {/* Phone */}
@@ -232,8 +222,44 @@ const Profile = () => {
                     )}
                   </div>
 
-                  {/* Address */}
+                  {/* Country */}
                   <div>
+                    <label className="block text-gray-700 font-medium">
+                      country:
+                    </label>
+                    {change ? (
+                      <input
+                        type="text"
+                        name="country"
+                        value={updatedUser.country}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      />
+                    ) : (
+                      <p className="text-gray-800">{user.country || "Not Provided"}</p>
+                    )}
+                  </div>
+
+                  {/* City */}
+                  <div>
+                    <label className="block text-gray-700 font-medium">
+                      city:
+                    </label>
+                    {change ? (
+                      <input
+                        type="text"
+                        name="city"
+                        value={updatedUser.city}
+                        onChange={handleChange}
+                        className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+                      />
+                    ) : (
+                      <p className="text-gray-800">{user.city || "Not Provided"}</p>
+                    )}
+                  </div>
+
+                  {/* Address */}
+                  {/* <div>
                     <label className="block text-gray-700 font-medium">
                       Address:
                     </label>
@@ -250,7 +276,7 @@ const Profile = () => {
                         {user.address || "No address Provided"}
                       </p>
                     )}
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Buttons */}

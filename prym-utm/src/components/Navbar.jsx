@@ -287,7 +287,7 @@ const Navbar = ({ onSearch }) => {
               </div>
               <RiArrowRightSLine className="text-[1.4rem]" />
             </div>
-            <NavLink to="/webchat">
+            {/* <NavLink to="/webchat">
               <div className="mt-6 hover:opacity-70 flex justify-between items-center cursor-pointer">
                 <div className="flex gap-3 items-center">
                   <MdOutlineContactSupport />
@@ -295,7 +295,7 @@ const Navbar = ({ onSearch }) => {
                 </div>
                 <RiArrowRightSLine className="text-[1.4rem]" />
               </div>
-            </NavLink>
+            </NavLink> */}
           </div>
         </div>
       </nav>
