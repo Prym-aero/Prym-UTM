@@ -167,7 +167,7 @@ const DroneAdd = () => {
             <div className="grid grid-cols-4 gap-4">
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-[#000000] text-sm font-bold mb-2"
                   htmlFor="droneName"
                 >
                   Drone Name
@@ -183,7 +183,7 @@ const DroneAdd = () => {
               </div>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-[#000000] text-sm font-bold mb-2"
                   htmlFor="uin"
                 >
                   UIN

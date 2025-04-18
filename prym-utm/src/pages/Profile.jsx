@@ -218,7 +218,9 @@ const Profile = () => {
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                       />
                     ) : (
-                      <p className="text-gray-800">{user.phone || "Not Provided"}</p>
+                      <p className="text-gray-800">
+                        {user.phone || "Not Provided"}
+                      </p>
                     )}
                   </div>
 
@@ -236,7 +238,9 @@ const Profile = () => {
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                       />
                     ) : (
-                      <p className="text-gray-800">{user.country || "Not Provided"}</p>
+                      <p className="text-gray-800">
+                        {user.country || "Not Provided"}
+                      </p>
                     )}
                   </div>
 
@@ -254,7 +258,9 @@ const Profile = () => {
                         className="mt-1 p-2 w-full border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                       />
                     ) : (
-                      <p className="text-gray-800">{user.city || "Not Provided"}</p>
+                      <p className="text-gray-800">
+                        {user.city || "Not Provided"}
+                      </p>
                     )}
                   </div>
 
