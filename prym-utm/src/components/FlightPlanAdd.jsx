@@ -89,7 +89,7 @@ const FlightPlanForm = () => {
   useEffect(() => {
     const delayDebounceFn = setTimeout(() => {
       fetchCoordinates(formData.locationName);
-    }, 1000); // Delay API call to prevent too many requests
+    }, 500); // Delay API call to prevent too many requests
 
     return () => clearTimeout(delayDebounceFn); // Cleanup to avoid unnecessary calls
   }, [formData.locationName]); // Runs only when locationName changes

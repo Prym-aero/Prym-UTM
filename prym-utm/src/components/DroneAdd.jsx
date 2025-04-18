@@ -161,7 +161,7 @@ const DroneAdd = () => {
   return (
     <>
       <div className="add-form w-screen h-screen bg-[#008080] flex justify-center items-center ">
-        <div className="form w-[65vw] h-[90vh] p-5 bg-[#d8d5db]">
+        <div className="form w-[65vw] h-[90vh] p-5 bg-[#ffffff]">
           <form className="formFill" onSubmit={handleSubmit}>
             <h1 className="text-2xl font-bold mb-4">Drone Registration</h1>
             <div className="grid grid-cols-4 gap-4">
