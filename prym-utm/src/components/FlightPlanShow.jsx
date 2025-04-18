@@ -2,6 +2,7 @@ const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { useEffect, useState } from "react";
 import axios from "axios";
 import AlertSnackbar from "./AlertSnackbar";
+import { IoIosSearch } from "react-icons/io";
 
 const FlightPlanShow = () => {
   const [flightPlans, setFlightPlans] = useState([]);
@@ -15,6 +16,8 @@ const FlightPlanShow = () => {
   const showAlert = (message, severity) => {
     setAlert({ open: true, message, severity });
   };
+
+  const [query, setQuery] = useState("");
 
   const handleDeleteFlightPlan = async (flightPlanId) => {
     try {
@@ -33,6 +36,37 @@ const FlightPlanShow = () => {
       // console.error("Error deleting flight plan:", error);
       showAlert("Login to perform any operation", "error");
     }
+  };
+
+  const handleSearch = (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      searchFlightPlans(query);
+    }
+  };
+
+  const searchFlightPlans = async (query) => {
+    setLoading(true);
+
+    const value = query.toLowerCase().trim();
+
+    const searchValues = flightPlans.filter((flightPlan) => {
+      const name = flightPlan.flightName?.toString().toLowerCase();
+      const date = flightPlan.flightDate?.toString().toLowerCase();
+      const status = flightPlan.status?.toString().toLowerCase();
+      const battery = flightPlan.batteryLevel?.toString().toLowerCase();
+
+      return (
+        name.includes(value) ||
+        date.includes(value) ||
+        status.includes(value) ||
+        battery.includes(value)
+      );
+    });
+
+    setFlightPlans(searchValues);
+    setLoading(false);
+    setQuery("");
   };
 
   useEffect(() => {
@@ -59,15 +93,61 @@ const FlightPlanShow = () => {
     <>
       {view ? (
         <>
-          <div className="w-screen h-full flex flex-col justify-center items-center bg-gray-100">
-              <h1 className="text-4xl text-orange-400 font-bold ">Flight Detail</h1>
-              <div className="details grid grid-cols-3 gap-2.5 " >
-                 <div className="flight-detail "></div>
-              </div>
-          </div>
+          <div className="w-full min-h-screen bg-gray-50 flex flex-col items-center py-10 px-6">
+  <h1 className="text-4xl font-bold text-orange-500 mb-10">Flight Detail</h1>
+
+  <div className="w-full max-w-4xl bg-white rounded-xl shadow-md p-8 text-left space-y-6">
+    <div>
+      <h2 className="text-lg font-semibold text-gray-600">Flight ID</h2>
+      <p className="text-xl text-gray-800">{view._id}</p>
+    </div>
+
+    <div>
+      <h2 className="text-lg font-semibold text-gray-600">Flight Date</h2>
+      <p className="text-xl text-gray-800">{view.flightDate}</p>
+    </div>
+
+    <div>
+      <h2 className="text-lg font-semibold text-gray-600">Flight Name</h2>
+      <p className="text-xl text-gray-800">{view.flightName}</p>
+    </div>
+
+    <div className="button">
+        <button onClick={ () => setView(null)}> Close</button>
+    </div>
+
+    {/* Add more info here the same way */}
+    {/* Example: */}
+    {/* 
+    <div>
+      <h2 className="text-lg font-semibold text-gray-600">Pilot Name</h2>
+      <p className="text-xl text-gray-800">{view.pilotName}</p>
+    </div> 
+    */}
+  </div>
+</div>
+
         </>
       ) : (
         <>
+          <div className="searchBar flex items-center gap-4">
+            <div className="flex items-center">
+              <input
+                type="text"
+                placeholder="Search location..."
+                className="p-2 rounded-l-md bg-gray-200 focus:border-black focus:outline-none ml-2.5 my-2.5"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                onKeyDown={handleSearch}
+              />
+              <button
+                className="bg-gray-200 px-4 py-2 rounded-r-md border-black border-l-2"
+                onClick={() => searchFlightPlans(query)}
+              >
+                <IoIosSearch className="text-2xl" />
+              </button>
+            </div>
+          </div>
           <div className="FlightPlanShow w-screen h-full flex flex-col justify-center items-center bg-gray-100">
             <h1 className="text-3xl font-bold text-center mt-10">
               Flight Plans
