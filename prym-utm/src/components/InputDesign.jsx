@@ -1,8 +1,87 @@
 "use client";
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const InputDesign = () => {
-    
+  const [formData, setFormData] = useState({
+    // userId: "", // User who created the flight
+    flightName: "",
+    locationName: "",
+    center: { lat: null, lon: null }, // Prevents 'undefined' issues
+    radius: 0, // Default numerical values to 0
+    altitude: 0,
+    speed: 0,
+    duration: 0,
+    flightDate: "", // Date input in string format
+
+    // 🔹 Drone Details
+    droneId: "",
+    droneModel: "",
+    batteryLevel: 100, // Default battery level at 100%
+
+    // 🔹 Waypoints (Array)
+    waypoints: [], // Empty array to start
+
+    // 🔹 Pilot Information
+    pilotId: "",
+    pilotName: "",
+
+    // 🔹 Flight Status
+    status: "pending", // Default to 'pending'
+
+    // 🔹 Regulatory & Safety Checks
+    regulatoryApproval: false,
+    safetyChecks: false,
+
+    // 🔹 Environmental & Emergency Fields
+    weatherConditions: "Unknown", // Default to 'Unknown'
+    emergencyFailsafe: false,
+
+    // 🔹 Additional Info
+    logs: [], // Logs start empty
+    notes: "",
+  });
+
+  const fetchCoordinates = async (location) => {
+    if (!location) return; // Prevent empty API calls
+
+    try {
+      const response = await fetch(
+        `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(
+          location
+        )}`
+      );
+      const data = await response.json();
+
+      if (data.length > 0) {
+        const { lat, lon } = data[0]; // Get first result
+        setFormData((prevData) => ({
+          ...prevData,
+          center: { lat: parseFloat(lat), lon: parseFloat(lon) }, // Store coordinates
+        }));
+        console.log(formData.center);
+      }
+    } catch (error) {
+      console.error("Error fetching coordinates:", error);
+    }
+  };
+
+  useEffect(() => {
+    const delayDebounceFn = setTimeout(() => {
+      fetchCoordinates(formData.locationName);
+    }, 500); // Delay API call to prevent too many requests
+
+    return () => clearTimeout(delayDebounceFn); // Cleanup to avoid unnecessary calls
+  }, [formData.locationName]); // Runs only when locationName changes
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   return (
     <div className="w-screen h-screen  p-2.5">
@@ -18,21 +97,30 @@ const InputDesign = () => {
               <input
                 type="text"
                 className="p-3.5 w-full text-base rounded-lg border-2 border-indigo-100 border-solid transition-all bg-slate-50 duration-[0.2s] ease-[ease]"
+                name="flightName"
+                value={formData.flightName}
+                placeholder="Enter flight name"
+                onChange={handleChange}
               />
             </div>
             <div>
               <label className="mb-2 font-medium">Location Name</label>
               <input
                 type="text"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                className="p-3.5 w-full text-base rounded-lg border-2 border-indigo-100 border-solid transition-all bg-slate-50 duration-[0.2s] ease-[ease]"
+                name="locationName"
+                value={formData.locationName}
+                placeholder="Enter flight location"
+                onChange={handleChange}
               />
             </div>
-            <div>
+            {/* <div>
               <label className="mb-2 font-medium">Center Latitude</label>
               <input
                 type="number"
                 step="0.000001"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                
               />
             </div>
             <div>
@@ -42,7 +130,7 @@ const InputDesign = () => {
                 step="0.000001"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
               />
-            </div>
+            </div> */}
           </div>
         </section>
 
@@ -57,16 +145,21 @@ const InputDesign = () => {
               <input
                 type="text"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                name="droneId"
+                value={formData.droneId}
+                placeholder="Enter Drone ID"
+                onChange={handleChange}
               />
             </div>
             <div>
-              <label className="mb-2 font-medium">Battery Level (%)</label>
+              <label className="mb-2 font-medium">BatteryLevel</label>
               <input
-                type="range"
-                min="0"
-                max="100"
-                defaultValue="100"
-                className="w-full"
+                type="text"
+                className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                name="batteryLevel"
+                value={formData.batteryLevel}
+                placeholder="Enter batteryLevel"
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -83,6 +176,10 @@ const InputDesign = () => {
               <input
                 type="number"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                name="altitude"
+                value={formData.altitude}
+                placeholder="Enter the Altitude"
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -90,6 +187,10 @@ const InputDesign = () => {
               <input
                 type="number"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                name="speed"
+                value={formData.speed}
+                placeholder="Enter speed"
+                onChange={handleChange}
               />
             </div>
             <div>
