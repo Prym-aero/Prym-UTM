@@ -160,14 +160,14 @@ const DroneAdd = () => {
 
   return (
     <>
-      <div className="add-form w-screen h-full bg-[#008080] flex justify-center items-center py-[10px] ">
-        <div className="form w-[65vw] h-[full] p-5 bg-[#d8d5db]">
+      <div className="add-form w-screen h-screen bg-[#008080] flex justify-center items-center ">
+        <div className="form w-[65vw] h-[90vh] p-5 bg-[#ffffff]">
           <form className="formFill" onSubmit={handleSubmit}>
             <h1 className="text-2xl font-bold mb-4">Drone Registration</h1>
             <div className="grid grid-cols-4 gap-4">
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-[#000000] text-sm font-bold mb-2"
                   htmlFor="droneName"
                 >
                   Drone Name
@@ -183,7 +183,7 @@ const DroneAdd = () => {
               </div>
               <div className="mb-4">
                 <label
-                  className="block text-gray-700 text-sm font-bold mb-2"
+                  className="block text-[#000000] text-sm font-bold mb-2"
                   htmlFor="uin"
                 >
                   UIN
