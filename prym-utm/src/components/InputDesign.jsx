@@ -2,8 +2,12 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { isTokenExpired, refreshAccessToken } from "../utils/authService";
+import { useNavigate } from "react-router-dom";
+import AlertSnackbar from "./AlertSnackbar";
 
 const InputDesign = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     // userId: "", // User who created the flight
     flightName: "",
@@ -42,6 +46,91 @@ const InputDesign = () => {
     logs: [], // Logs start empty
     notes: "",
   });
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    console.log("🚀 handleSubmit triggered!");
+    setMessage("");
+    setAlert({ open: false, message: "", severity: "info" });
+
+    let token = localStorage.getItem("accessToken");
+
+    // ✅ Check if token is expired
+    if (isTokenExpired(token)) {
+      console.log("🔄 Access token expired, refreshing...");
+      token = await refreshAccessToken(navigate); // Get new access token
+      if (!token) {
+        showAlert("Session expired. Please log in again.", "error");
+        setLoading(false);
+        return;
+      }
+    }
+
+    // ✅ Convert string values to Boolean and ensure default values
+    const processedFormData = {
+      ...formData,
+      regulatoryApproval: Boolean(formData.regulatoryApproval),
+      safetyChecks: Boolean(formData.safetyChecks),
+      batteryLevel: formData.batteryLevel || 100,
+      waypoints: formData.waypoints || [],
+      status: formData.status || "pending",
+      weatherConditions: formData.weatherConditions || "Unknown",
+      emergencyFailsafe: Boolean(formData.emergencyFailsafe),
+    };
+
+    console.log("🚀 Sending Data:", processedFormData);
+
+    try {
+      const response = await axios.post(
+        `${API_URL}/flightPlan/addFlight`,
+        processedFormData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // ✅ Use refreshed token
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
+      // console.log("✅ Flight Plan Saved:", response.data);
+      setMessage("Flight plan saved successfully!");
+      showAlert("Flight plan saved successfully!", "success");
+
+      // ✅ Reset form data with default values
+      setFormData({
+        flightName: "",
+        locationName: "",
+        center: { lat: 0, lon: 0 },
+        radius: 0,
+        altitude: 0,
+        speed: 0,
+        duration: 0,
+        flightDate: "",
+        droneId: "",
+        droneModel: "",
+        batteryLevel: 100,
+        waypoints: [],
+        pilotId: "",
+        pilotName: "",
+        status: "pending",
+        regulatoryApproval: false,
+        safetyChecks: false,
+        weatherConditions: "Unknown",
+        emergencyFailsafe: false,
+        logs: [],
+        notes: "",
+      });
+    } catch (err) {
+      console.error("🚨 Error:", err.response?.data || err.message);
+      showAlert(
+        "Error: " + (err.response?.data?.message || "Something went wrong"),
+        "error"
+      );
+    } finally {
+      setLoading(false);
+    }
+  };
 
   const fetchCoordinates = async (location) => {
     if (!location) return; // Prevent empty API calls
@@ -83,198 +172,238 @@ const InputDesign = () => {
     }));
   };
 
+  const [Alert, setAlert] = useState({
+    open: false,
+    message: "",
+    severity: "info",
+  });
+
+  const showAlert = (message, severity) => {
+    setAlert({ open: true, message, severity });
+  };
+
   return (
-    <div className="w-screen h-screen  p-2.5">
-      <form className="grid gap-10 p-10 mx-auto my-0 rounded-2xl bg-[white] max-w-[1200px] shadow-[0_8px_32px_rgba(0,0,0,0.08)] max-sm:gap-8 max-sm:p-6">
-        {/* Flight Information Section */}
-        <section>
-          <h2 className="gap-3 pb-3 mb-6 text-2xl font-bold text-blue-600 border-b-2 border-solid border-b-indigo-100">
-            Flight Information
-          </h2>
-          <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
-            <div>
-              <label className="mb-2 font-medium">Flight Name</label>
-              <input
-                type="text"
-                className="p-3.5 w-full text-base rounded-lg border-2 border-indigo-100 border-solid transition-all bg-slate-50 duration-[0.2s] ease-[ease]"
-                name="flightName"
-                value={formData.flightName}
-                placeholder="Enter flight name"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label className="mb-2 font-medium">Location Name</label>
-              <input
-                type="text"
-                className="p-3.5 w-full text-base rounded-lg border-2 border-indigo-100 border-solid transition-all bg-slate-50 duration-[0.2s] ease-[ease]"
-                name="locationName"
-                value={formData.locationName}
-                placeholder="Enter flight location"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Drone Info Section */}
-        <section>
-          <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
-            Drone Info
-          </h2>
-          <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
-            <div>
-              <label className="mb-2 font-medium">Drone ID</label>
-              <input
-                type="text"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                name="droneId"
-                value={formData.droneId}
-                placeholder="Enter Drone ID"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label className="mb-2 font-medium">BatteryLevel</label>
-              <input
-                type="text"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                name="batteryLevel"
-                value={formData.batteryLevel}
-                placeholder="Enter batteryLevel"
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Flight Parameters Section */}
-        <section>
-          <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
-            Flight Parameters
-          </h2>
-          <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
-            <div>
-              <label className="mb-2 font-medium">Altitude (meters)</label>
-              <input
-                type="number"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                name="altitude"
-                value={formData.altitude}
-                placeholder="Enter the Altitude"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label className="mb-2 font-medium">Speed (m/s)</label>
-              <input
-                type="number"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                name="speed"
-                value={formData.speed}
-                placeholder="Enter speed"
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label className="mb-2 font-medium">Duration (minutes)</label>
-              <input
-                type="number"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                name="duration"
-                value={formData.duration}
-                onChange={handleChange}
-              />
-            </div>
-            <div>
-              <label className="mb-2 font-medium">Flight Date</label>
-              <input
-                type="date"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                name="flightDate"
-                value={formData.flightDate}
-                onChange={handleChange}
-              />
-            </div>
-          </div>
-        </section>
-
-        {/* Status & Safety Section */}
-        <section>
-          <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
-            Status & Safety
-          </h2>
-          <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
-            <div>
-              <label className="mb-2 font-medium">Status</label>
-              <select
-                className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200"
-                name="status"
-                value={formData.status}
-                onChange={handleChange}
-              >
-                <option value="pending">Pending</option>
-                <option value="approved">Approved</option>
-                <option value="in-progress">In Progress</option>
-                <option value="completed">Completed</option>
-                <option value="cancelled">Cancelled</option>
-              </select>
-            </div>
-            <div>
-              <label className="mb-2 font-medium">Weather Conditions</label>
-              <select className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200" name="weatherConditions" value={formData.weatherConditions} onChange={handleChange}>
-                <option value="unknown">Unknown</option>
-                <option value="clear">Clear</option>
-                <option value="windy">Windy</option>
-                <option value="rainy">Rainy</option>
-              </select>
-            </div>
-            <div className="flex gap-2 items-center">
-              <input
-                type="checkbox"
-                id="regulatory-approval"
-                className="w-5 h-5"
-                name="regulatoryApproval"
-                value={formData.regulatoryApproval}
-                onChange={handleChange}
-              />
-              <label htmlFor="regulatory-approval" className="font-medium">
-                Regulatory Approval
-              </label>
-            </div>
-            <div className="flex gap-2 items-center">
-              <input type="checkbox" id="safety-checks" className="w-5 h-5" name="safetyChecks" value={formData.safetyChecks} onChange={handleChange} />
-              <label htmlFor="safety-checks" className="font-medium">
-                Safety Checks Passed
-              </label>
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Notes */}
-        <section>
-          <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
-            Additional Notes
-          </h2>
-          <textarea
-            className="p-3 w-full rounded-md border border-solid resize-y border-zinc-200 min-h-[120px]"
-            placeholder="Enter any additional notes or comments..."
-            onChange={formData.notes}
-            name="notes"
-            value={formData.notes}
-          />
-        </section>
-
-        {/* Submit Button */}
-        <button
-          className="gap-3 px-9 py-5 mt-6 text-lg font-semibold rounded-xl transition-all cursor-pointer border-[none] duration-[0.3s] ease-[ease] shadow-[0_4px_12px_rgba(37,99,235,0.2)] text-[white] bg-blue-600 hover:bg-blue-700"
-          type="submit"
-          
+    <>
+      <div className="w-screen h-screen  p-2.5">
+        <form
+          className="grid gap-10 p-10 mx-auto my-0 rounded-2xl bg-[white] max-w-[1200px] shadow-[0_8px_32px_rgba(0,0,0,0.08)] max-sm:gap-8 max-sm:p-6"
+          onSubmit={handleSubmit}
         >
-          Launch Flight Plan
-        </button>
-      </form>
-    </div>
+          {/* Flight Information Section */}
+          <section>
+            <h2 className="gap-3 pb-3 mb-6 text-2xl font-bold text-blue-600 border-b-2 border-solid border-b-indigo-100">
+              Flight Information
+            </h2>
+            <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
+              <div>
+                <label className="mb-2 font-medium">Flight Name</label>
+                <input
+                  type="text"
+                  className="p-3.5 w-full text-base rounded-lg border-2 border-indigo-100 border-solid transition-all bg-slate-50 duration-[0.2s] ease-[ease]"
+                  name="flightName"
+                  value={formData.flightName}
+                  placeholder="Enter flight name"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">Location Name</label>
+                <input
+                  type="text"
+                  className="p-3.5 w-full text-base rounded-lg border-2 border-indigo-100 border-solid transition-all bg-slate-50 duration-[0.2s] ease-[ease]"
+                  name="locationName"
+                  value={formData.locationName}
+                  placeholder="Enter flight location"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Drone Info Section */}
+          <section>
+            <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
+              Drone Info
+            </h2>
+            <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
+              <div>
+                <label className="mb-2 font-medium">Drone ID</label>
+                <input
+                  type="text"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="droneId"
+                  value={formData.droneId}
+                  placeholder="Enter Drone ID"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">BatteryLevel</label>
+                <input
+                  type="text"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="batteryLevel"
+                  value={formData.batteryLevel}
+                  placeholder="Enter batteryLevel"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Flight Parameters Section */}
+          <section>
+            <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
+              Flight Parameters
+            </h2>
+            <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
+              <div>
+                <label className="mb-2 font-medium">Altitude (meters)</label>
+                <input
+                  type="number"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="altitude"
+                  value={formData.altitude}
+                  placeholder="Enter the Altitude"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">Speed (m/s)</label>
+                <input
+                  type="number"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="speed"
+                  value={formData.speed}
+                  placeholder="Enter speed"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">Duration (minutes)</label>
+                <input
+                  type="number"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="duration"
+                  value={formData.duration}
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">Flight Date</label>
+                <input
+                  type="date"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="flightDate"
+                  value={formData.flightDate}
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </section>
+
+          {/* Status & Safety Section */}
+          <section>
+            <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
+              Status & Safety
+            </h2>
+            <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
+              <div>
+                <label className="mb-2 font-medium">Status</label>
+                <select
+                  className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200"
+                  name="status"
+                  value={formData.status}
+                  onChange={handleChange}
+                >
+                  <option value="pending">Pending</option>
+                  <option value="approved">Approved</option>
+                  <option value="in-progress">In Progress</option>
+                  <option value="completed">Completed</option>
+                  <option value="cancelled">Cancelled</option>
+                </select>
+              </div>
+              <div>
+                <label className="mb-2 font-medium">Weather Conditions</label>
+                <select
+                  className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200"
+                  name="weatherConditions"
+                  value={formData.weatherConditions}
+                  onChange={handleChange}
+                >
+                  <option value="unknown">Unknown</option>
+                  <option value="clear">Clear</option>
+                  <option value="windy">Windy</option>
+                  <option value="rainy">Rainy</option>
+                </select>
+              </div>
+              <div className="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="regulatory-approval"
+                  className="w-5 h-5"
+                  name="regulatoryApproval"
+                  value={formData.regulatoryApproval}
+                  onChange={handleChange}
+                />
+                <label htmlFor="regulatory-approval" className="font-medium">
+                  Regulatory Approval
+                </label>
+              </div>
+              <div className="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="safety-checks"
+                  className="w-5 h-5"
+                  name="safetyChecks"
+                  value={formData.safetyChecks}
+                  onChange={handleChange}
+                />
+                <label htmlFor="safety-checks" className="font-medium">
+                  Safety Checks Passed
+                </label>
+              </div>
+              <div className="flex gap-2 items-center">
+                <input
+                  type="checkbox"
+                  id="emergencyFail-checks"
+                  className="w-5 h-5"
+                  name="emergencyFailsafe"
+                  value={formData.emergencyFailsafe}
+                  onChange={handleChange}
+                />
+                <label htmlFor="emergencyFail-checks" className="font-medium">
+                  Emergency Fail Safe
+                </label>
+              </div>
+            </div>
+          </section>
+
+          {/* Additional Notes */}
+          <section>
+            <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
+              Additional Notes
+            </h2>
+            <textarea
+              className="p-3 w-full rounded-md border border-solid resize-y border-zinc-200 min-h-[120px]"
+              placeholder="Enter any additional notes or comments..."
+              onChange={formData.notes}
+              name="notes"
+              value={formData.notes}
+            />
+          </section>
+
+          {/* Submit Button */}
+          <button
+            className="gap-3 px-9 py-5 mt-6 text-lg font-semibold rounded-xl transition-all cursor-pointer border-[none] duration-[0.3s] ease-[ease] shadow-[0_4px_12px_rgba(37,99,235,0.2)] text-[white] bg-blue-600 hover:bg-blue-700"
+            type="submit"
+          >
+            Launch Flight Plan
+          </button>
+        </form>
+      </div>
+      <AlertSnackbar alert={Alert} setAlert={setAlert} />
+    </>
   );
 };
 
