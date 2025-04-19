@@ -5,6 +5,7 @@ import axios from "axios";
 import { isTokenExpired, refreshAccessToken } from "../utils/authService";
 import { useNavigate } from "react-router-dom";
 import AlertSnackbar from "./AlertSnackbar";
+const API_URL = import.meta.env.VITE_API_ENDPOINT;
 
 const InputDesign = () => {
   const navigate = useNavigate();
@@ -22,7 +23,7 @@ const InputDesign = () => {
     // 🔹 Drone Details
     droneId: "",
     droneModel: "",
-    batteryLevel: 100, // Default battery level at 100%
+    batteryLevel: 55, // Default battery level at 100%
 
     // 🔹 Waypoints (Array)
     waypoints: [], // Empty array to start
@@ -47,11 +48,12 @@ const InputDesign = () => {
     notes: "",
   });
 
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     console.log("🚀 handleSubmit triggered!");
-    setMessage("");
     setAlert({ open: false, message: "", severity: "info" });
 
     let token = localStorage.getItem("accessToken");
@@ -70,13 +72,13 @@ const InputDesign = () => {
     // ✅ Convert string values to Boolean and ensure default values
     const processedFormData = {
       ...formData,
-      regulatoryApproval: Boolean(formData.regulatoryApproval),
-      safetyChecks: Boolean(formData.safetyChecks),
+      regulatoryApproval: Boolean(formData.regulatoryApproval) || false,
+      safetyChecks: Boolean(formData.safetyChecks) || false,
       batteryLevel: formData.batteryLevel || 100,
       waypoints: formData.waypoints || [],
       status: formData.status || "pending",
       weatherConditions: formData.weatherConditions || "Unknown",
-      emergencyFailsafe: Boolean(formData.emergencyFailsafe),
+      emergencyFailsafe: Boolean(formData.emergencyFailsafe) || false,
     };
 
     console.log("🚀 Sending Data:", processedFormData);
@@ -94,7 +96,7 @@ const InputDesign = () => {
       );
 
       // console.log("✅ Flight Plan Saved:", response.data);
-      setMessage("Flight plan saved successfully!");
+      // setMessage("Flight plan saved successfully!");
       showAlert("Flight plan saved successfully!", "success");
 
       // ✅ Reset form data with default values
@@ -238,6 +240,17 @@ const InputDesign = () => {
                 />
               </div>
               <div>
+                <label className="mb-2 font-medium">Drone Model</label>
+                <input
+                  type="text"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="droneModel"
+                  value={formData.droneModel}
+                  placeholder="Enter Drone Model"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
                 <label className="mb-2 font-medium">BatteryLevel</label>
                 <input
                   type="text"
@@ -265,6 +278,17 @@ const InputDesign = () => {
                   name="altitude"
                   value={formData.altitude}
                   placeholder="Enter the Altitude"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">radius (meters)</label>
+                <input
+                  type="number"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="radius"
+                  value={formData.radius}
+                  placeholder="Enter the radius"
                   onChange={handleChange}
                 />
               </div>
@@ -301,6 +325,39 @@ const InputDesign = () => {
               </div>
             </div>
           </section>
+
+
+           {/* Pilot Info Section */}
+           <section>
+            <h2 className="pb-2 mb-6 text-xl font-semibold border-b-2 border-solid border-b-gray-200 text-slate-700">
+              Pilot Info
+            </h2>
+            <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
+              <div>
+                <label className="mb-2 font-medium">Pilot ID</label>
+                <input
+                  type="text"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="pilotId"
+                  value={formData.pilotId}
+                  placeholder="Enter Pilot ID"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label className="mb-2 font-medium">Pilot Name</label>
+                <input
+                  type="text"
+                  className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                  name="pilotName"
+                  value={formData.pilotName}
+                  placeholder="Enter Pilot Name"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </section>
+
 
           {/* Status & Safety Section */}
           <section>
@@ -387,9 +444,9 @@ const InputDesign = () => {
             <textarea
               className="p-3 w-full rounded-md border border-solid resize-y border-zinc-200 min-h-[120px]"
               placeholder="Enter any additional notes or comments..."
-              onChange={formData.notes}
               name="notes"
               value={formData.notes}
+              onChange={handleChange}
             />
           </section>
 
@@ -398,7 +455,7 @@ const InputDesign = () => {
             className="gap-3 px-9 py-5 mt-6 text-lg font-semibold rounded-xl transition-all cursor-pointer border-[none] duration-[0.3s] ease-[ease] shadow-[0_4px_12px_rgba(37,99,235,0.2)] text-[white] bg-blue-600 hover:bg-blue-700"
             type="submit"
           >
-            Launch Flight Plan
+            {loading ? "Launching..." : " Launch Flight Plan"}
           </button>
         </form>
       </div>
