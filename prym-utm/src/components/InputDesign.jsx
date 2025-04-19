@@ -114,23 +114,6 @@ const InputDesign = () => {
                 onChange={handleChange}
               />
             </div>
-            {/* <div>
-              <label className="mb-2 font-medium">Center Latitude</label>
-              <input
-                type="number"
-                step="0.000001"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-                
-              />
-            </div>
-            <div>
-              <label className="mb-2 font-medium">Center Longitude</label>
-              <input
-                type="number"
-                step="0.000001"
-                className="p-3 w-full rounded-md border border-solid border-zinc-200"
-              />
-            </div> */}
           </div>
         </section>
 
@@ -198,6 +181,9 @@ const InputDesign = () => {
               <input
                 type="number"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                name="duration"
+                value={formData.duration}
+                onChange={handleChange}
               />
             </div>
             <div>
@@ -205,6 +191,9 @@ const InputDesign = () => {
               <input
                 type="date"
                 className="p-3 w-full rounded-md border border-solid border-zinc-200"
+                name="flightDate"
+                value={formData.flightDate}
+                onChange={handleChange}
               />
             </div>
           </div>
@@ -218,7 +207,12 @@ const InputDesign = () => {
           <div className="grid gap-6 grid-cols-[repeat(auto-fit,minmax(280px,1fr))]">
             <div>
               <label className="mb-2 font-medium">Status</label>
-              <select className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200">
+              <select
+                className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200"
+                name="status"
+                value={formData.status}
+                onChange={handleChange}
+              >
                 <option value="pending">Pending</option>
                 <option value="approved">Approved</option>
                 <option value="in-progress">In Progress</option>
@@ -228,7 +222,7 @@ const InputDesign = () => {
             </div>
             <div>
               <label className="mb-2 font-medium">Weather Conditions</label>
-              <select className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200">
+              <select className="p-3 w-full rounded-md border border-solid bg-[white] border-zinc-200" name="weatherConditions" value={formData.weatherConditions} onChange={handleChange}>
                 <option value="unknown">Unknown</option>
                 <option value="clear">Clear</option>
                 <option value="windy">Windy</option>
@@ -240,13 +234,16 @@ const InputDesign = () => {
                 type="checkbox"
                 id="regulatory-approval"
                 className="w-5 h-5"
+                name="regulatoryApproval"
+                value={formData.regulatoryApproval}
+                onChange={handleChange}
               />
               <label htmlFor="regulatory-approval" className="font-medium">
                 Regulatory Approval
               </label>
             </div>
             <div className="flex gap-2 items-center">
-              <input type="checkbox" id="safety-checks" className="w-5 h-5" />
+              <input type="checkbox" id="safety-checks" className="w-5 h-5" name="safetyChecks" value={formData.safetyChecks} onChange={handleChange} />
               <label htmlFor="safety-checks" className="font-medium">
                 Safety Checks Passed
               </label>
@@ -262,6 +259,9 @@ const InputDesign = () => {
           <textarea
             className="p-3 w-full rounded-md border border-solid resize-y border-zinc-200 min-h-[120px]"
             placeholder="Enter any additional notes or comments..."
+            onChange={formData.notes}
+            name="notes"
+            value={formData.notes}
           />
         </section>
 
@@ -269,6 +269,7 @@ const InputDesign = () => {
         <button
           className="gap-3 px-9 py-5 mt-6 text-lg font-semibold rounded-xl transition-all cursor-pointer border-[none] duration-[0.3s] ease-[ease] shadow-[0_4px_12px_rgba(37,99,235,0.2)] text-[white] bg-blue-600 hover:bg-blue-700"
           type="submit"
+          
         >
           Launch Flight Plan
         </button>
