@@ -11,18 +11,18 @@ import {
   TileLayer,
   Marker,
   Popup,
-  Circle,
-  Polygon,
+  // Circle,
+  // Polygon,
   useMap,
 } from "react-leaflet";
 import MapSidebarTailwind from "../components/MapSidebarTailwind";
 import axios from "axios";
+import ZoneDisplay from "../components/ZoneDisplay";
 import { PiDroneBold } from "react-icons/pi";
 
 const Map = () => {
   // const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
   const [zones, setZones] = useState([]);
-  const [selectedZone, setSelectedZone] = useState(null);
   const [searchLocation, setSearchLocation] = useState("");
   const [Airports, setAirports] = useState([]);
   const [ActiveIndex, setActiveIndex] = useState(null);
@@ -53,9 +53,7 @@ const Map = () => {
     fetchAirports();
   }, []);
 
-  const zoneInfo = (zone) => {
-    setSelectedZone(zone);
-  };
+ 
 
   const activeZone = (index) => {
      setActiveIndex(index);
@@ -136,7 +134,7 @@ const Map = () => {
             </Marker>
           )}
 
-          {zones.map((zone, index) => {
+          {/* {zones.map((zone, index) => {
             if (
               zone.type === "circle" &&
               Array.isArray(zone.center) &&
@@ -184,7 +182,9 @@ const Map = () => {
               }
             }
             return null;
-          })}
+          })} */}
+
+          <ZoneDisplay zone={zones} />
 
           {Airports &&
             Airports.map((airport, index) => (
@@ -218,26 +218,6 @@ const Map = () => {
 
         <MapSidebarTailwind />
 
-        {selectedZone && (
-          <>
-            <div className="zoneInfo w-[300px] h-[650px] absolute top-30 right-10 bg-white rounded-lg shadow-lg p-4 z-500">
-              <div className="flex justify-between items-center">
-                <h2 className="text-lg font-bold mb-2">Zone Information</h2>
-                <button
-                  onClick={() => setSelectedZone(null)}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  <IoClose className="w-6 h-6" />
-                </button>
-              </div>
-              <p>Zone Name: {selectedZone.name}</p>
-              <p>Zone Type: {selectedZone.type}</p>
-              <p>Zone Location: {selectedZone.location}</p>
-              <p>Zone Center: {selectedZone.center.join(", ")}</p>
-              <p>Zone Radius: {selectedZone.radius}</p>
-            </div>
-          </>
-        )}
       </div>
 
       
