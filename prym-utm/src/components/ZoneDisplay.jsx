@@ -16,7 +16,6 @@ const ZoneDisplay = ({ zone }) => {
   const [selectedZone, setSelectedZone] = useState(null);
   const map = useMap();
 
-  console.log(zone);0
 
   // ✅ Create custom panes for layering zones
   useEffect(() => {

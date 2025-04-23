@@ -1,5 +1,4 @@
 const API_URL = import.meta.env.VITE_API_ENDPOINT;
-
 import { TbBuildingAirport } from "react-icons/tb";
 import L from "leaflet";
 import React, { useState, useEffect } from "react";
@@ -11,8 +10,6 @@ import {
   TileLayer,
   Marker,
   Popup,
-  // Circle,
-  // Polygon,
   useMap,
 } from "react-leaflet";
 import MapSidebarTailwind from "../components/MapSidebarTailwind";
