@@ -1310,7 +1310,8 @@
         "endAzimuth": 360,
         "verticalLimits": "UNL / GND",
         "color": "red"
-    },{
+    },
+    {
         "name": "VIR 153 C",
         "location": "Gwalior - III",
         "type": "circle",
@@ -1318,7 +1319,10 @@
         "regulation": "Local flying area. Controlling authority ATC Gwalior.",
         "summary": "Circular area centered on specific coordinates.",
         "vertices": [],
-        "center": [26.283333, 78.231944],
+        "center": [
+            26.283333,
+            78.231944
+        ],
         "radius": 27780,
         "innerRadius": 0,
         "outerRadius": 0,
@@ -1335,15 +1339,39 @@
         "regulation": "Local flying area. Controlling authority ATC Halwara. An airspace of 5NM centered at 30.866667N 75.95E with a vertical limit of 4000 FT AMSL has been reserved for Ludhiana Aviation Club Services.",
         "summary": "Polygon area with a circular arc.",
         "vertices": [
-            [30.633056, 76.315556],
-            [29.9, 76.165556],
-            [29.816667, 75.965556],
-            [30.283333, 75.265556],
-            [30.516389, 75.348611],
-            [30.799722, 76.031944],
-            [30.633056, 76.315556]
+            [
+                30.633056,
+                76.315556
+            ],
+            [
+                29.9,
+                76.165556
+            ],
+            [
+                29.816667,
+                75.965556
+            ],
+            [
+                30.283333,
+                75.265556
+            ],
+            [
+                30.516389,
+                75.348611
+            ],
+            [
+                30.799722,
+                76.031944
+            ],
+            [
+                30.633056,
+                76.315556
+            ]
         ],
-        "center": [30.749722, 75.631944],
+        "center": [
+            30.749722,
+            75.631944
+        ],
         "radius": 37040,
         "innerRadius": 0,
         "outerRadius": 37040,
@@ -1360,15 +1388,39 @@
         "regulation": "Local flying area. Area bounded by 28.633333N 77.548611E to 28.808889N 77.221111E then along the Eastern bank of Yamuna river to 28.616667N 77.265278E to 28.616667N 77.372778E is available for use by civil flights. FL055/FL460.",
         "summary": "Polygon area with a circular arc.",
         "vertices": [
-            [29.1, 77.548611],
-            [28.716667, 77.385278],
-            [28.566667, 77.816667],
-            [28.616667, 77.498611],
-            [28.616667, 77.265278],
-            [28.933333, 77.198611],
-            [29.1, 77.548611]
+            [
+                29.1,
+                77.548611
+            ],
+            [
+                28.716667,
+                77.385278
+            ],
+            [
+                28.566667,
+                77.816667
+            ],
+            [
+                28.616667,
+                77.498611
+            ],
+            [
+                28.616667,
+                77.265278
+            ],
+            [
+                28.933333,
+                77.198611
+            ],
+            [
+                29.1,
+                77.548611
+            ]
         ],
-        "center": [28.716667, 77.363889],
+        "center": [
+            28.716667,
+            77.363889
+        ],
         "radius": 46300,
         "innerRadius": 0,
         "outerRadius": 46300,
@@ -1385,14 +1437,35 @@
         "regulation": "Local flying area.",
         "summary": "Area bounded by lines joining points forming a polygon around Hindon-II.",
         "vertices": [
-            [29.3000, 78.4455],
-            [30.0600, 78.1855],
-            [30.4859, 78.1455],
-            [31.0659, 79.0454],
-            [30.1200, 80.1554],
-            [29.2500, 79.5954]
+            [
+                29.3000,
+                78.4455
+            ],
+            [
+                30.0600,
+                78.1855
+            ],
+            [
+                30.4859,
+                78.1455
+            ],
+            [
+                31.0659,
+                79.0454
+            ],
+            [
+                30.1200,
+                80.1554
+            ],
+            [
+                29.2500,
+                79.5954
+            ]
         ],
-        "center": [0, 0],
+        "center": [
+            0,
+            0
+        ],
         "radius": 0,
         "innerRadius": 0,
         "outerRadius": 0,
@@ -1409,12 +1482,27 @@
         "regulation": "Local flying area. Controlling authority ATC Jodhpur.",
         "summary": "Area bounded by lines joining points forming a polygon around Jodhpur (1).",
         "vertices": [
-            [26.2501, 72.5958],
-            [26.2001, 71.5958],
-            [27.0001, 71.5958],
-            [27.0801, 72.2158]
+            [
+                26.2501,
+                72.5958
+            ],
+            [
+                26.2001,
+                71.5958
+            ],
+            [
+                27.0001,
+                71.5958
+            ],
+            [
+                27.0801,
+                72.2158
+            ]
         ],
-        "center": [0, 0],
+        "center": [
+            0,
+            0
+        ],
         "radius": 0,
         "innerRadius": 0,
         "outerRadius": 0,
@@ -1431,12 +1519,27 @@
         "regulation": "Local flying area. Controlling authority ATC Jodhpur.",
         "summary": "Area bounded by lines joining points forming a polygon around Jodhpur (2).",
         "vertices": [
-            [25.1101, 73.5557],
-            [25.5801, 73.2157],
-            [26.2201, 74.4557],
-            [26.1101, 74.4657]
+            [
+                25.1101,
+                73.5557
+            ],
+            [
+                25.5801,
+                73.2157
+            ],
+            [
+                26.2201,
+                74.4557
+            ],
+            [
+                26.1101,
+                74.4657
+            ]
         ],
-        "center": [0, 0],
+        "center": [
+            0,
+            0
+        ],
         "radius": 0,
         "innerRadius": 0,
         "outerRadius": 0,
