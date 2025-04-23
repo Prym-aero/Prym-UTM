@@ -1127,5 +1127,188 @@
         "endAzimuth": 0,
         "verticalLimits": "6000 FT AMSL / GND",
         "color": "red"
+    },
+    {
+        "name": "VIR 152 B",
+        "location": "Fursatganj-II",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Fursatganj.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                26.5,
+                81.926389
+            ],
+            [
+                26.283333,
+                82.364722
+            ],
+            [
+                25.85,
+                82.026389
+            ],
+            [
+                25.916667,
+                81.579722
+            ],
+            [
+                25.883333,
+                81.549722
+            ],
+            [
+                25.933333,
+                81.482778
+            ],
+            [
+                26.5,
+                81.926389
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "6000 FT / 3000 FT",
+        "color": "red"
+    },
+    {
+        "name": "VIR 153 A",
+        "location": "Gwalior - I",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Gwalior.",
+        "summary": "Polygon area with a circular arc.",
+        "vertices": [
+            [
+                26.333333,
+                77.948611
+            ],
+            [
+                26.233333,
+                77.133333
+            ],
+            [
+                25.883333,
+                76.748611
+            ],
+            [
+                25.85,
+                76.533333
+            ],
+            [
+                25.166667,
+                76.233333
+            ],
+            [
+                24.566667,
+                76.183333
+            ],
+            [
+                24.366667,
+                76.783333
+            ],
+            [
+                24.516667,
+                76.783333
+            ],
+            [
+                24.466667,
+                77.511111
+            ],
+            [
+                25.416667,
+                77.627778
+            ],
+            [
+                26.116667,
+                77.998611
+            ],
+            [
+                26.333333,
+                77.948611
+            ]
+        ],
+        "center": [
+            26.283333,
+            78.231944
+        ],
+        "radius": 27780,
+        "innerRadius": 0,
+        "outerRadius": 27780,
+        "startAzimuth": 0,
+        "endAzimuth": 360,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 153 B",
+        "location": "Gwalior - II",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Gwalior.",
+        "summary": "Polygon area with a circular arc.",
+        "vertices": [
+            [
+                26.033333,
+                78.231944
+            ],
+            [
+                25.65,
+                78.481944
+            ],
+            [
+                25.716667,
+                78.748611
+            ],
+            [
+                26.0,
+                79.165278
+            ],
+            [
+                26.183333,
+                79.748611
+            ],
+            [
+                26.85,
+                80.065278
+            ],
+            [
+                27.216667,
+                79.283333
+            ],
+            [
+                27.45,
+                78.481944
+            ],
+            [
+                27.4,
+                78.433333
+            ],
+            [
+                26.283333,
+                78.231944
+            ],
+            [
+                26.033333,
+                78.231944
+            ]
+        ],
+        "center": [
+            26.283333,
+            78.231944
+        ],
+        "radius": 27780,
+        "innerRadius": 0,
+        "outerRadius": 27780,
+        "startAzimuth": 0,
+        "endAzimuth": 360,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
     }
 ]
