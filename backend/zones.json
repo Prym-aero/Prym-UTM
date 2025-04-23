@@ -1,1418 +1,99 @@
 [
     {
-        "type": "polygon",
-        "name": "VOD 179A - Varavina Kaval",
-        "center": null,
-        "radius": null,
-        "vertices": [
-            [
-                14.325,
-                76.5
-            ],
-            [
-                14.425,
-                76.5
-            ],
-            [
-                14.425,
-                76.65
-            ],
-            [
-                14.325,
-                76.65
-            ]
-        ],
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Danger",
-        "color": "yellow",
-        "location": "Varavina Kaval",
-        "summary": "Danger Area. Activity and duration will be notified by Class-I NOTAM; 7 days in advance.",
-        "verticalLimits": "5000 FT / GND",
-        "regulation": "Danger Area – Flights permitted only with prior coordination."
-    },
-    {
+        "name": "VID 229-A",
+        "location": "Udhampur",
         "type": "circle",
-        "name": "VOD 179B - Varavina Kaval",
-        "center": [
-            14.375,
-            76.575
-        ],
-        "radius": 18520,
-        "vertices": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Danger",
-        "color": "yellow",
-        "location": "Varavina Kaval",
-        "summary": "Danger Area. Activity and duration will be notified by Class-I NOTAM; 7 days in advance.",
-        "verticalLimits": "6000 FT / GND",
-        "regulation": "Danger Area – Flights permitted only with prior coordination."
-    },
-    {
-        "type": "polygon",
-        "name": "VOD 180 - Chennai FIR",
-        "center": null,
-        "radius": null,
-        "vertices": [
-            [
-                13.250833,
-                82.331667
-            ],
-            [
-                13.250833,
-                82.498056
-            ],
-            [
-                13.834722,
-                82.498056
-            ],
-            [
-                13.834722,
-                82.331667
-            ]
-        ],
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Danger",
-        "color": "yellow",
-        "location": "Chennai FIR",
-        "summary": "Danger Area. Activity and duration will be notified by Class-I NOTAM; 7 days in advance.",
-        "verticalLimits": "40000 FT / MSL",
-        "regulation": "Danger Area – Flights permitted only with prior coordination."
-    },
-    {
-        "name": "VOD 187 - Sameerpet",
-        "location": "Sameerpet",
-        "type": "polygon",
-        "airspace": "Danger",
-        "regulation": "Field firing range.",
-        "summary": "Area bounded by lines joining 173204N 0783455E; 173704N 0784155E; 173204N 0784155E.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                17.534444,
-                78.581944
-            ],
-            [
-                17.617778,
-                78.698611
-            ],
-            [
-                17.534444,
-                78.698611
-            ]
-        ],
-        "verticalLimits": "40000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOD 188 - Chengalpattu",
-        "location": "Chengalpattu",
-        "type": "polygon",
-        "airspace": "Danger",
-        "regulation": "1. Missile firing range.\n2. Activities will be notified by NOTAM; 7 days in advance.",
-        "summary": "Area bounded by 124005N to 124505N and 0795955E to 0800455E.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                12.668056,
-                79.998611
-            ],
-            [
-                12.751389,
-                79.998611
-            ],
-            [
-                12.751389,
-                80.081944
-            ],
-            [
-                12.668056,
-                80.081944
-            ]
-        ],
-        "verticalLimits": "19000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOD 189 - Panaguri",
-        "location": "Panaguri",
-        "type": "polygon",
-        "airspace": "Danger",
-        "regulation": "1. Missile firing range.\n2. Activities will be notified by NOTAM 7 days in advance.",
-        "summary": "Area bounded by 082006N to 082506N and 0772756E to 0773456E.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                8.335000,
-                77.465556
-            ],
-            [
-                8.418333,
-                77.465556
-            ],
-            [
-                8.418333,
-                77.582222
-            ],
-            [
-                8.335000,
-                77.582222
-            ]
-        ],
-        "verticalLimits": "19000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOD 216 - Marihal",
-        "location": "Marihal",
-        "type": "circle",
-        "airspace": "Danger",
-        "regulation": "Danger Area – Flights permitted only with prior coordination. Activities will be notified by NOTAM.",
-        "summary": "Circular area centered on 155304N 0744057E within a 1NM radius.",
-        "center": [
-            15.884444,
-            74.6825
-        ],
-        "radius": 1852,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": null,
-        "verticalLimits": "15000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOD 29 - Markandeya",
-        "location": "Markandeya",
-        "type": "polygon",
-        "airspace": "Danger",
-        "regulation": "1. Field firing range.\n2. Activities will be intimated 7 days in advance by Class-I NOTAM.\n3. Prior clearance from ATC Belgaum to be obtained.\n4. Army liaison officer is available in ATC unit Belgaum and the range activity is discontinued when directed by ATC.",
-        "summary": "Area bounded by lines joining points 155004N 0742957E; 160004N 0742957E; 160004N 0744557E; 155004N 0744557E.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                15.834444,
-                74.499167
-            ],
-            [
-                16.001111,
-                74.499167
-            ],
-            [
-                16.001111,
-                74.765833
-            ],
-            [
-                15.834444,
-                74.765833
-            ]
-        ],
-        "verticalLimits": "6000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOD 30 - Bagad Asmara",
-        "location": "Bagad Asmara",
-        "type": "polygon",
-        "airspace": "Danger",
-        "regulation": "1. Field firing range.\n2. Activities will be intimated 7 days in advance by Class-I NOTAM.\n3. Prior clearance from ATC Belgaum to be obtained.\n4. Army liaison officer is available in ATC unit Belgaum and the range activity is discontinued when directed by ATC.",
-        "summary": "Area bounded by lines joining points 154704N 0742457E; 155204N 0742457E; 155204N 0742957E; 154704N 0742957E.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                15.784444,
-                74.415833
-            ],
-            [
-                15.867778,
-                74.415833
-            ],
-            [
-                15.867778,
-                74.499167
-            ],
-            [
-                15.784444,
-                74.499167
-            ]
-        ],
-        "verticalLimits": "6000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOD 73 - Vishakhapatnam",
-        "location": "Vishakhapatnam",
-        "type": "polygon",
-        "airspace": "Danger",
-        "regulation": "1. Anti-aircraft firing range.\n2. Duration of activity will be notified through NOTAM; 24 Hrs in advance.",
-        "summary": "Area bounded by lines joining points 174204N 0831753E; 174704N 0833153E; 173404N 0832953E; 172804N 0831753E.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                17.701111,
-                83.298056
-            ],
-            [
-                17.784444,
-                83.531389
-            ],
-            [
-                17.567778,
-                83.498056
-            ],
-            [
-                17.467778,
-                83.298056
-            ]
-        ],
-        "verticalLimits": "UNL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOP 190 - Arvankadu - Sector 1",
-        "location": "Arvankadu",
-        "type": "sector",
-        "airspace": "Prohibited",
-        "regulation": "Flying is prohibited.",
-        "summary": "A Sector of circle of radius 1.25NM centred around coordinate 112156N 0764548E between clockwise bearings 060 DEG to 170 DEG.",
-        "center": [
-            11.365556,
-            76.763333
-        ],
-        "radius": null,
-        "innerRadius": 0,
-        "outerRadius": 2315,
-        "startAzimuth": 60,
-        "endAzimuth": 170,
-        "vertices": null,
-        "verticalLimits": "17500 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOP 190 - Arvankadu - Sector 2",
-        "location": "Arvankadu",
-        "type": "sector",
-        "airspace": "Prohibited",
-        "regulation": "Flying is prohibited.",
-        "summary": "A Sector of circle of radius 5NM centred around coordinate 112156N 0764548E between clockwise bearings 170 DEG to 060 DEG.",
-        "center": [
-            11.365556,
-            76.763333
-        ],
-        "radius": null,
-        "innerRadius": 0,
-        "outerRadius": 9260,
-        "startAzimuth": 170,
-        "endAzimuth": 420,
-        "vertices": null,
-        "verticalLimits": "17500 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOP 193 - Kalpakkam",
-        "location": "Kalpakkam",
-        "type": "circle",
-        "airspace": "Prohibited",
-        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
-        "summary": "Circular area centered on 123355N 0801033E within a 10KM radius.",
-        "center": [
-            12.565278,
-            80.175833
-        ],
-        "radius": 10000,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": null,
-        "verticalLimits": "10000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOP 194 - Hyderabad (Manuguru)",
-        "location": "Hyderabad (Manuguru)",
-        "type": "circle",
-        "airspace": "Prohibited",
-        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
-        "summary": "Area within a radius of 1 NM centred at Manuguru (1752N 08052E).",
-        "center": [
-            17.866667,
-            80.866667
-        ],
-        "radius": 1852,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": null,
-        "verticalLimits": "5000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOP 195 - Mysore",
-        "location": "Mysore",
-        "type": "circle",
-        "airspace": "Prohibited",
-        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
-        "summary": "Area within a radius of 1 NM centred at (1230N 0763750E).",
-        "center": [
-            12.5,
-            76.630556
-        ],
-        "radius": 1852,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": null,
-        "verticalLimits": "5000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOP 196 - Kaiga",
-        "location": "Kaiga",
-        "type": "polygon",
-        "airspace": "Prohibited",
-        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
-        "summary": "Area bounded by coordinates (1448N to 1454N, 07423E to 07429E).",
-        "vertices": [
-            [
-                14.8,
-                74.3833
-            ],
-            [
-                14.9,
-                74.3833
-            ],
-            [
-                14.9,
-                74.4833
-            ],
-            [
-                14.8,
-                74.4833
-            ]
-        ],
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "verticalLimits": "5000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOP 197 - Kudankulam",
-        "location": "Kudankulam",
-        "type": "circle",
-        "airspace": "Prohibited",
-        "regulation": "1. No person shall fly or assist in flying an aircraft within the specified airspace.\n2. Emergency Frequency: 121.50 MHz",
-        "summary": "Circular area centered on 081025N 0774216E within a 5NM radius.",
-        "center": [
-            8.173611,
-            77.704444
-        ],
-        "radius": 9260,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": null,
-        "verticalLimits": "10000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VOR 181 A - HAL",
-        "location": "HAL",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Test flying. Controlling authority ATC (HAL).",
-        "summary": "Area bounded by a polygon with arc segments representing HAL test flying airspace.",
-        "center": [
-            12.951389,
-            77.665556
-        ],
-        "radius": 185200,
-        "innerRadius": 9260,
-        "outerRadius": 185200,
-        "startAzimuth": 127,
-        "endAzimuth": 208,
-        "vertices": [
-            [
-                12.468056,
-                79.2825
-            ],
-            [
-                12.868056,
-                77.665556
-            ],
-            [
-                12.918056,
-                77.749167
-            ]
-        ],
-        "verticalLimits": "UNL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 181 B - HAL",
-        "location": "HAL",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Test flying. Controlling authority ATC (HAL).",
-        "summary": "Polygonal airspace for HAL test flying operations.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                12.758333,
-                76.454167
-            ],
-            [
-                12.758333,
-                77.25
-            ],
-            [
-                12.868056,
-                77.382222
-            ],
-            [
-                12.868056,
-                77.629444
-            ],
-            [
-                11.634722,
-                76.998889
-            ]
-        ],
-        "verticalLimits": "UNL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 181 C - HAL",
-        "location": "HAL",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Test flying. Controlling authority ATC (HAL).",
-        "summary": "Complex polygon with embedded arc segments for HAL test flying.",
-        "center": null,
-        "radius": null,
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "vertices": [
-            [
-                13.0,
-                78.0
-            ],
-            [
-                12.85,
-                78.0
-            ],
-            [
-                12.918056,
-                77.749167
-            ],
-            [
-                12.951389,
-                77.665556
-            ],
-            [
-                12.868056,
-                77.665556
-            ],
-            [
-                12.868056,
-                77.631944
-            ],
-            [
-                12.868056,
-                77.381944
-            ],
-            [
-                12.758333,
-                77.25
-            ],
-            [
-                12.758333,
-                77.141667
-            ],
-            [
-                12.841667,
-                77.141667
-            ],
-            [
-                13.016667,
-                77.430556
-            ],
-            [
-                13.016667,
-                77.618333
-            ]
-        ],
-        "verticalLimits": "FL 460 / GND",
-        "color": "yellow"
-    },
-    {
-        "type": "polygon",
-        "name": "VOR 181 D - HAL",
-        "center": [],
-        "radius": null,
-        "vertices": [
-            [
-                13.000000,
-                78.000000
-            ],
-            [
-                13.000000,
-                78.416667
-            ],
-            [
-                12.750000,
-                78.416667
-            ],
-            [
-                12.850000,
-                78.000000
-            ]
-        ],
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Restricted",
-        "color": "yellow",
-        "location": "HAL",
-        "summary": "Test flying. Controlling authority: ATC (HAL).",
-        "verticalLimits": "FL 460 / GND",
-        "regulation": "Restricted Area – Test flying operations. Entry with ATC clearance only."
-    },
-    {
-        "type": "polygon",
-        "name": "VOR 182 - Sulur-I",
-        "center": [],
-        "radius": null,
-        "vertices": [
-            [
-                10.973889,
-                77.468056
-            ],
-            [
-                10.869444,
-                77.439167
-            ],
-            [
-                10.306667,
-                77.925556
-            ],
-            [
-                10.489722,
-                78.257778
-            ],
-            [
-                10.817778,
-                78.163889
-            ],
-            [
-                11.002222,
-                78.261111
-            ],
-            [
-                11.176944,
-                78.1075
-            ]
-        ],
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Restricted",
-        "color": "yellow",
-        "location": "Sulur",
-        "summary": "IAF Local Flying Area. Activity H24.",
-        "verticalLimits": "FL 460 / GND",
-        "regulation": "Restricted Area – Continuous flying activity. Controlling Authority: Sulur ATC."
-    },
-    {
-        "type": "polygon",
-        "name": "VOR 183-A - Tambaram-I",
-        "center": [],
-        "radius": null,
-        "vertices": [
-            [
-                12.951389,
-                80.265278
-            ],
-            [
-                12.934722,
-                80.098611
-            ],
-            [
-                11.884722,
-                79.448611
-            ],
-            [
-                11.768056,
-                79.815278
-            ]
-        ],
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Restricted",
-        "color": "yellow",
-        "location": "Tambaram",
-        "summary": "Local flying area. Controlling authority: ATC Tambaram.",
-        "verticalLimits": "45000 FT / GND",
-        "regulation": "Restricted Area – Military flying zone under Tambaram ATC."
-    },
-    {
-        "type": "polygon",
-        "name": "VOR 183-B - Tambaram-II",
-        "center": [],
-        "radius": null,
-        "vertices": [
-            [
-                12.884722,
-                79.498611
-            ],
-            [
-                12.701389,
-                79.965278
-            ],
-            [
-                11.884722,
-                79.448611
-            ]
-        ],
-        "innerRadius": null,
-        "outerRadius": null,
-        "startAzimuth": null,
-        "endAzimuth": null,
-        "airspace": "Restricted",
-        "color": "yellow",
-        "location": "Tambaram",
-        "summary": "Local flying area. Controlling authority: ATC Tambaram.",
-        "verticalLimits": "45000 FT / 15000 FT",
-        "regulation": "Restricted Area – Altitude specific military flying under ATC Tambaram."
-    },
-    {
-        "name": "VOR 184 - Vishakhapatnam",
-        "location": "Vishakhapatnam",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Explosive area.",
-        "summary": "Polygonal explosive area near Vishakhapatnam.",
-        "vertices": [
-            [
-                17.740000,
-                83.241667
-            ],
-            [
-                17.736389,
-                83.245833
-            ],
-            [
-                17.728889,
-                83.253611
-            ],
-            [
-                17.724722,
-                83.254444
-            ],
-            [
-                17.723333,
-                83.238056
-            ],
-            [
-                17.732500,
-                83.233889
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 185 A - Yelahanka",
-        "location": "Yelahanka",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
-        "summary": "Polygon with a 20NM radius arc segment near Yelahanka for local flying.",
-        "vertices": [
-            [
-                13.140000,
-                77.275000
-            ],
-            [
-                13.140000,
-                78.000000
-            ],
-            [
-                13.000000,
-                78.000000
-            ],
-            [
-                13.016667,
-                77.618333
-            ],
-            [
-                13.016667,
-                77.296667
-            ]
-        ],
-        "center": [
-            13.133333,
-            77.616667
-        ],
-        "radius": 37040,
-        "innerRadius": 0,
-        "outerRadius": 37040,
-        "startAzimuth": 122,
-        "endAzimuth": 229,
-        "verticalLimits": "6000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 185 B - Yelahanka",
-        "location": "Yelahanka",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
-        "summary": "Multi-arc restricted area between VOBL ARP and Yelahanka.",
-        "vertices": [
-            [
-                13.415278,
-                77.438889
-            ],
-            [
-                13.558333,
-                77.345833
-            ],
-            [
-                13.016667,
-                77.236111
-            ],
-            [
-                13.016667,
-                77.301389
-            ]
-        ],
-        "center": [
-            13.198889,
-            77.705556
-        ],
-        "radius": 55560,
-        "innerRadius": 37040,
-        "outerRadius": 55560,
-        "startAzimuth": 143,
-        "endAzimuth": 304,
-        "verticalLimits": "6000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 185 C - Yelahanka",
-        "location": "Yelahanka",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
-        "summary": "Rectangular polygon area near Yelahanka for local flying.",
-        "vertices": [
-            [
-                13.125000,
-                78.000000
-            ],
-            [
-                13.125000,
-                78.150000
-            ],
-            [
-                13.233333,
-                78.150000
-            ],
-            [
-                13.233333,
-                78.416667
-            ],
-            [
-                13.000000,
-                78.416667
-            ],
-            [
-                13.000000,
-                78.000000
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "6000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 185 D - Yelahanka",
-        "location": "Yelahanka",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
-        "summary": "Large sector area with arcs and polygon boundaries around Yelahanka.",
-        "vertices": [
-            [
-                13.558333,
-                77.345833
-            ],
-            [
-                14.416667,
-                76.783333
-            ],
-            [
-                13.483333,
-                76.083333
-            ],
-            [
-                12.841667,
-                76.416667
-            ],
-            [
-                12.841667,
-                77.141667
-            ],
-            [
-                13.016667,
-                77.430556
-            ],
-            [
-                13.016667,
-                77.236111
-            ]
-        ],
-        "center": [
-            13.133333,
-            77.616667
-        ],
-        "radius": 166680,
-        "innerRadius": 55560,
-        "outerRadius": 166680,
-        "startAzimuth": 206,
-        "endAzimuth": 356,
-        "verticalLimits": "FL 200 / GND",
-        "color": "yellow"
-    }, {
-        "name": "VOR 186",
-        "location": "Hyderabad",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Hyderabad.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [19.3175, 75.998889],
-            [19.7175, 77.165833],
-            [18.8675, 79.448611],
-            [17.551111, 79.831944],
-            [17.584444, 78.998889],
-            [17.501111, 78.998889],
-            [17.501111, 78.398889],
-            [17.651111, 77.898889],
-            [17.601111, 76.998889]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "FL 240 / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 191-A",
-        "location": "Cochin",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Cochin.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [9.966667, 76.0],
-            [9.966667, 76.45],
-            [9.9, 76.466667],
-            [9.9, 76.025],
-            [9.966667, 76.0]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "2000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 191-B",
-        "location": "Cochin",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Cochin.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [9.9, 76.025],
-            [9.9, 76.466667],
-            [9.666667, 76.566667],
-            [9.566667, 76.166667],
-            [9.9, 76.025]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "5500 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 191-C",
-        "location": "Cochin",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Cochin.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [9.566667, 76.166667],
-            [9.666667, 76.566667],
-            [9.4, 76.55],
-            [9.283333, 76.266667],
-            [9.566667, 76.166667]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "FL 080 / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 191-D",
-        "location": "Cochin",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Cochin.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [9.9, 75.525],
-            [9.9, 76.025],
-            [9.233333, 76.283333],
-            [9.116667, 75.866667],
-            [9.9, 75.525]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "FL 090 / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 192",
-        "location": "Car Nicobar",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling Authority ATC Car Nicobar.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [8.668611, 92.3275],
-            [9.668333, 92.3275],
-            [9.668333, 93.3275],
-            [8.668611, 93.3275],
-            [8.668611, 92.3275]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / MSL",
-        "color": "yellow"
-    },
-    {
-        "name": "VOR 44 (B)",
-        "location": "Goa-II",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling Authority ATC (Navy) Goa.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [16.084444, 73.116111],
-            [15.584444, 74.199167],
-            [15.317778, 74.365833],
-            [14.251389, 74.465833],
-            [14.051389, 74.0825],
-            [16.084444, 73.116111]
-        ],
-        "center": [0, 0],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "FL 210 / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VID 100",
-        "location": "Buchohe Mandi",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                32.866389,
-                74.415833
-            ],
-            [
-                32.966389,
-                74.415833
-            ],
-            [
-                32.966389,
-                74.549167
-            ],
-            [
-                32.866389,
-                74.549167
-            ],
-            [
-                32.866389,
-                74.415833
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 101",
-        "location": "Channo",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                29.85,
-                80.498333
-            ],
-            [
-                29.916667,
-                80.498333
-            ],
-            [
-                29.916667,
-                80.548333
-            ],
-            [
-                29.85,
-                80.548333
-            ],
-            [
-                29.85,
-                80.498333
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 102",
-        "location": "Chakki Khud",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                32.383056,
-                75.798889
-            ],
-            [
-                32.416389,
-                75.798889
-            ],
-            [
-                32.416389,
-                75.832222
-            ],
-            [
-                32.383056,
-                75.832222
-            ],
-            [
-                32.383056,
-                75.798889
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 103",
-        "location": "Chor-Khud",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                33.999444,
-                74.165833
-            ],
-            [
-                34.166111,
-                74.165833
-            ],
-            [
-                34.166111,
-                74.415833
-            ],
-            [
-                33.999444,
-                74.415833
-            ],
-            [
-                33.999444,
-                74.165833
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 104",
-        "location": "Dauki",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                27.066944,
-                78.181944
-            ],
-            [
-                27.116944,
-                78.181944
-            ],
-            [
-                27.116944,
-                78.248611
-            ],
-            [
-                27.066944,
-                78.248611
-            ],
-            [
-                27.066944,
-                78.181944
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 105",
-        "location": "Dhilwan",
-        "type": "polygon",
         "airspace": "Restricted",
         "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                31.416389,
-                75.215556
-            ],
-            [
-                31.516389,
-                75.215556
-            ],
-            [
-                31.516389,
-                75.332222
-            ],
-            [
-                31.416389,
-                75.332222
-            ],
-            [
-                31.416389,
-                75.215556
-            ]
-        ],
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
         "center": [
-            0,
-            0
+            32.866667,
+            75.033333
         ],
-        "radius": 0,
+        "radius": 1852,
         "innerRadius": 0,
         "outerRadius": 0,
         "startAzimuth": 0,
         "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
+        "verticalLimits": "3000 FT / GND",
         "color": "red"
     },
     {
-        "name": "VID 106",
-        "location": "Gangadhan",
+        "name": "VID 229-B",
+        "location": "Jaganu",
+        "type": "circle",
+        "airspace": "Restricted",
+        "regulation": "Field firing range.",
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
+        "center": [
+            32.866667,
+            75.033333
+        ],
+        "radius": 1852,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "3000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 230",
+        "location": "Barnala",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "No flight permitted in the area. A heavy tethered balloon with military payload. Risk of interception in case of inadvertent penetration. Activities permanent.",
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
+        "center": [
+            30.416667,
+            75.55
+        ],
+        "radius": 10000,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 190 / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 96",
+        "location": "Asan",
         "type": "polygon",
         "airspace": "Restricted",
         "regulation": "Field firing range. Activities permanent.",
         "summary": "Polygon area bounded by specific points.",
         "vertices": [
             [
-                29.066667,
-                78.081944
+                30.441667,
+                77.565278
             ],
             [
-                28.983333,
-                78.081944
+                30.441667,
+                77.731944
             ],
             [
-                28.983333,
-                78.148611
+                30.316667,
+                77.879167
             ],
             [
-                28.866667,
-                78.148611
+                30.2,
+                77.831944
             ],
             [
-                28.866667,
-                78.013889
+                30.283333,
+                77.630556
             ],
             [
-                28.95,
-                78.013889
+                30.366667,
+                77.579167
             ],
             [
-                28.966667,
-                77.929722
-            ],
-            [
-                29.083333,
-                77.929722
-            ],
-            [
-                29.066667,
-                78.081944
+                30.441667,
+                77.565278
             ]
         ],
         "center": [
@@ -1424,36 +105,36 @@
         "outerRadius": 0,
         "startAzimuth": 0,
         "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
+        "verticalLimits": "37000 FT / GND",
         "color": "red"
     },
     {
-        "name": "VID 107",
-        "location": "Gari",
+        "name": "VID 97",
+        "location": "Auli",
         "type": "polygon",
         "airspace": "Restricted",
         "regulation": "Field firing range. Activities permanent.",
         "summary": "Area bounded by specific latitude and longitude ranges.",
         "vertices": [
             [
-                33.166111,
-                74.199167
+                30.5,
+                79.831667
             ],
             [
-                33.199722,
-                74.199167
+                30.533333,
+                79.831667
             ],
             [
-                33.199722,
-                74.229722
+                30.533333,
+                79.948611
             ],
             [
-                33.166111,
-                74.229722
+                30.5,
+                79.948611
             ],
             [
-                33.166111,
-                74.199167
+                30.5,
+                79.831667
             ]
         ],
         "center": [
@@ -1469,282 +150,370 @@
         "color": "red"
     },
     {
-        "name": "VID 109",
-        "location": "Hilly Terrain",
+        "name": "VID 98",
+        "location": "Balwanta",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                26.333611,
+                77.665278
+            ],
+            [
+                26.383611,
+                77.665278
+            ],
+            [
+                26.383611,
+                77.709167
+            ],
+            [
+                26.333611,
+                77.709167
+            ],
+            [
+                26.333611,
+                77.665278
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "33000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 99",
+        "location": "Babina Area B",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance. Upper limit 29000 FT between 2200Hrs-0600 Hrs IST.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                25.5,
+                78.165278
+            ],
+            [
+                25.666667,
+                78.665278
+            ],
+            [
+                25.833333,
+                78.998611
+            ],
+            [
+                25.833333,
+                79.165278
+            ],
+            [
+                25.5,
+                79.165278
+            ],
+            [
+                25.333333,
+                78.998611
+            ],
+            [
+                25.0,
+                79.165278
+            ],
+            [
+                24.666667,
+                79.165278
+            ],
+            [
+                24.666667,
+                78.831944
+            ],
+            [
+                25.166667,
+                78.331944
+            ],
+            [
+                25.5,
+                78.165278
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "45000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 99-A",
+        "location": "Babina Area A",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance. Upper limit 29000 FT between 2200Hrs-0600 Hrs IST.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                25.166944,
+                78.248611
+            ],
+            [
+                25.400278,
+                78.248611
+            ],
+            [
+                25.400278,
+                78.448611
+            ],
+            [
+                25.166944,
+                78.448611
+            ],
+            [
+                25.166944,
+                78.248611
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "37000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIP 89",
+        "location": "Rashtrapati Bhawan",
+        "type": "sector",
+        "airspace": "Prohibited",
+        "regulation": "Permanent.",
+        "summary": "Polygon area with a circular arc.",
+        "vertices": [
+            [
+                28.584722,
+                77.166389
+            ],
+            [
+                28.614444,
+                77.199444
+            ],
+            [
+                28.588056,
+                77.238056
+            ],
+            [
+                28.584722,
+                77.166389
+            ]
+        ],
+        "center": [
+            28.614444,
+            77.199444
+        ],
+        "radius": 5000,
+        "innerRadius": 0,
+        "outerRadius": 5000,
+        "startAzimuth": 0,
+        "endAzimuth": 360,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIP 90",
+        "location": "Mathura Refinery",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "Permanent.",
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
+        "center": [
+            27.383611,
+            77.698611
+        ],
+        "radius": 10000,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIP 92",
+        "location": "Narora",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
+        "center": [
+            28.116667,
+            78.4
+        ],
+        "radius": 1852,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "5000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 141-A",
+        "location": "Adampur-I",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "No aircraft shall fly except under and in accordance with the terms and conditions of special permit issued by Ministry of Defence, Government of India.",
+        "summary": "Polygon area with a circular arc.",
+        "vertices": [
+            [
+                31.183056,
+                75.032222
+            ],
+            [
+                31.749722,
+                75.582222
+            ],
+            [
+                31.766111,
+                75.665278
+            ],
+            [
+                31.216111,
+                75.482222
+            ],
+            [
+                31.166111,
+                75.511111
+            ],
+            [
+                30.983056,
+                75.463889
+            ],
+            [
+                31.183056,
+                75.032222
+            ]
+        ],
+        "center": [
+            31.283056,
+            75.582222
+        ],
+        "radius": 9260,
+        "innerRadius": 0,
+        "outerRadius": 9260,
+        "startAzimuth": 0,
+        "endAzimuth": 360,
+        "verticalLimits": "3000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 141-B",
+        "location": "Adampur-II",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Hill flying area.",
+        "summary": "Polygon area with a circular arc.",
+        "vertices": [
+            [
+                32.083056,
+                76.498889
+            ],
+            [
+                32.499722,
+                76.498889
+            ],
+            [
+                32.499722,
+                77.665278
+            ],
+            [
+                31.999722,
+                77.665278
+            ],
+            [
+                31.999722,
+                77.398889
+            ],
+            [
+                31.866111,
+                77.082222
+            ],
+            [
+                31.999722,
+                76.911111
+            ],
+            [
+                32.083056,
+                76.498889
+            ]
+        ],
+        "center": [
+            31.866111,
+            77.148889
+        ],
+        "radius": 27780,
+        "innerRadius": 0,
+        "outerRadius": 27780,
+        "startAzimuth": 0,
+        "endAzimuth": 360,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 142",
+        "location": "Agra (A)",
         "type": "polygon",
         "airspace": "Restricted",
         "regulation": "Local flying area.",
         "summary": "Polygon area bounded by specific points.",
         "vertices": [
             [
-                30.216667,
-                78.765278
+                25.9,
+                76.748889
             ],
             [
-                30.05,
-                79.564722
+                26.183333,
+                76.348889
             ],
             [
-                29.85,
-                79.764722
+                26.883333,
+                76.498889
             ],
             [
-                29.383333,
-                79.449722
+                27.183333,
+                76.927778
             ],
             [
-                29.716667,
-                78.498889
+                27.216667,
+                77.498889
             ],
             [
-                30.216667,
-                78.765278
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "2000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 110-A",
-        "location": "Hoshiarpur (New)",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                31.566389,
-                75.982222
+                26.633333,
+                77.898889
             ],
             [
-                31.666389,
-                75.982222
+                26.233333,
+                77.133333
             ],
             [
-                31.666389,
-                76.099167
-            ],
-            [
-                31.566389,
-                76.099167
-            ],
-            [
-                31.566389,
-                75.982222
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "23000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 110-B",
-        "location": "Hoshiarpur (Old)",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                31.549722,
-                75.832222
-            ],
-            [
-                31.699722,
-                75.832222
-            ],
-            [
-                31.699722,
-                75.999167
-            ],
-            [
-                31.549722,
-                75.999167
-            ],
-            [
-                31.549722,
-                75.832222
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "23000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 111",
-        "location": "Ismailpur",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                32.583056,
-                75.929722
-            ],
-            [
-                32.749722,
-                75.929722
-            ],
-            [
-                32.749722,
-                76.096389
-            ],
-            [
-                32.583056,
-                76.096389
-            ],
-            [
-                32.583056,
-                75.929722
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "37000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 112",
-        "location": "Jhalas",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                33.716111,
-                74.0325
-            ],
-            [
-                33.749722,
-                74.0325
-            ],
-            [
-                33.749722,
-                74.065833
-            ],
-            [
-                33.716111,
-                74.065833
-            ],
-            [
-                33.716111,
-                74.0325
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 113",
-        "location": "Kalith",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
-        "vertices": [
-            [
-                32.833056,
-                74.415833
-            ],
-            [
-                32.949722,
-                74.415833
-            ],
-            [
-                32.949722,
-                74.582778
-            ],
-            [
-                32.833056,
-                74.582778
-            ],
-            [
-                32.833056,
-                74.415833
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "37000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 114",
-        "location": "Kharindwa",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Dive-bombing and Air to ground firing. Duration of activity will be notified at least 24 Hrs. in advance by NOTAM.",
-        "summary": "Polygon area bounded by specific points.",
-        "vertices": [
-            [
-                29.999722,
-                76.832222
-            ],
-            [
-                29.999722,
-                76.999167
-            ],
-            [
-                30.2,
-                76.998611
-            ],
-            [
-                30.2,
-                76.832222
-            ],
-            [
-                29.999722,
-                76.832222
+                25.9,
+                76.748889
             ]
         ],
         "center": [
@@ -1760,32 +529,32 @@
         "color": "red"
     },
     {
-        "name": "VID 115",
-        "location": "Kulam",
+        "name": "VIR 143",
+        "location": "Gwalior",
         "type": "polygon",
         "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "regulation": "Local flying area.",
+        "summary": "Polygon area bounded by specific points.",
         "vertices": [
             [
-                33.749722,
-                77.748611
+                26.566944,
+                78.381944
             ],
             [
-                33.919722,
-                77.748611
+                27.5,
+                78.481944
             ],
             [
-                33.919722,
-                77.926389
+                27.583333,
+                78.148611
             ],
             [
-                33.749722,
-                77.926389
+                26.7,
+                78.265278
             ],
             [
-                33.749722,
-                77.748611
+                26.566944,
+                78.381944
             ]
         ],
         "center": [
@@ -1797,32 +566,36 @@
         "outerRadius": 0,
         "startAzimuth": 0,
         "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
+        "verticalLimits": "UNL / GND",
         "color": "red"
     },
     {
-        "name": "VID 131 - Siswan",
-        "location": "Siswan",
+        "name": "VIR 144",
+        "location": "Ambala (A)",
         "type": "polygon",
         "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Area bounded by 304959N to 305359N and 0764156E to 0764556E.",
+        "regulation": "IAF Low flying area. Controlling authority ATC Ambala.",
+        "summary": "Polygon area bounded by specific points and along the railway line.",
         "vertices": [
             [
-                30.4959,
-                76.4156
+                29.183333,
+                77.065556
             ],
             [
-                30.5359,
-                76.4156
+                29.283333,
+                77.727778
             ],
             [
-                30.5359,
-                76.4556
+                29.7,
+                78.065556
             ],
             [
-                30.4959,
-                76.4556
+                29.883333,
+                77.737778
+            ],
+            [
+                29.183333,
+                77.065556
             ]
         ],
         "center": [
@@ -1834,478 +607,72 @@
         "outerRadius": 0,
         "startAzimuth": 0,
         "endAzimuth": 0,
-        "verticalLimits": "19000 FT AMSL / GND",
+        "verticalLimits": "500 FT AMSL / GND",
         "color": "red"
     },
     {
-        "name": "VID 132 - Sumdo",
-        "location": "Sumdo",
-        "type": "polygon",
+        "name": "VIR 145",
+        "location": "Ambala (B)",
+        "type": "sector",
         "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by 320159N to 320659N and 0782955E to 0783955E.",
+        "regulation": "Local flying area. Controlling authority ATC Ambala. Avoid Patiala Aerodrome 5NM radius centred at 30.333333N 76.366667E and vertical limit GND/500 FT.",
+        "summary": "Polygon area with a circular arc.",
         "vertices": [
             [
-                32.0159,
-                78.2955
+                30.15,
+                77.231944
             ],
             [
-                32.0659,
-                78.2955
+                30.083333,
+                77.331944
             ],
             [
-                32.0659,
-                78.3955
+                29.916667,
+                77.198611
             ],
             [
-                32.0159,
-                78.3955
+                29.716667,
+                77.565278
+            ],
+            [
+                29.183333,
+                77.065556
+            ],
+            [
+                29.683333,
+                76.148611
+            ],
+            [
+                30.333333,
+                76.265278
+            ],
+            [
+                30.616389,
+                76.361111
+            ],
+            [
+                30.597222,
+                76.402778
+            ],
+            [
+                30.366667,
+                76.813889
+            ],
+            [
+                30.15,
+                77.231944
             ]
         ],
         "center": [
-            0,
-            0
+            30.366667,
+            76.813889
         ],
-        "radius": 0,
+        "radius": 46300,
         "innerRadius": 0,
-        "outerRadius": 0,
+        "outerRadius": 46300,
         "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "17000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 133 - Tanda",
-        "location": "Tanda",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by 320629N to 320829N and 0761756E to 0761856E.",
-        "vertices": [
-            [
-                32.0629,
-                76.1756
-            ],
-            [
-                32.0829,
-                76.1756
-            ],
-            [
-                32.0829,
-                76.1856
-            ],
-            [
-                32.0629,
-                76.1856
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 134 - Tartar",
-        "location": "Tartar",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by 354458N to 340458N and 0780455E to 0783454E.",
-        "vertices": [
-            [
-                35.4458,
-                78.0455
-            ],
-            [
-                34.0458,
-                78.0455
-            ],
-            [
-                34.0458,
-                78.3454
-            ],
-            [
-                35.4458,
-                78.3454
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 135 - Thalkhedar",
-        "location": "Thalkhedar",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by 293000N to 293400N and 0800854E to 0801454E.",
-        "vertices": [
-            [
-                29.3000,
-                80.0854
-            ],
-            [
-                29.3400,
-                80.0854
-            ],
-            [
-                29.3400,
-                80.1454
-            ],
-            [
-                29.3000,
-                80.1454
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 136 - Majha",
-        "location": "Majha",
-        "type": "circle",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Circular area centered on 264801N 0820453E within a 1NM radius.",
-        "vertices": [],
-        "center": [
-            26.4801,
-            82.0453
-        ],
-        "radius": 1852,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 137 - Tilpat",
-        "location": "Tilpat",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Helicopter Operations. Duration of activity will be notified by NOTAM.",
-        "summary": "Area bounded by lines joining points.",
-        "vertices": [
-            [
-                28.2212,
-                77.2505
-            ],
-            [
-                28.2550,
-                77.2750
-            ],
-            [
-                28.2930,
-                77.2215
-            ],
-            [
-                28.2955,
-                77.2045
-            ],
-            [
-                28.2815,
-                77.1830
-            ],
-            [
-                28.2500,
-                77.1845
-            ],
-            [
-                28.2345,
-                77.1905
-            ],
-            [
-                28.2230,
-                77.2035
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "500 FT AGL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VID 138 - Tosha Maidan",
-        "location": "Tosha Maidan",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by 334958N to 335958N and 0742257E to 0743657E.",
-        "vertices": [
-            [
-                33.4958,
-                74.2257
-            ],
-            [
-                33.5958,
-                74.2257
-            ],
-            [
-                33.5958,
-                74.3657
-            ],
-            [
-                33.4958,
-                74.3657
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 140 - Zalra",
-        "location": "Zalra",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by 341958N to 342758N and 0735057E to 0740257E.",
-        "vertices": [
-            [
-                34.1958,
-                73.5057
-            ],
-            [
-                34.2758,
-                73.5057
-            ],
-            [
-                34.2758,
-                74.0257
-            ],
-            [
-                34.1958,
-                74.0257
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "17000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 165 - Siri Mutra",
-        "location": "Siri Mutra",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Area bounded by lines joining points.",
-        "vertices": [
-            [
-                26.3101,
-                77.3655
-            ],
-            [
-                26.2401,
-                77.3255
-            ],
-            [
-                26.1601,
-                77.1556
-            ],
-            [
-                26.2501,
-                77.0956
-            ],
-            [
-                26.3001,
-                77.0656
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "8000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 166 - Farah",
-        "location": "Farah",
-        "type": "circle",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Circular area centered on 272001N 0774755E within a 1NM radius.",
-        "vertices": [],
-        "center": [
-            27.2001,
-            77.4755
-        ],
-        "radius": 1852,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "8000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 167 - Kharbutaang",
-        "location": "Kharbutaang",
-        "type": "circle",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Circular area centered on 343158N 0761156E within a 1NM radius.",
-        "vertices": [],
-        "center": [
-            34.3158,
-            76.1156
-        ],
-        "radius": 1852,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "30000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 168 - Sri Govindpur",
-        "location": "Sri Govindpur",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Area bounded by 313559N to 313959N and 0752356E to 0752956E.",
-        "vertices": [
-            [
-                31.3559,
-                75.2356
-            ],
-            [
-                31.3959,
-                75.2356
-            ],
-            [
-                31.3959,
-                75.2956
-            ],
-            [
-                31.3559,
-                75.2956
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "19000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 169 - Birgugiana",
-        "location": "Birgugiana",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Area bounded by 304456N to 305159N and 0743456E to 0744057E.",
-        "vertices": [
-            [
-                30.4456,
-                74.3456
-            ],
-            [
-                30.5159,
-                74.3456
-            ],
-            [
-                30.5159,
-                74.4057
-            ],
-            [
-                30.4456,
-                74.4057
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "36000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VID 170 - Kutra",
-        "location": "Kutra",
-        "type": "circle",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
-        "summary": "Circular area centered on 272101N 0793754E within a 1NM radius.",
-        "vertices": [],
-        "center": [
-            27.2101,
-            79.3754
-        ],
-        "radius": 1852,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "45000 FT / GND",
+        "endAzimuth": 360,
+        "verticalLimits": "UNL / GND",
         "color": "red"
     }
 ]
-
