@@ -3,7 +3,6 @@
 # --------------------
 .env
 parseAirports.js
-Zones.json
 importZones.js
 airports.csv
 

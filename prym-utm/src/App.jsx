@@ -6,7 +6,7 @@ import FlightPlan from './pages/FlightPlans';
 import ResetPassword from './pages/ResetPassword';
 import Drone from './pages/Drone';
 // import WebSocketChat from './pages/WebSocketChat';
-import './App.css'
+
 
 
 function App() {
