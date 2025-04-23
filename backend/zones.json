@@ -1045,5 +1045,87 @@
         "endAzimuth": 360,
         "verticalLimits": "UNL / GND",
         "color": "red"
+    },
+    {
+        "name": "VIR 151",
+        "location": "Chandigarh 1(B)",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Hill flying area.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                31.333056,
+                77.598611
+            ],
+            [
+                31.583056,
+                77.598611
+            ],
+            [
+                31.583056,
+                78.248611
+            ],
+            [
+                30.566667,
+                78.248611
+            ],
+            [
+                31.333056,
+                77.598611
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 152 A",
+        "location": "Fursatganj-I",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Fursatganj.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                26.716944,
+                81.514722
+            ],
+            [
+                26.5,
+                81.926389
+            ],
+            [
+                25.85,
+                81.412778
+            ],
+            [
+                26.116944,
+                81.081944
+            ],
+            [
+                26.716944,
+                81.514722
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "6000 FT AMSL / GND",
+        "color": "red"
     }
 ]
