@@ -1,5 +1,5 @@
 const API_URL = import.meta.env.VITE_API_ENDPOINT;
-import { IoClose } from "react-icons/io5";
+
 import { TbBuildingAirport } from "react-icons/tb";
 import L from "leaflet";
 import React, { useState, useEffect } from "react";
