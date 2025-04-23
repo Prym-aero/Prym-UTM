@@ -5,6 +5,7 @@ import Profile from './pages/Profile';
 import FlightPlan from './pages/FlightPlans';
 import ResetPassword from './pages/ResetPassword';
 import Drone from './pages/Drone';
+import './App.css'
 // import WebSocketChat from './pages/WebSocketChat';
 
 

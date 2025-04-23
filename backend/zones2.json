@@ -1,0 +1,678 @@
+[
+    {
+        "name": "VID 100",
+        "location": "Buchohe Mandi",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                32.866389,
+                74.415833
+            ],
+            [
+                32.966389,
+                74.415833
+            ],
+            [
+                32.966389,
+                74.549167
+            ],
+            [
+                32.866389,
+                74.549167
+            ],
+            [
+                32.866389,
+                74.415833
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT AMSL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 101",
+        "location": "Channo",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                29.85,
+                80.498333
+            ],
+            [
+                29.916667,
+                80.498333
+            ],
+            [
+                29.916667,
+                80.548333
+            ],
+            [
+                29.85,
+                80.548333
+            ],
+            [
+                29.85,
+                80.498333
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 102",
+        "location": "Chakki Khud",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                32.383056,
+                75.798889
+            ],
+            [
+                32.416389,
+                75.798889
+            ],
+            [
+                32.416389,
+                75.832222
+            ],
+            [
+                32.383056,
+                75.832222
+            ],
+            [
+                32.383056,
+                75.798889
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 103",
+        "location": "Chor-Khud",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                33.999444,
+                74.165833
+            ],
+            [
+                34.166111,
+                74.165833
+            ],
+            [
+                34.166111,
+                74.415833
+            ],
+            [
+                33.999444,
+                74.415833
+            ],
+            [
+                33.999444,
+                74.165833
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 104",
+        "location": "Dauki",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                27.066944,
+                78.181944
+            ],
+            [
+                27.116944,
+                78.181944
+            ],
+            [
+                27.116944,
+                78.248611
+            ],
+            [
+                27.066944,
+                78.248611
+            ],
+            [
+                27.066944,
+                78.181944
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 105",
+        "location": "Dhilwan",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Duration of activity will be notified by NOTAM; 7 days in advance.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                31.416389,
+                75.215556
+            ],
+            [
+                31.516389,
+                75.215556
+            ],
+            [
+                31.516389,
+                75.332222
+            ],
+            [
+                31.416389,
+                75.332222
+            ],
+            [
+                31.416389,
+                75.215556
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 106",
+        "location": "Gangadhan",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                29.066667,
+                78.081944
+            ],
+            [
+                28.983333,
+                78.081944
+            ],
+            [
+                28.983333,
+                78.148611
+            ],
+            [
+                28.866667,
+                78.148611
+            ],
+            [
+                28.866667,
+                78.013889
+            ],
+            [
+                28.95,
+                78.013889
+            ],
+            [
+                28.966667,
+                77.929722
+            ],
+            [
+                29.083333,
+                77.929722
+            ],
+            [
+                29.066667,
+                78.081944
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 107",
+        "location": "Gari",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                33.166111,
+                74.199167
+            ],
+            [
+                33.199722,
+                74.199167
+            ],
+            [
+                33.199722,
+                74.229722
+            ],
+            [
+                33.166111,
+                74.229722
+            ],
+            [
+                33.166111,
+                74.199167
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 109",
+        "location": "Hilly Terrain",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                30.216667,
+                78.765278
+            ],
+            [
+                30.05,
+                79.564722
+            ],
+            [
+                29.85,
+                79.764722
+            ],
+            [
+                29.383333,
+                79.449722
+            ],
+            [
+                29.716667,
+                78.498889
+            ],
+            [
+                30.216667,
+                78.765278
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "2000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 110-A",
+        "location": "Hoshiarpur (New)",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                31.566389,
+                75.982222
+            ],
+            [
+                31.666389,
+                75.982222
+            ],
+            [
+                31.666389,
+                76.099167
+            ],
+            [
+                31.566389,
+                76.099167
+            ],
+            [
+                31.566389,
+                75.982222
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "23000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 110-B",
+        "location": "Hoshiarpur (Old)",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                31.549722,
+                75.832222
+            ],
+            [
+                31.699722,
+                75.832222
+            ],
+            [
+                31.699722,
+                75.999167
+            ],
+            [
+                31.549722,
+                75.999167
+            ],
+            [
+                31.549722,
+                75.832222
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "23000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 111",
+        "location": "Ismailpur",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                32.583056,
+                75.929722
+            ],
+            [
+                32.749722,
+                75.929722
+            ],
+            [
+                32.749722,
+                76.096389
+            ],
+            [
+                32.583056,
+                76.096389
+            ],
+            [
+                32.583056,
+                75.929722
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "37000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 112",
+        "location": "Jhalas",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                33.716111,
+                74.0325
+            ],
+            [
+                33.749722,
+                74.0325
+            ],
+            [
+                33.749722,
+                74.065833
+            ],
+            [
+                33.716111,
+                74.065833
+            ],
+            [
+                33.716111,
+                74.0325
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "19000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 113",
+        "location": "Kalith",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                32.833056,
+                74.415833
+            ],
+            [
+                32.949722,
+                74.415833
+            ],
+            [
+                32.949722,
+                74.582778
+            ],
+            [
+                32.833056,
+                74.582778
+            ],
+            [
+                32.833056,
+                74.415833
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "37000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 114",
+        "location": "Kharindwa",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Dive-bombing and Air to ground firing. Duration of activity will be notified at least 24 Hrs. in advance by NOTAM.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                29.999722,
+                76.832222
+            ],
+            [
+                29.999722,
+                76.999167
+            ],
+            [
+                30.2,
+                76.998611
+            ],
+            [
+                30.2,
+                76.832222
+            ],
+            [
+                29.999722,
+                76.832222
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VID 115",
+        "location": "Kulam",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Field firing range. Activities permanent.",
+        "summary": "Area bounded by specific latitude and longitude ranges.",
+        "vertices": [
+            [
+                33.749722,
+                77.748611
+            ],
+            [
+                33.919722,
+                77.748611
+            ],
+            [
+                33.919722,
+                77.926389
+            ],
+            [
+                33.749722,
+                77.926389
+            ],
+            [
+                33.749722,
+                77.748611
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "35000 FT / GND",
+        "color": "red"
+    }
+]

@@ -5,13 +5,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOMServer from "react-dom/server";
 import Navbar from "../components/Navbar";
 import CursorCoordinates from "../components/CursorCoordinates";
-import {
-  MapContainer,
-  TileLayer,
-  Marker,
-  Popup,
-  useMap,
-} from "react-leaflet";
+import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import MapSidebarTailwind from "../components/MapSidebarTailwind";
 import axios from "axios";
 import ZoneDisplay from "../components/ZoneDisplay";
@@ -50,11 +44,9 @@ const Map = () => {
     fetchAirports();
   }, []);
 
- 
-
   const activeZone = (index) => {
-     setActiveIndex(index);
-  }
+    setActiveIndex(index);
+  };
 
   const airportIcon = L.divIcon({
     html: ReactDOMServer.renderToString(
@@ -112,10 +104,13 @@ const Map = () => {
           center={[19.8347, 75.8816]}
           zoom={13}
           scrollWheelZoom={true}
-          style={{ width: "100%", height: "100vh" }}
+          style={{ width: "100%", height: "100svh" }}
           zoomControl={false}
         >
-          <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+          <TileLayer
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          />
 
           <CursorCoordinates />
 
@@ -131,59 +126,9 @@ const Map = () => {
             </Marker>
           )}
 
-          {/* {zones.map((zone, index) => {
-            if (
-              zone.type === "circle" &&
-              Array.isArray(zone.center) &&
-              zone.center.length === 2 &&
-              zone.center.every((coord) => typeof coord === "number")
-            ) {
-              return (
-                <Circle
-                  key={index}
-                  center={[zone.center[0], zone.center[1]]}
-                  radius={zone.radius || 1000} // Default radius if missing
-                  color={ActiveIndex === index ? zone.airspace : "transparent"}
-                  fillColor={zone.airspace}
-                  fillOpacity={0.5}
-                  eventHandlers={{ click: () => {
-                     zoneInfo(zone);
-                     activeZone(index);
-                     
-                  }}}
-                />
-              );
-            } else if (
-              zone.type === "polygon" &&
-              Array.isArray(zone.vertices)
-            ) {
-              const validVertices = zone.vertices.filter(
-                (v) =>
-                  Array.isArray(v) &&
-                  v.length === 2 &&
-                  v.every((coord) => typeof coord === "number")
-              );
-
-              if (validVertices.length > 2) {
-                // At least 3 points required for a polygon
-                return (
-                  <Polygon
-                    key={index}
-                    positions={validVertices}
-                    color={zone.airspace}
-                    fillColor={zone.airspace}
-                    fillOpacity={0.5}
-                    eventHandlers={{ click: () => zoneInfo(zone) }}
-                  />
-                );
-              }
-            }
-            return null;
-          })} */}
-
           <ZoneDisplay zone={zones} />
 
-          {Airports &&
+          {/* {Airports &&
             Airports.map((airport, index) => (
               <Marker
                 key={index}
@@ -198,7 +143,7 @@ const Map = () => {
                   Country: {airport.country}
                 </Popup>
               </Marker>
-            ))}
+            ))} */}
           {/* 
            {drones && drones.map((drone,index)=> (
               <Marker key={index} position={[drone.location.latitude, drone.location.longitude]} icon={droneIcon}>
@@ -214,10 +159,7 @@ const Map = () => {
         </MapContainer>
 
         <MapSidebarTailwind />
-
       </div>
-
-      
     </>
   );
 };

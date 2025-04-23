@@ -111,6 +111,7 @@ const ZoneDisplay = ({ zone }) => {
           <p>Zone Location: {selectedZone.location}</p>
           <p>Zone Center: {selectedZone.center?.join(", ")}</p>
           <p>Zone Radius: {selectedZone.radius}</p>
+          <p>zone Regulation: <br /> {selectedZone.regulation}</p>
         </div>
       )}
     </>
