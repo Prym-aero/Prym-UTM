@@ -4656,5 +4656,789 @@
         "endAzimuth": 0,
         "verticalLimits": "UNL / GND",
         "color": "yellow"
+    },
+    {
+        "name": "VIR 156-D",
+        "location": "Jodhpur (4)",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Jodhpur.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                26.533333,
+                72.982778
+            ],
+            [
+                26.6,
+                72.282778
+            ],
+            [
+                27.416667,
+                74.565278
+            ],
+            [
+                27.416667,
+                73.531944
+            ],
+            [
+                27.133333,
+                72.365278
+            ],
+            [
+                26.533333,
+                72.982778
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 156-E",
+        "location": "Jodhpur (5)",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Jodhpur.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                26.083333,
+                73.299167
+            ],
+            [
+                26.2,
+                73.198611
+            ],
+            [
+                26.283333,
+                73.431944
+            ],
+            [
+                26.183333,
+                73.708611
+            ],
+            [
+                26.083333,
+                73.411111
+            ],
+            [
+                26.083333,
+                73.299167
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 157",
+        "location": "Kanpur (Chakeri)",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Kanpur (Chakeri).",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                26.75,
+                80.148611
+            ],
+            [
+                26.133333,
+                79.916667
+            ],
+            [
+                25.95,
+                79.548611
+            ],
+            [
+                24.95,
+                80.498611
+            ],
+            [
+                24.583333,
+                80.545278
+            ],
+            [
+                24.533333,
+                80.845278
+            ],
+            [
+                25.416667,
+                81.127778
+            ],
+            [
+                25.8,
+                81.331944
+            ],
+            [
+                26.75,
+                80.148611
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 158",
+        "location": "Karnal",
+        "type": "circle",
+        "airspace": "Restricted",
+        "regulation": "Aerodrome Traffic Zone. Airspace reserved for exclusive use of Haryana Aviation Club, Karnal between sunrise to Sunset.",
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
+        "center": [
+            29.666667,
+            76.998611
+        ],
+        "radius": 9260,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 050 / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 159",
+        "location": "BakshiKa Talab",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority Bakshi-Ka-Talab.",
+        "summary": "Area bounded by lines joining points forming a polygon around BakshiKa Talab.",
+        "vertices": [
+            [
+                26.5901,
+                80.5354
+            ],
+            [
+                27.1101,
+                80.3954
+            ],
+            [
+                28.0901,
+                80.5854
+            ],
+            [
+                27.4101,
+                81.5753
+            ],
+            [
+                27.3001,
+                82.2953
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 161-A",
+        "location": "Pathankot-I",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Pathankot.",
+        "summary": "Area bounded by lines and a circular boundary forming a sector around Pathankot-I.",
+        "vertices": [
+            [
+                32.3329,
+                75.4156
+            ],
+            [
+                33.1059,
+                75.2956
+            ],
+            [
+                33.2758,
+                75.5156
+            ],
+            [
+                33.0259,
+                76.2556
+            ],
+            [
+                32.0759,
+                76.2856
+            ],
+            [
+                32.0159,
+                75.5656
+            ]
+        ],
+        "center": [
+            32.1359,
+            75.3756
+        ],
+        "radius": 37040,
+        "innerRadius": 0,
+        "outerRadius": 37040,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR 161-B",
+        "location": "Pathankot-II",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Hilly flying area.",
+        "summary": "Area bounded by lines joining points forming a polygon around Pathankot-II.",
+        "vertices": [
+            [
+                32.5959,
+                76.2556
+            ],
+            [
+                32.5959,
+                77.2955
+            ],
+            [
+                33.3558,
+                76.5955
+            ],
+            [
+                33.3558,
+                75.5956
+            ],
+            [
+                33.2758,
+                75.5156
+            ],
+            [
+                33.0359,
+                76.2556
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 162",
+        "location": "Sarsawa",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. From GND up to and including FL070 controlling authority is Sarsawa ATC. Above FL070 controlling authority is Chandigarh ATC.",
+        "summary": "Area bounded by lines joining points forming a polygon around Sarsawa.",
+        "vertices": [
+            [
+                29.5600,
+                77.1255
+            ],
+            [
+                30.2500,
+                77.3855
+            ],
+            [
+                30.1900,
+                78.0155
+            ],
+            [
+                30.0300,
+                78.1455
+            ],
+            [
+                29.3200,
+                77.5955
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR 163",
+        "location": "Utterlai",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "1. Local flying area.\n2. Controlling authority ATC Utterlai.",
+        "summary": "Area bounded by defined coordinates around Utterlai",
+        "vertices": [
+            [
+                26.200278,
+                71.149444
+            ],
+            [
+                26.150278,
+                71.949444
+            ],
+            [
+                25.566667,
+                71.916111
+            ],
+            [
+                25.183333,
+                71.916111
+            ],
+            [
+                25.216667,
+                71.432778
+            ],
+            [
+                25.333333,
+                71.183056
+            ],
+            [
+                25.483333,
+                71.149722
+            ],
+            [
+                26.100000,
+                71.016389
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR 226",
+        "location": "Jaiselmer",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "UNL / GND",
+        "summary": "Polygon area with multiple circular arcs.",
+        "vertices": [
+            [
+                26.9,
+                71.066667
+            ],
+            [
+                26.9,
+                71.9
+            ],
+            [
+                26.4,
+                71.9
+            ],
+            [
+                26.2,
+                71.25
+            ],
+            [
+                26.516667,
+                71.066667
+            ],
+            [
+                26.433333,
+                70.8
+            ],
+            [
+                26.4,
+                70.766667
+            ],
+            [
+                26.716667,
+                70.333333
+            ],
+            [
+                26.733333,
+                70.416667
+            ],
+            [
+                27.3,
+                70.8
+            ],
+            [
+                27.383333,
+                70.8
+            ],
+            [
+                26.9,
+                71.066667
+            ]
+        ],
+        "center": [
+            26.9,
+            70.866667
+        ],
+        "radius": 46300,
+        "innerRadius": 0,
+        "outerRadius": 55560,
+        "startAzimuth": 0,
+        "endAzimuth": 360,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 227",
+        "location": "Indian Military Academy",
+        "type": "circle",
+        "airspace": "Restricted",
+        "regulation": "Aerosport training activities. Controlling authority: Indian Military Academy. Aircraft transiting through the area should contact Indian Military Academy on 122.3MHz or 123.5MHz.",
+        "summary": "Circular area centered on specific coordinates.",
+        "vertices": [],
+        "center": [
+            30.35,
+            77.966667
+        ],
+        "radius": 3704,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "1000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 228-A",
+        "location": "Udhampur",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area of Udhampur airfield. Controlling Authority: ATC Udhampur.",
+        "summary": "Area bounded by lines joining points forming a polygon around Udhampur.",
+        "vertices": [
+            [
+                33.09,
+                74.51
+            ],
+            [
+                33.09,
+                74.58
+            ],
+            [
+                32.52,
+                74.58
+            ],
+            [
+                32.52,
+                74.51
+            ],
+            [
+                33.09,
+                74.51
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR 228-B",
+        "location": "Udhampur",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area of Udhampur airfield. Controlling Authority: ATC Udhampur.",
+        "summary": "Area bounded by lines joining points forming a polygon around Udhampur.",
+        "vertices": [
+            [
+                32.55,
+                74.58
+            ],
+            [
+                33.00,
+                74.35
+            ],
+            [
+                33.15,
+                74.16
+            ],
+            [
+                33.22,
+                74.25
+            ],
+            [
+                33.25,
+                74.45
+            ],
+            [
+                33.20,
+                75.00
+            ],
+            [
+                32.55,
+                74.58
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / 10000 FT AMSL",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR 91 A",
+        "location": "HINDON",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area.",
+        "summary": "Area bounded by lines joining points forming a polygon around Hindon.",
+        "vertices": [
+            [
+                28.3700,
+                77.4925
+            ],
+            [
+                29.0200,
+                77.3955
+            ],
+            [
+                29.4300,
+                78.1355
+            ],
+            [
+                29.2200,
+                79.0945
+            ],
+            [
+                29.0330,
+                79.0325
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR 91 B",
+        "location": "Hindon",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area.",
+        "summary": "Area bounded by lines joining points forming a polygon around Hindon.",
+        "vertices": [
+            [
+                28.3700,
+                77.4925
+            ],
+            [
+                28.3500,
+                77.4855
+            ],
+            [
+                28.3500,
+                78.4755
+            ],
+            [
+                28.4800,
+                78.4955
+            ],
+            [
+                28.4800,
+                78.5855
+            ],
+            [
+                29.0330,
+                79.0325
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 170 / GND",
+        "color": "red"
+    },
+    {
+        "name": "VIR-164 A",
+        "location": "Nal I",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Controlling Authority: ATC NAL. Local flying area.",
+        "summary": "Area bounded by lines joining points forming a polygon around Nal I.",
+        "vertices": [
+            [
+                28.0100,
+                73.4057
+            ],
+            [
+                28.1000,
+                73.4057
+            ],
+            [
+                28.1500,
+                75.2956
+            ],
+            [
+                28.0500,
+                75.2956
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 090 / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR-164 B",
+        "location": "Nal II",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Controlling Authority: ATC NAL. Local flying area.",
+        "summary": "Area bounded by lines joining points forming a polygon around Nal II.",
+        "vertices": [
+            [
+                28.0100,
+                73.4057
+            ],
+            [
+                28.1400,
+                72.1830
+            ],
+            [
+                28.1800,
+                72.2200
+            ],
+            [
+                28.1900,
+                73.4057
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 210 / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VIR-164 C",
+        "location": "Nal III",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Controlling Authority: ATC NAL. Local flying area.",
+        "summary": "Area bounded by lines joining points forming a polygon around Nal III.",
+        "vertices": [
+            [
+                28.0100,
+                73.4057
+            ],
+            [
+                28.0500,
+                75.2956
+            ],
+            [
+                28.0000,
+                75.2956
+            ],
+            [
+                27.3400,
+                74.4857
+            ],
+            [
+                27.3000,
+                74.4857
+            ],
+            [
+                27.3000,
+                72.5958
+            ],
+            [
+                27.5700,
+                72.0600
+            ],
+            [
+                28.1400,
+                72.1830
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
     }
 ]
