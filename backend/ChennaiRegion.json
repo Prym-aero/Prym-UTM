@@ -237,6 +237,29 @@
         "color": "red"
     },
     {
+        "name": "VOD 178",
+        "location": "Pigeon Island",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Naval firing range. Dates will be notified by NOTAM; 7 days in advance.",
+        "summary": "Area bounded by lines joining points forming a polygon around Pigeon Island.",
+        "vertices": [
+            [14.0105, 74.2757],
+            [13.5105, 74.2757],
+            [13.5105, 74.0757],
+            [14.1105, 74.0757],
+            [14.0905, 74.2257]
+        ],
+        "center": [0, 0],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "28000 FT AMSL / MSL",
+        "color": "yellow"
+    },
+    {
         "type": "polygon",
         "name": "VOD 179A - Varavina Kaval",
         "center": null,
