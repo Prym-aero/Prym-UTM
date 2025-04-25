@@ -1,1098 +1,720 @@
 [
-    {
-        "name": "VED 200",
-        "location": "Maner",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "1. Field firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Rectangular field firing range at Maner",
-        "vertices": [
-            [
-                25.600000,
-                84.825556
-            ],
-            [
-                25.600000,
-                84.875556
-            ],
-            [
-                25.633333,
-                84.875556
-            ],
-            [
-                25.633333,
-                84.825556
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "8000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 201",
-        "location": "Dulland Mukh",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Flying activity throughout the year between 0730-1700 IST",
-        "summary": "Polygon area at Dulland Mukh",
-        "vertices": [
-            [
-                27.500000,
-                94.283333
-            ],
-            [
-                27.466667,
-                94.516667
-            ],
-            [
-                27.216667,
-                94.183333
-            ],
-            [
-                27.516667,
-                94.233333
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "20000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 50",
-        "location": "Gopalpur",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "1. Seaward firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.\n3. Controlled by Army Air Defence College, Gopalpur.",
-        "summary": "Sector with arc boundary for seaward firing range",
-        "vertices": [
-            [
-                19.243333,
-                84.561667
-            ],
-            [
-                19.123056,
-                85.598889
-            ],
-            [
-                18.560278,
-                84.562500
-            ]
-        ],
-        "center": [
-            19.243333,
-            84.561667
-        ],
-        "radius": 75000,
-        "innerRadius": 0,
-        "outerRadius": 75000,
-        "startAzimuth": 90,
-        "endAzimuth": 270,
-        "verticalLimits": "20000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 52",
-        "location": "Balasore",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "1. Air-to-air firing range.\n2. Activity and duration will be notified through NOTAM; 7 days in advance.",
-        "summary": "Coastal polygon area for air-to-air firing range",
-        "vertices": [
-            [
-                20.950000,
-                86.900000
-            ],
-            [
-                21.683333,
-                87.900000
-            ],
-            [
-                21.516667,
-                87.700000
-            ],
-            [
-                21.216667,
-                87.383333
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 53",
-        "location": "Balasore",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Air-to-air firing range. Active between 0100 to 1200 daily.",
-        "summary": "Area bounded by lines joining points forming a polygon around Balasore.",
-        "vertices": [
-            [
-                21.2733,
-                87.0151
-            ],
-            [
-                21.1833,
-                87.1151
-            ],
-            [
-                21.0023,
-                87.0251
-            ],
-            [
-                21.0433,
-                86.5006
-            ],
-            [
-                21.0828,
-                86.4841
-            ],
-            [
-                21.1553,
-                86.5051
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 54",
-        "location": "Baliong",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Baliong.",
-        "vertices": [
-            [
-                28.0002,
-                96.0946
-            ],
-            [
-                28.0502,
-                96.0946
-            ],
-            [
-                28.0502,
-                96.1446
-            ],
-            [
-                28.0002,
-                96.1446
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 55",
-        "location": "Buxaduar",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Area bounded by lines joining points forming a polygon around Buxaduar.",
-        "vertices": [
-            [
-                26.49,
-                89.33
-            ],
-            [
-                26.43,
-                89.36
-            ],
-            [
-                26.40,
-                89.36
-            ],
-            [
-                26.40,
-                89.30
-            ],
-            [
-                26.44,
-                89.30
-            ],
-            [
-                26.44,
-                89.23
-            ],
-            [
-                26.49,
-                89.23
-            ],
-            [
-                26.49,
-                89.27
-            ],
-            [
-                26.48,
-                89.27
-            ],
-            [
-                26.48,
-                89.30
-            ],
-            [
-                26.49,
-                89.30
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "17000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 56",
-        "location": "Daranga",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Daranga.",
-        "vertices": [
-            [
-                26.4502,
-                91.2349
-            ],
-            [
-                26.5302,
-                91.2349
-            ],
-            [
-                26.5302,
-                91.4949
-            ],
-            [
-                26.4502,
-                91.4949
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 57",
-        "location": "Deori Dumri",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "1. Field firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Rectangular field firing range at Deori Dumri",
-        "vertices": [
-            [
-                24.166667,
-                84.797778
-            ],
-            [
-                24.166667,
-                85.247778
-            ],
-            [
-                24.500000,
-                85.247778
-            ],
-            [
-                24.500000,
-                84.797778
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "37000 FT / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 58",
-        "location": "Deota Mura",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "1. Field firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Rectangular field firing range at Deota Mura",
-        "vertices": [
-            [
-                23.500833,
-                91.497222
-            ],
-            [
-                23.500833,
-                91.663056
-            ],
-            [
-                23.633889,
-                91.663056
-            ],
-            [
-                23.633889,
-                91.497222
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "17000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 59",
-        "location": "Guru Basar",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Guru Basar.",
-        "vertices": [
-            [
-                27.4002,
-                94.3947
-            ],
-            [
-                27.5502,
-                94.3947
-            ],
-            [
-                27.5502,
-                94.5947
-            ],
-            [
-                27.4002,
-                94.5947
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 60",
-        "location": "Horhap",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Horhap.",
-        "vertices": [
-            [
-                23.1302,
-                85.2052
-            ],
-            [
-                23.2302,
-                85.2052
-            ],
-            [
-                23.2302,
-                85.3052
-            ],
-            [
-                23.1302,
-                85.3052
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "37000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 61",
-        "location": "Leimakhong",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Leimakhong.",
-        "vertices": [
-            [
-                24.5702,
-                93.4648
-            ],
-            [
-                25.0102,
-                93.4648
-            ],
-            [
-                25.0102,
-                93.5148
-            ],
-            [
-                24.5702,
-                93.5148
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT AMSL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 62",
-        "location": "Logchuuet",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Logchuuet.",
-        "vertices": [
-            [
-                25.4502,
-                93.1448
-            ],
-            [
-                25.5202,
-                93.1448
-            ],
-            [
-                25.5202,
-                93.2148
-            ],
-            [
-                25.4502,
-                93.2148
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 63",
-        "location": "Miao",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range.",
-        "summary": "Rectangular field firing range at Miao",
-        "vertices": [
-            [
-                27.166667,
-                95.996389
-            ],
-            [
-                27.166667,
-                96.412778
-            ],
-            [
-                27.500000,
-                96.412778
-            ],
-            [
-                27.500000,
-                95.996389
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 64",
-        "location": "Netarhat",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range.",
-        "summary": "Rectangular field firing range at Netarhat",
-        "vertices": [
-            [
-                23.183889,
-                84.164444
-            ],
-            [
-                23.183889,
-                84.331111
-            ],
-            [
-                23.433889,
-                84.331111
-            ],
-            [
-                23.433889,
-                84.164444
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "37000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 65",
-        "location": "Rushton",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "1. Target towing range.\n2. Activity and duration will be notified by NOTAM; 7 days in advance.\n3. Controlling authority ATC Kalaikunda.",
-        "summary": "Rectangular target towing range at Rushton",
-        "vertices": [
-            [
-                20.583611,
-                87.997500
-            ],
-            [
-                20.583611,
-                88.997222
-            ],
-            [
-                20.000833,
-                88.997222
-            ],
-            [
-                20.000833,
-                87.997500
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / MSL",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 66",
-        "location": "Seigosa",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range.",
-        "summary": "Rectangular field firing range at Seigosa",
-        "vertices": [
-            [
-                26.866667,
-                92.813333
-            ],
-            [
-                26.866667,
-                93.030000
-            ],
-            [
-                27.083889,
-                93.030000
-            ],
-            [
-                27.083889,
-                92.813333
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 67",
-        "location": "Sela",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range. Activities permanent.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Sela.",
-        "vertices": [
-            [
-                27.2002,
-                91.5448
-            ],
-            [
-                27.4001,
-                91.5448
-            ],
-            [
-                27.4001,
-                92.1448
-            ],
-            [
-                27.2002,
-                92.1448
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 68",
-        "location": "Sikkim",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Sikkim.",
-        "vertices": [
-            [
-                27.1501,
-                88.2950
-            ],
-            [
-                27.3001,
-                88.2950
-            ],
-            [
-                27.3001,
-                88.4950
-            ],
-            [
-                27.1501,
-                88.4950
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 69",
-        "location": "Shillong",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Continuously active, unless notified otherwise.",
-        "summary": "Area bounded by lines joining points forming a polygon around Shillong.",
-        "vertices": [
-            [
-                25.4047,
-                91.5431
-            ],
-            [
-                25.4047,
-                91.5531
-            ],
-            [
-                25.3950,
-                91.5531
-            ],
-            [
-                25.3950,
-                91.5431
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "1200 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 70",
-        "location": "Tippichaku",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range.",
-        "summary": "Area bounded by rectangular coordinates forming a polygon around Tippichaku.",
-        "vertices": [
-            [
-                26.4502,
-                92.1948
-            ],
-            [
-                27.1502,
-                92.1948
-            ],
-            [
-                27.1502,
-                92.4448
-            ],
-            [
-                26.4502,
-                92.4448
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VED 71",
-        "location": "Testa",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Field firing range.",
-        "summary": "Rectangular field firing range at Testa",
-        "vertices": [
-            [
-                26.750278,
-                88.413889
-            ],
-            [
-                26.750278,
-                88.580556
-            ],
-            [
-                26.916944,
-                88.580556
-            ],
-            [
-                26.916944,
-                88.413889
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "35000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VED 74",
-        "location": "Assam Wildlife Sanctuary",
-        "type": "polygon",
-        "airspace": "Restricted",
-        "regulation": "Avoid flying low as far as possible.",
-        "summary": "Triangular wildlife sanctuary area in Assam",
-        "vertices": [
-            [
-                26.600556,
-                93.130000
-            ],
-            [
-                26.700556,
-                93.546667
-            ],
-            [
-                26.650000,
-                93.546667
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL",
-        "color": "yellow"
-    },
-    {
-        "name": "VEP 51",
-        "location": "Bhubaneswar",
-        "type": "polygon",
-        "airspace": "Prohibited",
-        "regulation": "1. Prohibited area.\n2. Active with effect from 15-6-1983",
-        "summary": "Pentagonal prohibited area near Bhubaneswar",
-        "vertices": [
-            [
-                20.500833,
-                85.998889
-            ],
-            [
-                20.500833,
-                85.797778
-            ],
-            [
-                20.566667,
-                85.747778
-            ],
-            [
-                20.733333,
-                85.747778
-            ],
-            [
-                20.733333,
-                85.998889
-            ]
-        ],
-        "center": [
-            0,
-            0
-        ],
-        "radius": 0,
-        "innerRadius": 0,
-        "outerRadius": 0,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "50000 FT AMSL / GND",
-        "color": "red"
-    },
-    {
-        "name": "VER 202",
-        "location": "Chabua",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Chabua.",
-        "summary": "Area bounded by lines joining points and arcs of circles forming a sector around Chabua.",
-        "vertices": [
-            [
-                27.4032,
-                95.1147
-            ],
-            [
-                27.5132,
-                95.1647
-            ],
-            [
-                27.5102,
-                95.2947
-            ],
-            [
-                27.4117,
-                95.3732
-            ],
-            [
-                27.3347,
-                95.4317
-            ],
-            [
-                27.1702,
-                95.5447
-            ],
-            [
-                27.0932,
-                95.4147
-            ],
-            [
-                27.3302,
-                95.2947
-            ],
-            [
-                26.4702,
-                94.5947
-            ],
-            [
-                26.5502,
-                94.5217
-            ],
-            [
-                27.1502,
-                95.0732
-            ]
-        ],
-        "center": [
-            27.3345,
-            94.4445
-        ],
-        "radius": 27780,
-        "innerRadius": 0,
-        "outerRadius": 27780,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VER 202 (Second Sector)",
-        "location": "Chabua",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Chabua.",
-        "summary": "Area bounded by lines joining points and arcs of circles forming a second sector around Chabua.",
-        "vertices": [
-            [
-                27.3800,
-                94.2745
-            ],
-            [
-                27.4400,
-                94.3300
-            ],
-            [
-                27.4900,
-                94.4900
-            ],
-            [
-                27.4200,
-                94.4530
-            ]
-        ],
-        "center": [
-            27.3345,
-            94.4445
-        ],
-        "radius": 27780,
-        "innerRadius": 0,
-        "outerRadius": 27780,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "UNL / GND",
-        "color": "yellow"
-    },
-    {
-        "name": "VER 202 (Third Sector)",
-        "location": "Chabua",
-        "type": "sector",
-        "airspace": "Restricted",
-        "regulation": "Local flying area. Controlling authority ATC Chabua.",
-        "summary": "Area bounded by lines joining points and arcs of circles forming a third sector around Chabua.",
-        "vertices": [
-            [
-                27.3222,
-                95.0847
-            ],
-            [
-                27.4032,
-                95.1147
-            ],
-            [
-                27.1502,
-                95.0732
-            ],
-            [
-                27.2232,
-                95.0732
-            ]
-        ],
-        "center": [
-            27.3232,
-            95.0847
-        ],
-        "radius": 9260,
-        "innerRadius": 0,
-        "outerRadius": 9260,
-        "startAzimuth": 0,
-        "endAzimuth": 0,
-        "verticalLimits": "2000 FT AMSL / GND",
-        "color": "yellow"
-    }
+  {
+    "name": "VED 200",
+    "location": "Maner",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "1. Field firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Rectangular field firing range at Maner",
+    "vertices": [
+      [25.6, 84.825556],
+      [25.6, 84.875556],
+      [25.633333, 84.875556],
+      [25.633333, 84.825556]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "8000 FT / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 201",
+    "location": "Dulland Mukh",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Flying activity throughout the year between 0730-1700 IST",
+    "summary": "Polygon area at Dulland Mukh",
+    "vertices": [
+      [27.5, 94.283333],
+      [27.466667, 94.516667],
+      [27.216667, 94.183333],
+      [27.516667, 94.233333]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "20000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 50",
+    "location": "Gopalpur",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "1. Seaward firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.\n3. Controlled by Army Air Defence College, Gopalpur.",
+    "summary": "Sector with arc boundary for seaward firing range",
+    "vertices": [
+      [19.243333, 84.561667],
+      [19.123056, 85.598889],
+      [18.560278, 84.5625]
+    ],
+    "center": [19.243333, 84.561667],
+    "radius": 75000,
+    "innerRadius": 0,
+    "outerRadius": 75000,
+    "startAzimuth": 90,
+    "endAzimuth": 270,
+    "verticalLimits": "20000 FT / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 52",
+    "location": "Balasore",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "1. Air-to-air firing range.\n2. Activity and duration will be notified through NOTAM; 7 days in advance.",
+    "summary": "Coastal polygon area for air-to-air firing range",
+    "vertices": [
+      [20.95, 86.9],
+      [21.683333, 87.9],
+      [21.516667, 87.7],
+      [21.216667, 87.383333]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "UNL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 53",
+    "location": "Balasore",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Air-to-air firing range. Active between 0100 to 1200 daily.",
+    "summary": "Area bounded by lines joining points forming a polygon around Balasore.",
+    "vertices": [
+      [21.2733, 87.0151],
+      [21.1833, 87.1151],
+      [21.0023, 87.0251],
+      [21.0433, 86.5006],
+      [21.0828, 86.4841],
+      [21.1553, 86.5051]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "UNL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 54",
+    "location": "Baliong",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Baliong.",
+    "vertices": [
+      [28.0002, 96.0946],
+      [28.0502, 96.0946],
+      [28.0502, 96.1446],
+      [28.0002, 96.1446]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 55",
+    "location": "Buxaduar",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Area bounded by lines joining points forming a polygon around Buxaduar.",
+    "vertices": [
+      [26.49, 89.33],
+      [26.43, 89.36],
+      [26.4, 89.36],
+      [26.4, 89.3],
+      [26.44, 89.3],
+      [26.44, 89.23],
+      [26.49, 89.23],
+      [26.49, 89.27],
+      [26.48, 89.27],
+      [26.48, 89.3],
+      [26.49, 89.3]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "17000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 56",
+    "location": "Daranga",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Daranga.",
+    "vertices": [
+      [26.4502, 91.2349],
+      [26.5302, 91.2349],
+      [26.5302, 91.4949],
+      [26.4502, 91.4949]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 57",
+    "location": "Deori Dumri",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "1. Field firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Rectangular field firing range at Deori Dumri",
+    "vertices": [
+      [24.166667, 84.797778],
+      [24.166667, 85.247778],
+      [24.5, 85.247778],
+      [24.5, 84.797778]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "37000 FT / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 58",
+    "location": "Deota Mura",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "1. Field firing range.\n2. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Rectangular field firing range at Deota Mura",
+    "vertices": [
+      [23.500833, 91.497222],
+      [23.500833, 91.663056],
+      [23.633889, 91.663056],
+      [23.633889, 91.497222]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "17000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 59",
+    "location": "Guru Basar",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Guru Basar.",
+    "vertices": [
+      [27.4002, 94.3947],
+      [27.5502, 94.3947],
+      [27.5502, 94.5947],
+      [27.4002, 94.5947]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 60",
+    "location": "Horhap",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Horhap.",
+    "vertices": [
+      [23.1302, 85.2052],
+      [23.2302, 85.2052],
+      [23.2302, 85.3052],
+      [23.1302, 85.3052]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "37000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 61",
+    "location": "Leimakhong",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Duration of activity will be notified through NOTAM; 7 days in advance.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Leimakhong.",
+    "vertices": [
+      [24.5702, 93.4648],
+      [25.0102, 93.4648],
+      [25.0102, 93.5148],
+      [24.5702, 93.5148]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT AMSL / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 62",
+    "location": "Logchuuet",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Activities permanent.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Logchuuet.",
+    "vertices": [
+      [25.4502, 93.1448],
+      [25.5202, 93.1448],
+      [25.5202, 93.2148],
+      [25.4502, 93.2148]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 63",
+    "location": "Miao",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range.",
+    "summary": "Rectangular field firing range at Miao",
+    "vertices": [
+      [27.166667, 95.996389],
+      [27.166667, 96.412778],
+      [27.5, 96.412778],
+      [27.5, 95.996389]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 64",
+    "location": "Netarhat",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range.",
+    "summary": "Rectangular field firing range at Netarhat",
+    "vertices": [
+      [23.183889, 84.164444],
+      [23.183889, 84.331111],
+      [23.433889, 84.331111],
+      [23.433889, 84.164444]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "37000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 65",
+    "location": "Rushton",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "1. Target towing range.\n2. Activity and duration will be notified by NOTAM; 7 days in advance.\n3. Controlling authority ATC Kalaikunda.",
+    "summary": "Rectangular target towing range at Rushton",
+    "vertices": [
+      [20.583611, 87.9975],
+      [20.583611, 88.997222],
+      [20.000833, 88.997222],
+      [20.000833, 87.9975]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "UNL / MSL",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 66",
+    "location": "Seigosa",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range.",
+    "summary": "Rectangular field firing range at Seigosa",
+    "vertices": [
+      [26.866667, 92.813333],
+      [26.866667, 93.03],
+      [27.083889, 93.03],
+      [27.083889, 92.813333]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 67",
+    "location": "Sela",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range. Activities permanent.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Sela.",
+    "vertices": [
+      [27.2002, 91.5448],
+      [27.4001, 91.5448],
+      [27.4001, 92.1448],
+      [27.2002, 92.1448]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 68",
+    "location": "Sikkim",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Sikkim.",
+    "vertices": [
+      [27.1501, 88.295],
+      [27.3001, 88.295],
+      [27.3001, 88.495],
+      [27.1501, 88.495]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 69",
+    "location": "Shillong",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Continuously active, unless notified otherwise.",
+    "summary": "Area bounded by lines joining points forming a polygon around Shillong.",
+    "vertices": [
+      [25.4047, 91.5431],
+      [25.4047, 91.5531],
+      [25.395, 91.5531],
+      [25.395, 91.5431]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "1200 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 70",
+    "location": "Tippichaku",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range.",
+    "summary": "Area bounded by rectangular coordinates forming a polygon around Tippichaku.",
+    "vertices": [
+      [26.4502, 92.1948],
+      [27.1502, 92.1948],
+      [27.1502, 92.4448],
+      [26.4502, 92.4448]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VED 71",
+    "location": "Testa",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Field firing range.",
+    "summary": "Rectangular field firing range at Testa",
+    "vertices": [
+      [26.750278, 88.413889],
+      [26.750278, 88.580556],
+      [26.916944, 88.580556],
+      [26.916944, 88.413889]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "35000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VED 74",
+    "location": "Assam Wildlife Sanctuary",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "Avoid flying low as far as possible.",
+    "summary": "Triangular wildlife sanctuary area in Assam",
+    "vertices": [
+      [26.600556, 93.13],
+      [26.700556, 93.546667],
+      [26.65, 93.546667]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "UNL",
+    "color": "yellow"
+  },
+  {
+    "name": "VEP 51",
+    "location": "Bhubaneswar",
+    "type": "polygon",
+    "airspace": "Prohibited",
+    "regulation": "1. Prohibited area.\n2. Active with effect from 15-6-1983",
+    "summary": "Pentagonal prohibited area near Bhubaneswar",
+    "vertices": [
+      [20.500833, 85.998889],
+      [20.500833, 85.797778],
+      [20.566667, 85.747778],
+      [20.733333, 85.747778],
+      [20.733333, 85.998889]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "50000 FT AMSL / GND",
+    "color": "red"
+  },
+  {
+    "name": "VER 202",
+    "location": "Chabua",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "Local flying area. Controlling authority ATC Chabua.",
+    "summary": "Area bounded by lines joining points and arcs of circles forming a sector around Chabua.",
+    "vertices": [
+      [27.4032, 95.1147],
+      [27.5132, 95.1647],
+      [27.5102, 95.2947],
+      [27.4117, 95.3732],
+      [27.3347, 95.4317],
+      [27.1702, 95.5447],
+      [27.0932, 95.4147],
+      [27.3302, 95.2947],
+      [26.4702, 94.5947],
+      [26.5502, 94.5217],
+      [27.1502, 95.0732]
+    ],
+    "center": [27.3345, 94.4445],
+    "radius": 27780,
+    "innerRadius": 0,
+    "outerRadius": 27780,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "UNL / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VER 202 (Second Sector)",
+    "location": "Chabua",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "Local flying area. Controlling authority ATC Chabua.",
+    "summary": "Area bounded by lines joining points and arcs of circles forming a second sector around Chabua.",
+    "vertices": [
+      [27.38, 94.2745],
+      [27.44, 94.33],
+      [27.49, 94.49],
+      [27.42, 94.453]
+    ],
+    "center": [27.3345, 94.4445],
+    "radius": 27780,
+    "innerRadius": 0,
+    "outerRadius": 27780,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "UNL / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VER 202 (Third Sector)",
+    "location": "Chabua",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "Local flying area. Controlling authority ATC Chabua.",
+    "summary": "Area bounded by lines joining points and arcs of circles forming a third sector around Chabua.",
+    "vertices": [
+      [27.3222, 95.0847],
+      [27.4032, 95.1147],
+      [27.1502, 95.0732],
+      [27.2232, 95.0732]
+    ],
+    "center": [27.3232, 95.0847],
+    "radius": 9260,
+    "innerRadius": 0,
+    "outerRadius": 9260,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "2000 FT AMSL / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VER 203-A",
+    "location": "Bihta-I",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "1. Local flying area for IAF aircraft from Dawn to Dusk\n2. All aircraft to contact Bihta Tower prior to crossing area.",
+    "summary": "Sector area with arc boundary for IAF flying near Bihta",
+    "vertices": [
+      [26.519167, 84.882222],
+      [25.583889, 84.914444],
+      [25.583889, 84.536944]
+    ],
+    "center": [25.590556, 85.09],
+    "radius": 55560,
+    "innerRadius": 0,
+    "outerRadius": 55560,
+    "startAzimuth": 240,
+    "endAzimuth": 300,
+    "verticalLimits": "7000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VER 203-B",
+    "location": "Bihta-II",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "1. Local flying area for IAF aircraft from Dawn to Dusk\n2. All aircraft to contact Bihta Tower prior to crossing area.",
+    "summary": "Complex sector with counter-clockwise arc for IAF flying",
+    "vertices": [
+      [26.083611, 84.831111],
+      [26.055278, 84.882222],
+      [25.583889, 84.536944],
+      [25.566667, 84.081111],
+      [25.75, 84.081111]
+    ],
+    "center": [25.590556, 85.09],
+    "radius": 55560,
+    "innerRadius": 0,
+    "outerRadius": 55560,
+    "startAzimuth": 280,
+    "endAzimuth": 240,
+    "verticalLimits": "7000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VER 203-C",
+    "location": "Bihta-III",
+    "type": "polygon",
+    "airspace": "Restricted",
+    "regulation": "1. Local flying area for IAF aircraft from Dawn to Dusk\n2. All aircraft to contact Bihta Tower prior to crossing area.",
+    "summary": "Polygon area for IAF flying near Bihta",
+    "vertices": [
+      [26.5, 84.746667],
+      [26.5, 84.847778],
+      [26.055278, 84.882222],
+      [26.083611, 84.831111]
+    ],
+    "center": [0, 0],
+    "radius": 0,
+    "innerRadius": 0,
+    "outerRadius": 0,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "7000 FT / GND",
+    "color": "yellow"
+  },
+  {
+    "name": "VER 203-D",
+    "location": "Bihta-IV",
+    "type": "sector",
+    "airspace": "Restricted",
+    "regulation": "Local flying area for IAF aircraft from Dawn to Dusk. All aircraft to contact Bihta Tower prior to crossing area.",
+    "summary": "Area bounded by lines joining points and a counter-clockwise arc of a circle forming a sector around Bihta-IV.",
+    "vertices": [
+      [25.0837, 84.5027],
+      [25.3502, 84.3213],
+      [25.3502, 84.5452]
+    ],
+    "center": [25.3526, 85.0524],
+    "radius": 55560,
+    "innerRadius": 0,
+    "outerRadius": 55560,
+    "startAzimuth": 0,
+    "endAzimuth": 0,
+    "verticalLimits": "7000 FT / 3000 FT AMSL",
+    "color": "yellow"
+  }
 ]
