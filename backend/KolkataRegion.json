@@ -1128,7 +1128,7 @@
     "location": "Tezpur-III",
     "type": "polygon",
     "airspace": "Restricted",
-    "regulation": "1. IAF Local Flying Area\n2. Controlling Authority: Tezpur ATC\n3. Active H24",
+    "regulation": "1. IAF Local Flying Area 2. Controlling Authority: Tezpur ATC\n3. Active H24",
     "summary": "Complex polygon for IAF operations active 24/7",
     "vertices": [
       [26.120833, 92.365278],
