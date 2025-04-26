@@ -1,0 +1,1529 @@
+[
+    {
+        "name": "VOD 175 B",
+        "location": "Thumba - II",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Rocket firing range. Activity and duration will be notified in advance through NOTAM.",
+        "summary": "Area bounded by lines joining points and clockwise arcs of circles forming a sector around Thumba - II.",
+        "vertices": [
+            [
+                8.3055,
+                76.4703
+            ],
+            [
+                8.2803,
+                76.4856
+            ],
+            [
+                7.0404,
+                75.4445
+            ],
+            [
+                8.0743,
+                75.0337
+            ]
+        ],
+        "center": [
+            8.3203,
+            76.5201
+        ],
+        "radius": 199800,
+        "innerRadius": 9260,
+        "outerRadius": 199800,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOD 176",
+        "location": "Passage Island",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Naval firing range. Dates will be notified by NOTAM 7 days in advance.",
+        "summary": "Two sectors of circles with radii of 10NM centered at two different locations.",
+        "vertices": [],
+        "center": [
+            11.1106,
+            92.4051
+        ],
+        "radius": 18520,
+        "innerRadius": 0,
+        "outerRadius": 18520,
+        "startAzimuth": 67,
+        "endAzimuth": 110,
+        "verticalLimits": "24000 FT AMSL / MSL",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 176 (Second Sector)",
+        "location": "Passage Island",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Naval firing range. Dates will be notified by NOTAM 7 days in advance.",
+        "summary": "A second sector of a circle with radius of 10NM centered at another location.",
+        "vertices": [],
+        "center": [
+            11.1136,
+            92.4049
+        ],
+        "radius": 18520,
+        "innerRadius": 0,
+        "outerRadius": 18520,
+        "startAzimuth": 210,
+        "endAzimuth": 252,
+        "verticalLimits": "24000 FT AMSL / MSL",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 177",
+        "location": "Kavalur",
+        "type": "circle",
+        "airspace": "Restricted",
+        "regulation": "Astronomical Observations and Laser activity. Controlling Authority: Indian Institute of Astrophysics, Bengaluru. Activity between 1230 to 0030 UTC Daily. Aircraft are required to remain clear of VOD 177 during the above duration.",
+        "summary": "Circular area centered on Kavalur within a 24.076KM radius.",
+        "vertices": [],
+        "center": [
+            12.3439,
+            78.4927
+        ],
+        "radius": 24076,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "26500 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 171",
+        "location": "Chirala",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Firing Range. Duration of activity will be notified by NOTAM; 7 days in advance.",
+        "summary": "Area bounded by lines joining points and a clockwise arc of a circle forming a sector around Chirala.",
+        "vertices": [
+            [
+                15.5034,
+                80.2924
+            ],
+            [
+                15.3004,
+                81.2654
+            ]
+        ],
+        "center": [
+            15.5034,
+            80.2924
+        ],
+        "radius": 100000,
+        "innerRadius": 0,
+        "outerRadius": 100000,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOD 172",
+        "location": "Cochin",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Anti-aircraft firing range. Controlling Authority: Indian Navy. Activity will be intimated 7 days in advance through NOTAM.",
+        "summary": "Area bounded by lines joining points forming a polygon around Cochin.",
+        "vertices": [
+            [
+                9.5806,
+                76.1356
+            ],
+            [
+                9.5806,
+                75.5957
+            ],
+            [
+                9.4306,
+                75.5957
+            ],
+            [
+                9.4406,
+                76.1756
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "35000 FT AGL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 173",
+        "location": "Chennai",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Anti-Aircraft Naval firing. Duration of activity will be notified by NOTAM; 24 Hrs. in advance.",
+        "summary": "Area bounded by lines joining points forming a polygon around Chennai.",
+        "vertices": [
+            [
+                13.0705,
+                80.1755
+            ],
+            [
+                13.1805,
+                80.2654
+            ],
+            [
+                13.0605,
+                80.3154
+            ],
+            [
+                12.5605,
+                80.2554
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOD 175 A",
+        "location": "Thumba - I",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Rocket firing range. Activity and duration will be notified in advance through NOTAM.",
+        "summary": "Area bounded by lines joining points and clockwise arcs of circles forming a sector around Thumba - I.",
+        "vertices": [
+            [
+                8.3053,
+                76.4707
+            ],
+            [
+                8.2800,
+                76.4859
+            ],
+            [
+                7.3205,
+                76.0611
+            ],
+            [
+                8.1526,
+                75.3813
+            ]
+        ],
+        "center": [
+            8.3159,
+            76.5203
+        ],
+        "radius": 139300,
+        "innerRadius": 9260,
+        "outerRadius": 139300,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOD 178",
+        "location": "Pigeon Island",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Naval firing range. Dates will be notified by NOTAM; 7 days in advance.",
+        "summary": "Area bounded by lines joining points forming a polygon around Pigeon Island.",
+        "vertices": [
+            [14.0105, 74.2757],
+            [13.5105, 74.2757],
+            [13.5105, 74.0757],
+            [14.1105, 74.0757],
+            [14.0905, 74.2257]
+        ],
+        "center": [0, 0],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "28000 FT AMSL / MSL",
+        "color": "yellow"
+    },
+    {
+        "type": "polygon",
+        "name": "VOD 179A - Varavina Kaval",
+        "center": null,
+        "radius": null,
+        "vertices": [
+            [
+                14.325,
+                76.5
+            ],
+            [
+                14.425,
+                76.5
+            ],
+            [
+                14.425,
+                76.65
+            ],
+            [
+                14.325,
+                76.65
+            ]
+        ],
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Danger",
+        "color": "yellow",
+        "location": "Varavina Kaval",
+        "summary": "Danger Area. Activity and duration will be notified by Class-I NOTAM; 7 days in advance.",
+        "verticalLimits": "5000 FT / GND",
+        "regulation": "Danger Area – Flights permitted only with prior coordination."
+    },
+    {
+        "type": "circle",
+        "name": "VOD 179B - Varavina Kaval",
+        "center": [
+            14.375,
+            76.575
+        ],
+        "radius": 18520,
+        "vertices": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Danger",
+        "color": "yellow",
+        "location": "Varavina Kaval",
+        "summary": "Danger Area. Activity and duration will be notified by Class-I NOTAM; 7 days in advance.",
+        "verticalLimits": "6000 FT / GND",
+        "regulation": "Danger Area – Flights permitted only with prior coordination."
+    },
+    {
+        "type": "polygon",
+        "name": "VOD 180 - Chennai FIR",
+        "center": null,
+        "radius": null,
+        "vertices": [
+            [
+                13.250833,
+                82.331667
+            ],
+            [
+                13.250833,
+                82.498056
+            ],
+            [
+                13.834722,
+                82.498056
+            ],
+            [
+                13.834722,
+                82.331667
+            ]
+        ],
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Danger",
+        "color": "yellow",
+        "location": "Chennai FIR",
+        "summary": "Danger Area. Activity and duration will be notified by Class-I NOTAM; 7 days in advance.",
+        "verticalLimits": "40000 FT / MSL",
+        "regulation": "Danger Area – Flights permitted only with prior coordination."
+    },
+    {
+        "name": "VOD 187 - Sameerpet",
+        "location": "Sameerpet",
+        "type": "polygon",
+        "airspace": "Danger",
+        "regulation": "Field firing range.",
+        "summary": "Area bounded by lines joining 173204N 0783455E; 173704N 0784155E; 173204N 0784155E.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                17.534444,
+                78.581944
+            ],
+            [
+                17.617778,
+                78.698611
+            ],
+            [
+                17.534444,
+                78.698611
+            ]
+        ],
+        "verticalLimits": "40000 FT / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 188 - Chengalpattu",
+        "location": "Chengalpattu",
+        "type": "polygon",
+        "airspace": "Danger",
+        "regulation": "1. Missile firing range.\n2. Activities will be notified by NOTAM; 7 days in advance.",
+        "summary": "Area bounded by 124005N to 124505N and 0795955E to 0800455E.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                12.668056,
+                79.998611
+            ],
+            [
+                12.751389,
+                79.998611
+            ],
+            [
+                12.751389,
+                80.081944
+            ],
+            [
+                12.668056,
+                80.081944
+            ]
+        ],
+        "verticalLimits": "19000 FT / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 189 - Panaguri",
+        "location": "Panaguri",
+        "type": "polygon",
+        "airspace": "Danger",
+        "regulation": "1. Missile firing range.\n2. Activities will be notified by NOTAM 7 days in advance.",
+        "summary": "Area bounded by 082006N to 082506N and 0772756E to 0773456E.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                8.335000,
+                77.465556
+            ],
+            [
+                8.418333,
+                77.465556
+            ],
+            [
+                8.418333,
+                77.582222
+            ],
+            [
+                8.335000,
+                77.582222
+            ]
+        ],
+        "verticalLimits": "19000 FT / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 216 - Marihal",
+        "location": "Marihal",
+        "type": "circle",
+        "airspace": "Danger",
+        "regulation": "Danger Area – Flights permitted only with prior coordination. Activities will be notified by NOTAM.",
+        "summary": "Circular area centered on 155304N 0744057E within a 1NM radius.",
+        "center": [
+            15.884444,
+            74.6825
+        ],
+        "radius": 1852,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": null,
+        "verticalLimits": "15000 FT / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 29 - Markandeya",
+        "location": "Markandeya",
+        "type": "polygon",
+        "airspace": "Danger",
+        "regulation": "1. Field firing range.\n2. Activities will be intimated 7 days in advance by Class-I NOTAM.\n3. Prior clearance from ATC Belgaum to be obtained.\n4. Army liaison officer is available in ATC unit Belgaum and the range activity is discontinued when directed by ATC.",
+        "summary": "Area bounded by lines joining points 155004N 0742957E; 160004N 0742957E; 160004N 0744557E; 155004N 0744557E.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                15.834444,
+                74.499167
+            ],
+            [
+                16.001111,
+                74.499167
+            ],
+            [
+                16.001111,
+                74.765833
+            ],
+            [
+                15.834444,
+                74.765833
+            ]
+        ],
+        "verticalLimits": "6000 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 30 - Bagad Asmara",
+        "location": "Bagad Asmara",
+        "type": "polygon",
+        "airspace": "Danger",
+        "regulation": "1. Field firing range.\n2. Activities will be intimated 7 days in advance by Class-I NOTAM.\n3. Prior clearance from ATC Belgaum to be obtained.\n4. Army liaison officer is available in ATC unit Belgaum and the range activity is discontinued when directed by ATC.",
+        "summary": "Area bounded by lines joining points 154704N 0742457E; 155204N 0742457E; 155204N 0742957E; 154704N 0742957E.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                15.784444,
+                74.415833
+            ],
+            [
+                15.867778,
+                74.415833
+            ],
+            [
+                15.867778,
+                74.499167
+            ],
+            [
+                15.784444,
+                74.499167
+            ]
+        ],
+        "verticalLimits": "6000 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOD 73 - Vishakhapatnam",
+        "location": "Vishakhapatnam",
+        "type": "polygon",
+        "airspace": "Danger",
+        "regulation": "1. Anti-aircraft firing range.\n2. Duration of activity will be notified through NOTAM; 24 Hrs in advance.",
+        "summary": "Area bounded by lines joining points 174204N 0831753E; 174704N 0833153E; 173404N 0832953E; 172804N 0831753E.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                17.701111,
+                83.298056
+            ],
+            [
+                17.784444,
+                83.531389
+            ],
+            [
+                17.567778,
+                83.498056
+            ],
+            [
+                17.467778,
+                83.298056
+            ]
+        ],
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOP 190 - Arvankadu - Sector 1",
+        "location": "Arvankadu",
+        "type": "sector",
+        "airspace": "Prohibited",
+        "regulation": "Flying is prohibited.",
+        "summary": "A Sector of circle of radius 1.25NM centred around coordinate 112156N 0764548E between clockwise bearings 060 DEG to 170 DEG.",
+        "center": [
+            11.365556,
+            76.763333
+        ],
+        "radius": null,
+        "innerRadius": 0,
+        "outerRadius": 2315,
+        "startAzimuth": 60,
+        "endAzimuth": 170,
+        "vertices": null,
+        "verticalLimits": "17500 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOP 190 - Arvankadu - Sector 2",
+        "location": "Arvankadu",
+        "type": "sector",
+        "airspace": "Prohibited",
+        "regulation": "Flying is prohibited.",
+        "summary": "A Sector of circle of radius 5NM centred around coordinate 112156N 0764548E between clockwise bearings 170 DEG to 060 DEG.",
+        "center": [
+            11.365556,
+            76.763333
+        ],
+        "radius": null,
+        "innerRadius": 0,
+        "outerRadius": 9260,
+        "startAzimuth": 170,
+        "endAzimuth": 420,
+        "vertices": null,
+        "verticalLimits": "17500 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOP 193 - Kalpakkam",
+        "location": "Kalpakkam",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
+        "summary": "Circular area centered on 123355N 0801033E within a 10KM radius.",
+        "center": [
+            12.565278,
+            80.175833
+        ],
+        "radius": 10000,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": null,
+        "verticalLimits": "10000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOP 194 - Hyderabad (Manuguru)",
+        "location": "Hyderabad (Manuguru)",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
+        "summary": "Area within a radius of 1 NM centred at Manuguru (1752N 08052E).",
+        "center": [
+            17.866667,
+            80.866667
+        ],
+        "radius": 1852,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": null,
+        "verticalLimits": "5000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOP 195 - Mysore",
+        "location": "Mysore",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
+        "summary": "Area within a radius of 1 NM centred at (1230N 0763750E).",
+        "center": [
+            12.5,
+            76.630556
+        ],
+        "radius": 1852,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": null,
+        "verticalLimits": "5000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOP 196 - Kaiga",
+        "location": "Kaiga",
+        "type": "polygon",
+        "airspace": "Prohibited",
+        "regulation": "No person shall fly or assist in flying an aircraft over the specified area.",
+        "summary": "Area bounded by coordinates (1448N to 1454N, 07423E to 07429E).",
+        "vertices": [
+            [
+                14.8,
+                74.3833
+            ],
+            [
+                14.9,
+                74.3833
+            ],
+            [
+                14.9,
+                74.4833
+            ],
+            [
+                14.8,
+                74.4833
+            ]
+        ],
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "verticalLimits": "5000 FT / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOP 197 - Kudankulam",
+        "location": "Kudankulam",
+        "type": "circle",
+        "airspace": "Prohibited",
+        "regulation": "1. No person shall fly or assist in flying an aircraft within the specified airspace.\n2. Emergency Frequency: 121.50 MHz",
+        "summary": "Circular area centered on 081025N 0774216E within a 5NM radius.",
+        "center": [
+            8.173611,
+            77.704444
+        ],
+        "radius": 9260,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": null,
+        "verticalLimits": "10000 FT AMSL / GND",
+        "color": "red"
+    },
+    {
+        "name": "VOR 181 A - HAL",
+        "location": "HAL",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Test flying. Controlling authority ATC (HAL).",
+        "summary": "Area bounded by a polygon with arc segments representing HAL test flying airspace.",
+        "center": [
+            12.951389,
+            77.665556
+        ],
+        "radius": 185200,
+        "innerRadius": 9260,
+        "outerRadius": 185200,
+        "startAzimuth": 127,
+        "endAzimuth": 208,
+        "vertices": [
+            [
+                12.468056,
+                79.2825
+            ],
+            [
+                12.868056,
+                77.665556
+            ],
+            [
+                12.918056,
+                77.749167
+            ]
+        ],
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 181 B - HAL",
+        "location": "HAL",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Test flying. Controlling authority ATC (HAL).",
+        "summary": "Polygonal airspace for HAL test flying operations.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                12.758333,
+                76.454167
+            ],
+            [
+                12.758333,
+                77.25
+            ],
+            [
+                12.868056,
+                77.382222
+            ],
+            [
+                12.868056,
+                77.629444
+            ],
+            [
+                11.634722,
+                76.998889
+            ]
+        ],
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 181 C - HAL",
+        "location": "HAL",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Test flying. Controlling authority ATC (HAL).",
+        "summary": "Complex polygon with embedded arc segments for HAL test flying.",
+        "center": null,
+        "radius": null,
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "vertices": [
+            [
+                13.0,
+                78.0
+            ],
+            [
+                12.85,
+                78.0
+            ],
+            [
+                12.918056,
+                77.749167
+            ],
+            [
+                12.951389,
+                77.665556
+            ],
+            [
+                12.868056,
+                77.665556
+            ],
+            [
+                12.868056,
+                77.631944
+            ],
+            [
+                12.868056,
+                77.381944
+            ],
+            [
+                12.758333,
+                77.25
+            ],
+            [
+                12.758333,
+                77.141667
+            ],
+            [
+                12.841667,
+                77.141667
+            ],
+            [
+                13.016667,
+                77.430556
+            ],
+            [
+                13.016667,
+                77.618333
+            ]
+        ],
+        "verticalLimits": "FL 460 / GND",
+        "color": "yellow"
+    },
+    {
+        "type": "polygon",
+        "name": "VOR 181 D - HAL",
+        "center": [],
+        "radius": null,
+        "vertices": [
+            [
+                13.000000,
+                78.000000
+            ],
+            [
+                13.000000,
+                78.416667
+            ],
+            [
+                12.750000,
+                78.416667
+            ],
+            [
+                12.850000,
+                78.000000
+            ]
+        ],
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Restricted",
+        "color": "yellow",
+        "location": "HAL",
+        "summary": "Test flying. Controlling authority: ATC (HAL).",
+        "verticalLimits": "FL 460 / GND",
+        "regulation": "Restricted Area – Test flying operations. Entry with ATC clearance only."
+    },
+    {
+        "type": "polygon",
+        "name": "VOR 182 - Sulur-I",
+        "center": [],
+        "radius": null,
+        "vertices": [
+            [
+                10.973889,
+                77.468056
+            ],
+            [
+                10.869444,
+                77.439167
+            ],
+            [
+                10.306667,
+                77.925556
+            ],
+            [
+                10.489722,
+                78.257778
+            ],
+            [
+                10.817778,
+                78.163889
+            ],
+            [
+                11.002222,
+                78.261111
+            ],
+            [
+                11.176944,
+                78.1075
+            ]
+        ],
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Restricted",
+        "color": "yellow",
+        "location": "Sulur",
+        "summary": "IAF Local Flying Area. Activity H24.",
+        "verticalLimits": "FL 460 / GND",
+        "regulation": "Restricted Area – Continuous flying activity. Controlling Authority: Sulur ATC."
+    },
+    {
+        "type": "polygon",
+        "name": "VOR 183-A - Tambaram-I",
+        "center": [],
+        "radius": null,
+        "vertices": [
+            [
+                12.951389,
+                80.265278
+            ],
+            [
+                12.934722,
+                80.098611
+            ],
+            [
+                11.884722,
+                79.448611
+            ],
+            [
+                11.768056,
+                79.815278
+            ]
+        ],
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Restricted",
+        "color": "yellow",
+        "location": "Tambaram",
+        "summary": "Local flying area. Controlling authority: ATC Tambaram.",
+        "verticalLimits": "45000 FT / GND",
+        "regulation": "Restricted Area – Military flying zone under Tambaram ATC."
+    },
+    {
+        "type": "polygon",
+        "name": "VOR 183-B - Tambaram-II",
+        "center": [],
+        "radius": null,
+        "vertices": [
+            [
+                12.884722,
+                79.498611
+            ],
+            [
+                12.701389,
+                79.965278
+            ],
+            [
+                11.884722,
+                79.448611
+            ]
+        ],
+        "innerRadius": null,
+        "outerRadius": null,
+        "startAzimuth": null,
+        "endAzimuth": null,
+        "airspace": "Restricted",
+        "color": "yellow",
+        "location": "Tambaram",
+        "summary": "Local flying area. Controlling authority: ATC Tambaram.",
+        "verticalLimits": "45000 FT / 15000 FT",
+        "regulation": "Restricted Area – Altitude specific military flying under ATC Tambaram."
+    },
+    {
+        "name": "VOR 184 - Vishakhapatnam",
+        "location": "Vishakhapatnam",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Explosive area.",
+        "summary": "Polygonal explosive area near Vishakhapatnam.",
+        "vertices": [
+            [
+                17.740000,
+                83.241667
+            ],
+            [
+                17.736389,
+                83.245833
+            ],
+            [
+                17.728889,
+                83.253611
+            ],
+            [
+                17.724722,
+                83.254444
+            ],
+            [
+                17.723333,
+                83.238056
+            ],
+            [
+                17.732500,
+                83.233889
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 185 A - Yelahanka",
+        "location": "Yelahanka",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
+        "summary": "Polygon with a 20NM radius arc segment near Yelahanka for local flying.",
+        "vertices": [
+            [
+                13.140000,
+                77.275000
+            ],
+            [
+                13.140000,
+                78.000000
+            ],
+            [
+                13.000000,
+                78.000000
+            ],
+            [
+                13.016667,
+                77.618333
+            ],
+            [
+                13.016667,
+                77.296667
+            ]
+        ],
+        "center": [
+            13.133333,
+            77.616667
+        ],
+        "radius": 37040,
+        "innerRadius": 0,
+        "outerRadius": 37040,
+        "startAzimuth": 122,
+        "endAzimuth": 229,
+        "verticalLimits": "6000 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 185 B - Yelahanka",
+        "location": "Yelahanka",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
+        "summary": "Multi-arc restricted area between VOBL ARP and Yelahanka.",
+        "vertices": [
+            [
+                13.415278,
+                77.438889
+            ],
+            [
+                13.558333,
+                77.345833
+            ],
+            [
+                13.016667,
+                77.236111
+            ],
+            [
+                13.016667,
+                77.301389
+            ]
+        ],
+        "center": [
+            13.198889,
+            77.705556
+        ],
+        "radius": 55560,
+        "innerRadius": 37040,
+        "outerRadius": 55560,
+        "startAzimuth": 143,
+        "endAzimuth": 304,
+        "verticalLimits": "6000 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 185 C - Yelahanka",
+        "location": "Yelahanka",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
+        "summary": "Rectangular polygon area near Yelahanka for local flying.",
+        "vertices": [
+            [
+                13.125000,
+                78.000000
+            ],
+            [
+                13.125000,
+                78.150000
+            ],
+            [
+                13.233333,
+                78.150000
+            ],
+            [
+                13.233333,
+                78.416667
+            ],
+            [
+                13.000000,
+                78.416667
+            ],
+            [
+                13.000000,
+                78.000000
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "6000 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 185 D - Yelahanka",
+        "location": "Yelahanka",
+        "type": "sector",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Yelahanka 118.1 MHz",
+        "summary": "Large sector area with arcs and polygon boundaries around Yelahanka.",
+        "vertices": [
+            [
+                13.558333,
+                77.345833
+            ],
+            [
+                14.416667,
+                76.783333
+            ],
+            [
+                13.483333,
+                76.083333
+            ],
+            [
+                12.841667,
+                76.416667
+            ],
+            [
+                12.841667,
+                77.141667
+            ],
+            [
+                13.016667,
+                77.430556
+            ],
+            [
+                13.016667,
+                77.236111
+            ]
+        ],
+        "center": [
+            13.133333,
+            77.616667
+        ],
+        "radius": 166680,
+        "innerRadius": 55560,
+        "outerRadius": 166680,
+        "startAzimuth": 206,
+        "endAzimuth": 356,
+        "verticalLimits": "FL 200 / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 186",
+        "location": "Hyderabad",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Hyderabad.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                19.3175,
+                75.998889
+            ],
+            [
+                19.7175,
+                77.165833
+            ],
+            [
+                18.8675,
+                79.448611
+            ],
+            [
+                17.551111,
+                79.831944
+            ],
+            [
+                17.584444,
+                78.998889
+            ],
+            [
+                17.501111,
+                78.998889
+            ],
+            [
+                17.501111,
+                78.398889
+            ],
+            [
+                17.651111,
+                77.898889
+            ],
+            [
+                17.601111,
+                76.998889
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 240 / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 191-A",
+        "location": "Cochin",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Cochin.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                9.966667,
+                76.0
+            ],
+            [
+                9.966667,
+                76.45
+            ],
+            [
+                9.9,
+                76.466667
+            ],
+            [
+                9.9,
+                76.025
+            ],
+            [
+                9.966667,
+                76.0
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "2000 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 191-B",
+        "location": "Cochin",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Cochin.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                9.9,
+                76.025
+            ],
+            [
+                9.9,
+                76.466667
+            ],
+            [
+                9.666667,
+                76.566667
+            ],
+            [
+                9.566667,
+                76.166667
+            ],
+            [
+                9.9,
+                76.025
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "5500 FT AMSL / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 191-C",
+        "location": "Cochin",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Cochin.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                9.566667,
+                76.166667
+            ],
+            [
+                9.666667,
+                76.566667
+            ],
+            [
+                9.4,
+                76.55
+            ],
+            [
+                9.283333,
+                76.266667
+            ],
+            [
+                9.566667,
+                76.166667
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 080 / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 191-D",
+        "location": "Cochin",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling authority ATC Cochin.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                9.9,
+                75.525
+            ],
+            [
+                9.9,
+                76.025
+            ],
+            [
+                9.233333,
+                76.283333
+            ],
+            [
+                9.116667,
+                75.866667
+            ],
+            [
+                9.9,
+                75.525
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 090 / GND",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 192",
+        "location": "Car Nicobar",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling Authority ATC Car Nicobar.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                8.668611,
+                92.3275
+            ],
+            [
+                9.668333,
+                92.3275
+            ],
+            [
+                9.668333,
+                93.3275
+            ],
+            [
+                8.668611,
+                93.3275
+            ],
+            [
+                8.668611,
+                92.3275
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "UNL / MSL",
+        "color": "yellow"
+    },
+    {
+        "name": "VOR 44 (B)",
+        "location": "Goa-II",
+        "type": "polygon",
+        "airspace": "Restricted",
+        "regulation": "Local flying area. Controlling Authority ATC (Navy) Goa.",
+        "summary": "Polygon area bounded by specific points.",
+        "vertices": [
+            [
+                16.084444,
+                73.116111
+            ],
+            [
+                15.584444,
+                74.199167
+            ],
+            [
+                15.317778,
+                74.365833
+            ],
+            [
+                14.251389,
+                74.465833
+            ],
+            [
+                14.051389,
+                74.0825
+            ],
+            [
+                16.084444,
+                73.116111
+            ]
+        ],
+        "center": [
+            0,
+            0
+        ],
+        "radius": 0,
+        "innerRadius": 0,
+        "outerRadius": 0,
+        "startAzimuth": 0,
+        "endAzimuth": 0,
+        "verticalLimits": "FL 210 / GND",
+        "color": "yellow"
+    }
+]
