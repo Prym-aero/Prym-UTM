@@ -10,8 +10,51 @@ const isValidLatLng = (point) =>
   point.length === 2 &&
   typeof point[0] === "number" &&
   typeof point[1] === "number";
-const isValidPolygon = (vertices) =>
-  Array.isArray(vertices) && vertices.length > 0 && isValidLatLng(vertices[0]);
+
+const isValidPolygon = (vertices) => {
+  // Check if vertices is an array and has at least 3 points
+  if (!Array.isArray(vertices) || vertices.length < 3) {
+    return false;
+  }
+
+  // Helper function to validate a single coordinate
+  const isValidCoordinate = (coord) => {
+    if (!Array.isArray(coord) || coord.length !== 2) {
+      return false;
+    }
+    const [lat, lng] = coord;
+    return lat >= -90 && lat <= 90 && lng >= -180 && lng <= 180;
+  };
+
+  // Validate each vertex
+  for (let i = 0; i < vertices.length; i++) {
+    const current = vertices[i];
+    const next = vertices[(i + 1) % vertices.length]; // Wrap around to check closure
+
+    // Check if the current vertex is valid
+    if (!isValidCoordinate(current)) {
+      return false;
+    }
+
+    // Check for duplicate consecutive points
+    if (i > 0 && current[0] === next[0] && current[1] === next[1]) {
+      return false;
+    }
+  }
+
+  // Optionally, check if the polygon is closed (first and last vertices are the same)
+  const firstVertex = vertices[0];
+  const lastVertex = vertices[vertices.length - 1];
+  if (firstVertex[0] !== lastVertex[0] || firstVertex[1] !== lastVertex[1]) {
+    console.warn(
+      "Warning: Polygon is not closed. First and last vertices differ."
+    );
+    // You can choose to enforce closure by uncommenting the line below:
+    // return false;
+  }
+
+  return true;
+};
 
 const ZoneDisplay = ({ zone }) => {
   const [selectedZone, setSelectedZone] = useState(null);
@@ -77,19 +120,17 @@ const ZoneDisplay = ({ zone }) => {
             zone.endAzimuth
           );
 
-          if (isValidPolygon(sectorPolygon)) {
-            return (
-              <Polygon
-                key={index}
-                positions={sectorPolygon}
-                color={zone.color}
-                fillColor={zone.color}
-                fillOpacity={0.5}
-                pane={paneName}
-                eventHandlers={{ click: () => zoneInfo(zone) }}
-              />
-            );
-          }
+          return (
+            <Polygon
+              key={index}
+              positions={sectorPolygon}
+              color={zone.color}
+              fillColor={zone.color}
+              fillOpacity={0.5}
+              pane={paneName}
+              eventHandlers={{ click: () => zoneInfo(zone) }}
+            />
+          );
         }
 
         return null; // Skip invalid zone
