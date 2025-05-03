@@ -1,21 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Circle, Polygon, useMap } from "react-leaflet";
-import getSectorPolygon from "./GetCordinatesSector";
+import getSectorPolygon from "../utils/GetCordinatesSector";
 import { IoClose } from "react-icons/io5";
-
-// ✅ Validation Helpers
-const isValidLatLng = (point) =>
-  Array.isArray(point) &&
-  point.length === 2 &&
-  typeof point[0] === "number" &&
-  typeof point[1] === "number";
-const isValidPolygon = (vertices) =>
-  Array.isArray(vertices) && vertices.length > 0 && isValidLatLng(vertices[0]);
+import { MdMyLocation, MdOutlineReport } from "react-icons/md";
+import { isValidLatLng, isValidPolygon } from "../utils/validation";
 
 const ZoneDisplay = ({ zone }) => {
   const [selectedZone, setSelectedZone] = useState(null);
   const map = useMap();
-
 
   // ✅ Create custom panes for layering zones
   useEffect(() => {
@@ -28,18 +20,29 @@ const ZoneDisplay = ({ zone }) => {
     }
   }, [map]);
 
-  const zoneInfo = (zone) => setSelectedZone(zone);
+  // ✅ Helper function to close polygons
+  const closePolygon = (vertices, zoneName) => {
+    if (!Array.isArray(vertices) || vertices.length < 3) return vertices;
 
+    const firstVertex = vertices[0];
+    const lastVertex = vertices[vertices.length - 1];
+
+    // If the first and last vertices are not the same, close the polygon
+    if (firstVertex[0] !== lastVertex[0] || firstVertex[1] !== lastVertex[1]) {
+      console.log(`Closing polygon for zone "${zoneName}"`);
+      return [...vertices, firstVertex]; // Append the first vertex to the end
+    }
+
+    return vertices; // Already closed
+  };
+
+  // ✅ Render all zones
   return (
     <>
       {zone.map((zone, index) => {
-        const paneName = `zonePane${(index % 3) + 1}`; // Rotate between zonePane1, zonePane2, zonePane3
+        const paneName = `zonePane${(index % 3) + 1}`;
 
-        if (
-          zone.type === "circle" &&
-          isValidLatLng(zone.center) &&
-          typeof zone.radius === "number"
-        ) {
+        if (zone.type === "circle" && isValidLatLng(zone.center) && typeof zone.radius === "number") {
           return (
             <Circle
               key={index}
@@ -49,12 +52,16 @@ const ZoneDisplay = ({ zone }) => {
               fillColor={zone.color}
               fillOpacity={0.5}
               pane={paneName}
-              eventHandlers={{ click: () => zoneInfo(zone) }}
+              eventHandlers={{ click: () => setSelectedZone(zone) }}
             />
           );
         }
 
-        if (zone.type === "polygon" && isValidPolygon(zone.vertices)) {
+        if (zone.type === "polygon") {
+          if (!isValidPolygon(zone.vertices, zone.name)) {
+            zone.vertices = closePolygon(zone.vertices, zone.name); // Automatically close the polygon
+          }
+
           return (
             <Polygon
               key={index}
@@ -63,7 +70,7 @@ const ZoneDisplay = ({ zone }) => {
               fillColor={zone.color}
               fillOpacity={0.5}
               pane={paneName}
-              eventHandlers={{ click: () => zoneInfo(zone) }}
+              eventHandlers={{ click: () => setSelectedZone(zone) }}
             />
           );
         }
@@ -77,41 +84,106 @@ const ZoneDisplay = ({ zone }) => {
             zone.endAzimuth
           );
 
-          if (isValidPolygon(sectorPolygon)) {
-            return (
-              <Polygon
-                key={index}
-                positions={sectorPolygon}
-                color={zone.color}
-                fillColor={zone.color}
-                fillOpacity={0.5}
-                pane={paneName}
-                eventHandlers={{ click: () => zoneInfo(zone) }}
-              />
-            );
-          }
+          return (
+            <Polygon
+              key={index}
+              positions={sectorPolygon}
+              color={zone.color}
+              fillColor={zone.color}
+              fillOpacity={0.5}
+              pane={paneName}
+              eventHandlers={{ click: () => setSelectedZone(zone) }}
+            />
+          );
         }
 
         return null; // Skip invalid zone
       })}
 
+      {/* Render zone details panel */}
       {selectedZone && (
-        <div className="zoneInfo w-[300px] h-[650px] absolute top-30 right-10 bg-white rounded-lg shadow-lg p-4 z-500">
-          <div className="flex justify-between items-center">
-            <h2 className="text-lg font-bold mb-2">Zone Information</h2>
-            <button
-              onClick={() => setSelectedZone(null)}
-              className="text-gray-500 hover:text-gray-700"
-            >
-              <IoClose className="w-6 h-6" />
-            </button>
+        <div className="absolute z-[500] bg-white shadow-lg transition-all duration-200 pb-5 overflow-y-auto px-5 w-[388px] h-[80%] rounded-lg top-16 right-10">
+          {/* Close Button */}
+          <IoClose
+            onClick={() => setSelectedZone(null)}
+            className="absolute right-5 cursor-pointer text-red-600 text-[1.7rem] top-7"
+          />
+
+          {/* Drone Image */}
+          <img src="/drone.png" alt="Drone" className="object-cover mx-auto w-[240px]" />
+
+          {/* Location Header */}
+          <div className="flex justify-between mt-4">
+            <p className="text-base text-gray-700">Where you clicked</p>
+            <MdMyLocation className="text-gray-600 text-[1.4rem]" />
           </div>
-          <p>Zone Name: {selectedZone.name}</p>
-          <p>Zone Type: {selectedZone.type}</p>
-          <p>Zone Location: {selectedZone.location}</p>
-          <p>Zone Center: {selectedZone.center?.join(", ")}</p>
-          <p>Zone Radius: {selectedZone.radius}</p>
-          <p>zone Regulation: <br /> {selectedZone.regulation}</p>
+          <div className="bg-[#00000034] h-[1px] w-full my-2"></div>
+
+          {/* Main Zone Information */}
+          <div
+            className="mt-5 border rounded-lg py-4 px-3 border-t-4"
+            style={{ borderTopColor: selectedZone?.color || "#000000" }}
+          >
+            <p>
+              <span>ZONE NAME: </span>
+              {selectedZone?.name}
+            </p>
+            <p className="mt-2">
+              <span>TYPE: </span>
+              {selectedZone?.type}
+            </p>
+            <p className="mt-2">
+              <span>AIRSPACE: </span>
+              {selectedZone?.airspace}
+            </p>
+          </div>
+
+          {/* Summary Section */}
+          <div className="mt-4">
+            <p className="font-medium">Summary</p>
+            <div className="bg-[#00000034] h-[1px] w-full my-2"></div>
+            <p className="text-sm text-gray-600">{selectedZone?.summary}</p>
+          </div>
+
+          {/* Location Details */}
+          <div className="mt-4">
+            <p className="font-medium">Location Details</p>
+            <div className="bg-[#00000034] h-[1px] w-full my-2"></div>
+            <p className="text-sm text-gray-600">
+              <span className="font-medium">Address: </span>
+              {selectedZone?.location}
+            </p>
+          </div>
+
+          {/* Vertical Limits */}
+          {selectedZone?.verticalLimits && (
+            <div className="mt-4">
+              <p className="font-medium">Vertical Limits</p>
+              <div className="bg-[#00000034] h-[1px] w-full my-2"></div>
+              <p className="text-sm text-gray-600">{selectedZone?.verticalLimits}</p>
+            </div>
+          )}
+
+          {/* Regulations */}
+          <div className="mt-4">
+            <p className="font-medium">Regulations</p>
+            <div className="bg-[#00000034] h-[1px] w-full my-2"></div>
+            <p className="text-sm text-gray-600">{selectedZone?.regulation}</p>
+          </div>
+
+          {/* Prohibited Area */}
+          {selectedZone?.prohibitedArea && (
+            <div className="mt-4">
+              <p className="font-medium">Prohibited Area</p>
+              <div className="bg-[#00000034] h-[1px] w-full my-2"></div>
+              <p className="text-sm text-gray-600">{selectedZone?.prohibitedArea}</p>
+            </div>
+          )}
+
+          {/* Report Button */}
+          <button className="rounded-full text-sm border border-black px-4 py-2 mt-10 mb-10 hover:bg-black hover:text-white transition-all duration-200 flex gap-2 items-center mx-auto">
+            <MdOutlineReport className="text-[1.4rem]" /> Report a flight incident
+          </button>
         </div>
       )}
     </>

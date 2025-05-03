@@ -46,6 +46,7 @@ const MapSidebarTailwind = () => {
           )}
         </div>
       ))}
+      
       <AlertSnackbar alert={Alert} setAlert={setAlert} />
     </div>
   );

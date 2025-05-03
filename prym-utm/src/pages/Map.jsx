@@ -10,6 +10,7 @@ import MapSidebarTailwind from "../components/MapSidebarTailwind";
 import axios from "axios";
 import ZoneDisplay from "../components/ZoneDisplay";
 import { PiDroneBold } from "react-icons/pi";
+import { FaFilter } from "react-icons/fa";
 
 const Map = () => {
   // const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
@@ -17,19 +18,37 @@ const Map = () => {
   const [searchLocation, setSearchLocation] = useState("");
   const [Airports, setAirports] = useState([]);
   const [ActiveIndex, setActiveIndex] = useState(null);
+  const [filter, setFilter] = useState(false);
+  const [redZone, setRedZone] = useState(true);
+  const [greenZone, setGreenZone] = useState(true);
+  const [yellowZone, setYellowZone] = useState(true);
+  const [redZoneData, setRedZoneData] = useState([]);
+  const [greenZoneData, setGreenZoneData] = useState([]);
+  const [yellowZoneData, setYellowZoneData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`${API_URL}/zones`);
-        // console.log("Fetched Zones:", response.data); // Check the format here
+        // setZones(response.data);
         setZones(response.data);
+        console.log(zones);
+        console.log("Fetched Zones:", response.data.slice(0, 5)); // Check the format here
       } catch (error) {
         console.error("Error fetching zones:", error);
       }
     };
     fetchData();
   }, []);
+
+  useEffect(() => {
+    // Compute derived data whenever `zones` changes
+    if (zones.length > 0) {
+      setRedZoneData(zones.filter((zone) => zone.color === "red"));
+      setGreenZoneData(zones.filter((zone) => zone.color === "green"));
+      setYellowZoneData(zones.filter((zone) => zone.color === "yellow"));
+    }
+  }, [zones]);
 
   useEffect(() => {
     const fetchAirports = async () => {
@@ -126,7 +145,9 @@ const Map = () => {
             </Marker>
           )}
 
-          <ZoneDisplay zone={zones} />
+          {redZone && <ZoneDisplay zone={redZoneData} />}
+          {greenZone && <ZoneDisplay zone={greenZoneData} />}
+          {yellowZone && <ZoneDisplay zone={yellowZoneData} />}
 
           {/* {Airports &&
             Airports.map((airport, index) => (
@@ -156,10 +177,47 @@ const Map = () => {
                  </Popup>
               </Marker>
            ))} */}
+          <div className="filterbutton z-999 absolute top-15 right-3.25">
+            <button
+              className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer z-1000 "
+              onClick={() => setFilter(!filter)}
+            >
+              <FaFilter size={20} color="white" />
+            </button>
+          </div>
+          {filter && (
+            <div className="absolute top-45 right-10 z-[1000] bg-white shadow-lg transition-all duration-200 pb-5 overflow-y-auto px-5 w-[288px] h-[50%] rounded-lg">
+              <h2 className="text-xl font-bold mb-4">Filter Zones</h2>
+              <div className="flex items-center mb-2">
+                <input
+                  type="checkbox"
+                  checked={redZone}
+                  onChange={() => setRedZone(!redZone)}
+                />
+                <label className="ml-2">Red Zone</label>
+              </div>
+              <div className="flex items-center mb-2">
+                <input
+                  type="checkbox"
+                  checked={greenZone}
+                  onChange={() => setGreenZone(!greenZone)}
+                />
+                <label className="ml-2">Green Zone</label>
+              </div>
+              <div className="flex items-center mb-2">
+                <input
+                  type="checkbox"
+                  checked={yellowZone}
+                  onChange={() => setYellowZone(!yellowZone)}
+                />
+                <label className="ml-2">Yellow Zone</label>
+              </div>
+            </div>
+          )}
         </MapContainer>
-
-        <MapSidebarTailwind />
       </div>
+
+      <MapSidebarTailwind />
     </>
   );
 };
