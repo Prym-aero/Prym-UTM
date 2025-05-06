@@ -9,7 +9,6 @@ import { isTokenExpired, refreshAccessToken } from "../utils/authService"; // Im
 import { useNavigate } from "react-router-dom";
 
 const FlightPlanForm = () => {
-
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
     // userId: "", // User who created the flight
@@ -124,82 +123,89 @@ const FlightPlanForm = () => {
 
     // ✅ Check if token is expired
     if (isTokenExpired(token)) {
-        console.log("🔄 Access token expired, refreshing...");
-        token = await refreshAccessToken(navigate); // Get new access token
-        if (!token) {
-            showAlert("Session expired. Please log in again.", "error");
-            setLoading(false);
-            return;
-        }
+      console.log("🔄 Access token expired, refreshing...");
+      token = await refreshAccessToken(navigate); // Get new access token
+      if (!token) {
+        showAlert("Session expired. Please log in again.", "error");
+        setLoading(false);
+        return;
+      }
     }
 
     // ✅ Convert string values to Boolean and ensure default values
     const processedFormData = {
-        ...formData,
-        regulatoryApproval: Boolean(formData.regulatoryApproval),
-        safetyChecks: Boolean(formData.safetyChecks),
-        batteryLevel: formData.batteryLevel || 100,
-        waypoints: formData.waypoints || [],
-        status: formData.status || "pending",
-        weatherConditions: formData.weatherConditions || "Unknown",
-        emergencyFailsafe: Boolean(formData.emergencyFailsafe),
+      ...formData,
+      regulatoryApproval: Boolean(formData.regulatoryApproval),
+      safetyChecks: Boolean(formData.safetyChecks),
+      batteryLevel: formData.batteryLevel || 100,
+      waypoints: formData.waypoints || [],
+      status: formData.status || "pending",
+      weatherConditions: formData.weatherConditions || "Unknown",
+      emergencyFailsafe: Boolean(formData.emergencyFailsafe),
     };
 
     console.log("🚀 Sending Data:", processedFormData);
 
     try {
-        const response = await axios.post(
-            `${API_URL}/flightPlan/addFlight`,
-            processedFormData,
-            {
-                headers: {
-                    Authorization: `Bearer ${token}`,  // ✅ Use refreshed token
-                    "Content-Type": "application/json",
-                },
-            }
-        );
+      const response = await axios.post(
+        `${API_URL}/flightPlan/addFlight`,
+        processedFormData,
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // ✅ Use refreshed token
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-        // console.log("✅ Flight Plan Saved:", response.data);
-        setMessage("Flight plan saved successfully!");
-        showAlert("Flight plan saved successfully!", "success");
+      // console.log("✅ Flight Plan Saved:", response.data);
+      setMessage("Flight plan saved successfully!");
+      showAlert("Flight plan saved successfully!", "success");
 
-        // ✅ Reset form data with default values
-        setFormData({
-            flightName: "",
-            locationName: "",
-            center: { lat: 0, lon: 0 },
-            radius: 0,
-            altitude: 0,
-            speed: 0,
-            duration: 0,
-            flightDate: "",
-            droneId: "",
-            droneModel: "",
-            batteryLevel: 100,
-            waypoints: [],
-            pilotId: "",
-            pilotName: "",
-            status: "pending",
-            regulatoryApproval: false,
-            safetyChecks: false,
-            weatherConditions: "Unknown",
-            emergencyFailsafe: false,
-            logs: [],
-            notes: "",
-        });
+      // ✅ Reset form data with default values
+      setFormData({
+        flightName: "",
+        locationName: "",
+        center: { lat: 0, lon: 0 },
+        radius: 0,
+        altitude: 0,
+        speed: 0,
+        duration: 0,
+        flightDate: "",
+        droneId: "",
+        droneModel: "",
+        batteryLevel: 100,
+        waypoints: [],
+        pilotId: "",
+        pilotName: "",
+        status: "pending",
+        regulatoryApproval: false,
+        safetyChecks: false,
+        weatherConditions: "Unknown",
+        emergencyFailsafe: false,
+        logs: [],
+        notes: "",
+      });
     } catch (err) {
-        console.error("🚨 Error:", err.response?.data || err.message);
-        showAlert("Error: " + (err.response?.data?.message || "Something went wrong"), "error");
+      console.error("🚨 Error:", err.response?.data || err.message);
+      showAlert(
+        "Error: " + (err.response?.data?.message || "Something went wrong"),
+        "error"
+      );
     } finally {
-        setLoading(false);
+      setLoading(false);
     }
-};
-
+  };
 
   return (
     <>
-    
       <div className="w-screen h-full flex flex-col justify-center items-center  ">
+        <button
+          className="F-btn px-4 py-2.5 text-white bg-black border-none rounded-4xl cursor-pointer "
+          onClick={() => setComp("add")}
+        >
+          Add Flight
+        </button>
         <div className="flight-form w-full bg-blue-200 h-[900px] ">
           <form
             className="w-full h-full bg-pink-100 p-8 rounded-lg shadow-lg grid grid-cols-2 gap-x-6 gap-y-4"

@@ -1,6 +1,6 @@
 const API_URL = import.meta.env.VITE_API_ENDPOINT;
 import { TbBuildingAirport } from "react-icons/tb";
-import L from "leaflet";
+import L, { geoJSON } from "leaflet";
 import React, { useState, useEffect } from "react";
 import ReactDOMServer from "react-dom/server";
 import Navbar from "../components/Navbar";
@@ -11,6 +11,7 @@ import axios from "axios";
 import ZoneDisplay from "../components/ZoneDisplay";
 import { PiDroneBold } from "react-icons/pi";
 import { FaFilter } from "react-icons/fa";
+import { DrawControl } from "../components/DrawItem";
 
 const Map = () => {
   // const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
@@ -91,6 +92,19 @@ const Map = () => {
     return null;
   }
 
+
+  const handleDrawCreated = (geoJSON) => {
+     console.log("Created shape:", geoJSON);
+  }
+
+  const handleDrawEdited = (geoJSON) => {
+      console.log("Edited shape:", geoJSON);
+  }
+
+  const handleDrawDeleted = (geoJSON) => {
+      console.log("Deleted shape:", geoJSON);
+  }
+
   // the dummy function to show drone ont the map
   // useEffect(() => {
   //   const fetchDroneData = async () => {
@@ -138,6 +152,14 @@ const Map = () => {
           </Marker>
 
           <SetViewOnSearch coords={searchLocation} />
+
+          <DrawControl
+            onDrawCreated={handleDrawCreated}
+            onDrawEdited={handleDrawEdited}
+            onDrawDeleted={handleDrawDeleted}
+
+
+          ></DrawControl>
 
           {searchLocation && (
             <Marker position={searchLocation}>
