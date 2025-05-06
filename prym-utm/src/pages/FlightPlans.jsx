@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState} from "react";
 // import axios from "axios";
 import Navbar from "../components/Navbar";
 // import Snackbar from "@mui/material/Snackbar";
@@ -9,8 +9,8 @@ import FlightPlanShow from "../components/FlightPlanShow";
 import InputDesign from "../components/InputDesign";
 
 const FlightPlan = () => {
-  const [comp, setComp] = useState("add");
-
+    const [comp, setComp] = useState("add");
+    
   return (
     <>
       <Navbar />
