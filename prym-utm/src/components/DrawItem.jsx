@@ -18,6 +18,7 @@ export const DrawControl = ({ onDrawCreated, onDrawEdited, onDrawDeleted }) => {
         polygon: true,
         polyline: true,
         rectangle: true,
+        square: true,
         circle: true,
         marker: true,
       },
@@ -37,17 +38,34 @@ export const DrawControl = ({ onDrawCreated, onDrawEdited, onDrawDeleted }) => {
       // Extract GeoJSON data
       const geoJSON = layer.toGeoJSON();
 
-      // If it's a circle, extract radius
+      // Process coordinates based on shape type
       if (layer instanceof L.Circle) {
-        const center = layer.getLatLng(); // { lat, lng }
-        const radius = layer.getRadius(); // in meters
+        const center = layer.getLatLng();
+        const radius = layer.getRadius();
 
-        // Add radius to GeoJSON properties
         geoJSON.properties = {
           ...geoJSON.properties,
           radius: radius,
-          center: [center.lng, center.lat], // GeoJSON uses [lng, lat]
+          center: [
+            parseFloat(center.lng.toFixed(6)),
+            parseFloat(center.lat.toFixed(6)),
+          ],
         };
+      } else if (layer instanceof L.Polygon || layer instanceof L.Polyline) {
+        // Process polygon/line coordinates
+        geoJSON.geometry.coordinates = geoJSON.geometry.coordinates.map(
+          (ring) =>
+            ring.map((coord) => [
+              parseFloat(coord[0].toFixed(6)),
+              parseFloat(coord[1].toFixed(6)),
+            ])
+        );
+      } else if (layer instanceof L.Marker) {
+        // Process marker point
+        geoJSON.geometry.coordinates = [
+          parseFloat(geoJSON.geometry.coordinates[0].toFixed(6)),
+          parseFloat(geoJSON.geometry.coordinates[1].toFixed(6)),
+        ];
       }
 
       if (onDrawCreated) onDrawCreated(geoJSON);
