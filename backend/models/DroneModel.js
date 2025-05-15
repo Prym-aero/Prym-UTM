@@ -6,7 +6,7 @@ const droneSchema = new mongoose.Schema({
   droneStatus: { type: String, enum: ["Active", "Inactive", "Flying", "Repair", "Crashed"], default: "Inactive" },
   droneType: String,
   manufacture: String,
-  deploymentDate: { type: String, required: true } ,
+  deploymentDate: { type: String, required: true },
   application: String,
   coverageArea: String,
   controlRange: String,
@@ -33,6 +33,20 @@ const droneSchema = new mongoose.Schema({
   trainingLevel: String,
   insuranceCoverage: String,
   image: { type: String }, // Directly store Base64 image string
+  lastKnownPosition: {
+    type: {
+      type: String,
+      default: "Point",
+      enum: ["Point"]
+    },
+    coordinates: [Number] // [longitude, latitude]
+  },
+  lastUpdated: Date,
+  currentAltitude: Number,
+  currentBattery: Number,
+  currentSpeed: Number,
 }, { timestamps: true });
+
+droneSchema.index({ lastKnownPosition: "2dsphere" });
 
 module.exports = mongoose.model("Drone", droneSchema);

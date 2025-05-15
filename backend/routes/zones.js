@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Zone = require('../models/zoneModel');
-const authMiddleware = require('../controllers/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 
 router.use(express.json());
 

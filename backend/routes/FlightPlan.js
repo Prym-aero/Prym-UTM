@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const FlightPlan = require('../models/FlightPlanModel');
-const authMiddleware = require('../controllers/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 
 
 router.get('/', async (req, res) => {

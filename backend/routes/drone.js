@@ -1,7 +1,7 @@
 const express = require('express');
 const Drone = require('../models/DroneModel');
 const router = express.Router();
-const authMiddleware = require('../controllers/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 
 router.get('/', async (req, res) => {  // this route is for getting all the drones from the database 
     try {

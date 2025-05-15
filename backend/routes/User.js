@@ -2,7 +2,7 @@ const express = require('express');
 const User = require('../models/UserModel');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const authMiddleware = require('../controllers/authMiddleware');
+const authMiddleware = require('../middleware/authMiddleware');
 require('dotenv').config(); // Load environment variables
 const util = require("util");
 

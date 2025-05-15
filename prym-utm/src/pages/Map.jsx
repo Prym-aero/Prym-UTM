@@ -157,8 +157,6 @@ const Map = () => {
             onDrawCreated={handleDrawCreated}
             onDrawEdited={handleDrawEdited}
             onDrawDeleted={handleDrawDeleted}
-
-
           ></DrawControl>
 
           {searchLocation && (
