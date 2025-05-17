@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Circle, Polygon, useMap } from "react-leaflet";
-import getSectorPolygon from "../utils/GetCordinatesSector";
+import getSectorPolygon from "../../utils/GetCordinatesSector";
 import { IoClose } from "react-icons/io5";
 import { MdMyLocation, MdOutlineReport } from "react-icons/md";
-import { isValidLatLng, isValidPolygon } from "../utils/validation";
+import { isValidLatLng, isValidPolygon } from "../../utils/validation";
 
 const ZoneDisplay = ({ zone }) => {
   const [selectedZone, setSelectedZone] = useState(null);

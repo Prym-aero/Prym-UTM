@@ -58,32 +58,33 @@ io.on("connection", (socket) => {
         console.log(`Client ${socket.id} tracking drone ${droneId}`);
     });
 
+    // Handle drone tracking unsubscription
+    socket.on("untrack-drone", (droneId) => {
+        socket.leave(`drone-${droneId}`);
+        console.log(`Client ${socket.id} stopped tracking drone ${droneId}`);
+    });
+
     // Process incoming sensor data
     socket.on("sensor-data", async (data) => {
         try {
             const { droneId, ...sensorData } = data;
             const timestamp = new Date();
 
-            // 1. Validate incoming data
             if (!droneId || !sensorData.latitude || !sensorData.longitude) {
                 throw new Error("Invalid sensor data format");
             }
 
-            // 2. Update live cache
             const liveData = { ...sensorData, timestamp };
             liveDroneData.set(droneId, liveData);
 
-            // 3. Broadcast to subscribers
             io.to(`drone-${droneId}`).emit("update", liveData);
 
-            // 4. Add to MongoDB queue
             await addToQueue({
                 droneId,
                 ...sensorData,
                 timestamp
             });
 
-            // 5. Update drone document
             await Drone.findOneAndUpdate(
                 { uin: droneId },
                 {
@@ -96,10 +97,9 @@ io.on("connection", (socket) => {
                     droneStatus: "Flying",
                     lastUpdated: timestamp
                 },
-                { upsert: true } // Create if doesn't exist
+                { upsert: true }
             );
 
-            // 6. Geofence check
             const violation = await checkGeofence(
                 sensorData.latitude,
                 sensorData.longitude
@@ -113,10 +113,7 @@ io.on("connection", (socket) => {
                     timestamp
                 };
 
-                // Broadcast to all monitoring clients
                 io.emit("alert", alert);
-
-                // Specific alert to drone operator
                 io.to(`drone-${droneId}-operator`).emit("priority-alert", alert);
             }
 
@@ -126,11 +123,9 @@ io.on("connection", (socket) => {
         }
     });
 
-    // Handle drone control commands
     socket.on("control-command", async (command) => {
         try {
             // Validate and process control commands
-            // (Add your command logic here)
         } catch (error) {
             console.error(`Control command error: ${error.message}`);
         }
@@ -140,6 +135,7 @@ io.on("connection", (socket) => {
         console.log(`Client disconnected: ${socket.id}`);
     });
 });
+
 
 
 // websocket login goes here 

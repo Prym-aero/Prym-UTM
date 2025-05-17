@@ -4,14 +4,17 @@ import L, { geoJSON } from "leaflet";
 import React, { useState, useEffect } from "react";
 import ReactDOMServer from "react-dom/server";
 import Navbar from "../components/Navbar";
-import CursorCoordinates from "../components/CursorCoordinates";
+import CursorCoordinates from "../components/Map/CursorCoordinates";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
-import MapSidebarTailwind from "../components/MapSidebarTailwind";
+import MapSidebarTailwind from "../components/Map/MapSidebarTailwind";
 import axios from "axios";
-import ZoneDisplay from "../components/ZoneDisplay";
+import ZoneDisplay from "../components/Map/ZoneDisplay";
 import { PiDroneBold } from "react-icons/pi";
 import { FaFilter } from "react-icons/fa";
-import { DrawControl } from "../components/DrawItem";
+import { DrawControl } from "../components/Map/DrawItem";
+import DroneTrackingLayer from "../components/Map/DroneTrackingLayer";
+import DroneControlPanel from "../components/Map/DroneControlPanel";
+import FlyToDrone from "../components/Map/FlyToDrone";
 
 const Map = () => {
   // const [drones, setDrones] = useState([]); // till now this is just for the checking drone is showing on the map or not
@@ -26,6 +29,8 @@ const Map = () => {
   const [redZoneData, setRedZoneData] = useState([]);
   const [greenZoneData, setGreenZoneData] = useState([]);
   const [yellowZoneData, setYellowZoneData] = useState([]);
+  const [drones, setDrones] = useState({});
+  const [selectedDrone, setSelectedDrone] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -92,18 +97,24 @@ const Map = () => {
     return null;
   }
 
+  const handleDroneUpdate = (updatedDrone) => {
+    setDrones((prev) => ({
+      ...prev,
+      [updatedDrone.id]: updatedDrone,
+    }));
+  };
 
   const handleDrawCreated = (geoJSON) => {
-     console.log("Created shape:", geoJSON);
-  }
+    console.log("Created shape:", geoJSON);
+  };
 
   const handleDrawEdited = (geoJSON) => {
-      console.log("Edited shape:", geoJSON);
-  }
+    console.log("Edited shape:", geoJSON);
+  };
 
   const handleDrawDeleted = (geoJSON) => {
-      console.log("Deleted shape:", geoJSON);
-  }
+    console.log("Deleted shape:", geoJSON);
+  };
 
   // the dummy function to show drone ont the map
   // useEffect(() => {
@@ -158,6 +169,19 @@ const Map = () => {
             onDrawEdited={handleDrawEdited}
             onDrawDeleted={handleDrawDeleted}
           ></DrawControl>
+
+          <DroneTrackingLayer
+            selectedDrone={selectedDrone}
+            onDroneUpdate={handleDroneUpdate}
+          />
+
+          <DroneControlPanel
+            drones={drones}
+            selectedDrone={selectedDrone}
+            onSelectDrone={setSelectedDrone}
+          />
+
+          {selectedDrone && <FlyToDrone drone={drones[selectedDrone]} />}
 
           {searchLocation && (
             <Marker position={searchLocation}>

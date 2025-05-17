@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AlertSnackbar from "./AlertSnackbar";
+import AlertSnackbar from "../AlertSnackbar";
 
 const MapSidebarTailwind = () => {
   const [openPanel, setOpenPanel] = useState(null);
