@@ -5,6 +5,7 @@ require('dotenv').config();
 require('./config/db');
 const userRoutes = require('./routes/User');
 const port = process.env.PORT || 3000;
+const Drone = require('./models/DroneModel')
 const zoneRoutes = require('./routes/zones');
 const flightPlanRoutes = require('./routes/FlightPlan');
 const AirportsRoutes = require('./routes/Airports');
