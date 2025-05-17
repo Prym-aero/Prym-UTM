@@ -10,6 +10,7 @@ const zoneRoutes = require('./routes/zones');
 const flightPlanRoutes = require('./routes/FlightPlan');
 const AirportsRoutes = require('./routes/Airports');
 const authRoutes = require('./routes/auth');
+const sensorRoute = require('./routes/sensor');
 const droneRoutes = require('./routes/drone');
 const sensorQueue = require("./queues/sensorQueue");
 const { initializeQueue, addToQueue } = require('./queues/sensorQueue');
@@ -32,6 +33,7 @@ app.use('/api/flightPlan', flightPlanRoutes);
 app.use('/api/airports', AirportsRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/drones', droneRoutes);
+app.use('/api/sensor', sensorRoute);
 
 app.get('/', (req, res) => {
     res.send("welcome to the prym utm api");
